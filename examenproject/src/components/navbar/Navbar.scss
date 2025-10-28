@@ -1,0 +1,138 @@
+// src/components/Navbar.scss
+
+.navbar {
+  width: 100%;
+  background-color: #2c3e50;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.login-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  color: white;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.role-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  &.admin {
+    background-color: #e74c3c;
+    color: white;
+  }
+
+  &.gebruiker {
+    background-color: #3498db;
+    color: white;
+  }
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.btn-user {
+  background-color: #3498db;
+  color: white;
+
+  &:hover {
+    background-color: #2980b9;
+  }
+}
+
+.btn-admin {
+  background-color: #e74c3c;
+  color: white;
+
+  &:hover {
+    background-color: #c0392b;
+  }
+}
+
+.btn-logout {
+  background-color: #95a5a6;
+  color: white;
+
+  &:hover {
+    background-color: #7f8c8d;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .login-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn {
+    flex: 1;
+  }
+
+  .user-info {
+    flex-direction: column;
+    text-align: center;
+  }
+}

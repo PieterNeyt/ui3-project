@@ -1,0 +1,22 @@
+{
+  "verdiepingen": [
+    {
+      "id": "1",
+      "naam": "Kelder",
+      "width": 600,
+      "height": 400,
+      "x": 0,
+      "y": 0,
+      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een dompelpomp"
+    },
+    {
+      "id": "2",
+      "naam": "Gelijkvloers",
+      "width": 800,
+      "height": 600,
+      "x": 0,
+      "y": 0,
+      "omschrijving": "Bevat woonkamer en keuken"
+    }
+  ]
+}
