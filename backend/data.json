@@ -1,22 +1,40 @@
 {
-  "verdiepingen": [
+  "floors": [
     {
-      "id": "1",
       "naam": "Kelder",
-      "width": 600,
-      "height": 400,
-      "x": 0,
-      "y": 0,
-      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een dompelpomp"
+      "width": 800,
+      "height": 600,
+      "x": 50,
+      "y": 50,
+      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een d",
+      "id": "1"
     },
     {
       "id": "2",
       "naam": "Gelijkvloers",
-      "width": 800,
-      "height": 600,
+      "width": 1000,
+      "height": 800,
       "x": 0,
       "y": 0,
-      "omschrijving": "Bevat woonkamer en keuken"
+      "omschrijving": "Hoofdverdieping met woonkamer en keuken"
+    },
+    {
+      "id": "3",
+      "naam": "Eerste verdieping",
+      "width": 900,
+      "height": 700,
+      "x": 50,
+      "y": 100,
+      "omschrijving": "Slaapkamers en badkamer"
+    },
+    {
+      "naam": "zerzer",
+      "width": 100,
+      "height": 1000,
+      "x": 50,
+      "y": 5,
+      "omschrijving": "aaaaaaaaaaaaa",
+      "id": "c3dd5656-39a7-4445-a4df-cda3f63dc27f"
     }
   ]
 }

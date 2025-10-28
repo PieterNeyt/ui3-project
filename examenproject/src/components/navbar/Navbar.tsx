@@ -6,15 +6,28 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
+import { Link as RouterLink } from 'react-router';
 import { useAuth } from '../../context/useAuth';
 
 const Navbar: React.FC = () => {
-    const { user, loginAsUser, loginAsAdmin, logout, isLoggedIn } = useAuth();
+    const { user, loginAsUser, loginAsAdmin, logout, isLoggedIn, isAdmin } = useAuth();
 
     return (
         <AppBar position="fixed" color="primary" elevation={3}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="h6">SmartNest</Typography>
+                <Typography variant="h6" component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                    SmartNest
+                </Typography>
+
+                {isLoggedIn() && (
+                    <Box display="flex" gap={2}>
+                        {isAdmin() && (
+                            <Button color="inherit" component={RouterLink} to="/floors">
+                                Verdiepingen
+                            </Button>
+                        )}
+                    </Box>
+                )}
 
                 {isLoggedIn() ? (
                     <Box display="flex" alignItems="center" gap={2}>

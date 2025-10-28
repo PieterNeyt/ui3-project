@@ -8,7 +8,7 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
 
-    const loginAsUser = () => setUser({ username: "Jan Peters", role: "gebruiker" });
+    const loginAsUser = () => setUser({ username: "Pieter Neyt", role: "gebruiker" });
     const loginAsAdmin = () => setUser({ username: "Admin User", role: "admin" });
     const logout = () => setUser(null);
 
