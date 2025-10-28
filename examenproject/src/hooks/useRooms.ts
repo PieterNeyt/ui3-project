@@ -1,4 +1,3 @@
-// src/hooks/useRooms.ts
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { roomService } from '../services/roomService';
 import type {RoomFormData} from '../types/room';
@@ -16,6 +15,13 @@ export const useRoom = (id: string) => {
     return useQuery({
         queryKey: ['rooms', id],
         queryFn: () => roomService.getRoom(id),
+    });
+};
+
+export const useRooms = () => {
+    return useQuery({
+        queryKey: ['rooms'],
+        queryFn: () => roomService.getRooms(),
     });
 };
 

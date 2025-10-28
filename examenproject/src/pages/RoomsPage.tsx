@@ -13,7 +13,7 @@ import {
     Breadcrumbs,
     Link,
 } from '@mui/material';
-import { Edit, Delete, Add, Home } from '@mui/icons-material';
+import { Edit, Delete, Add, Home, Settings } from '@mui/icons-material';
 import { Link as RouterLink, useParams } from 'react-router';
 import { useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom } from '../hooks/useRooms';
 import { useFloors } from '../hooks/useFloors';
@@ -220,6 +220,14 @@ export const RoomsPage: React.FC = () => {
                                 disabled={createRoomMutation.isPending || updateRoomMutation.isPending}
                             >
                                 <Edit />
+                            </IconButton>
+                            <IconButton
+                                color="secondary"
+                                component={RouterLink}
+                                to={`/rooms/${room.id}/devices`}
+                                title="Domotica Controls Beheren"
+                            >
+                                <Settings />
                             </IconButton>
                             <IconButton
                                 color="error"

@@ -30,6 +30,11 @@ export const roomService = {
         });
         return response.data;
     },
+    // Get all rooms
+    getRooms: async (): Promise<Room[]> => {
+        const response = await api.get('/rooms');
+        return response.data;
+    },
 
     // Update room
     updateRoom: async (id: string, roomData: RoomFormData): Promise<Room> => {

@@ -11,12 +11,13 @@ import {
     CardContent,
     CardActions,
 } from '@mui/material';
-import { Edit, Delete, Add } from '@mui/icons-material';
+import {Edit, Delete, Add} from '@mui/icons-material';
 import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../hooks/useFloors';
 import { FloorForm } from '../components/floor/FloorForm';
 import { FloorPreview } from '../components/floor/FloorPreview';
 import type { Floor, FloorFormData } from '../types/floor';
 import { useAuth } from '../context/useAuth';
+
 
 export const FloorsPage: React.FC = () => {
     const { isAdmin } = useAuth();
@@ -87,6 +88,7 @@ export const FloorsPage: React.FC = () => {
                 textAlign: 'center',
             }}
         >
+
             <Box
                 display="flex"
                 justifyContent="space-between"

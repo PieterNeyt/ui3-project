@@ -53,7 +53,7 @@
       "verdiepingId": "2",
       "width": 400,
       "height": 500,
-      "x": 5,
+      "x": 500,
       "y": 150,
       "omschrijving": "Gezellige woonkamer met open haard",
       "id": "2"
@@ -81,7 +81,7 @@
     {
       "naam": "zolder toilet",
       "verdiepingId": "0207324e-bdda-473b-9e3d-b45c7f78b168",
-      "width": 5,
+      "width": 50,
       "height": 500,
       "x": 50,
       "y": 0,
@@ -97,6 +97,278 @@
       "x": 0,
       "y": 0,
       "omschrijving": ""
+    },
+    {
+      "id": "686f90d2-894e-4747-8908-2ab716511495",
+      "naam": "studio",
+      "verdiepingId": "1",
+      "width": 500,
+      "height": 500,
+      "x": 50,
+      "y": 50,
+      "omschrijving": ""
+    }
+  ],
+  "devices": [
+    {
+      "id": "2",
+      "naam": "Thermostaat woonkamer",
+      "type": "verwarming",
+      "upcCode": "2345678901234",
+      "kamerId": "2",
+      "x": 400,
+      "y": 200,
+      "omschrijving": "Nest Thermostaat",
+      "defaultWaarde": {
+        "temperature": 16
+      },
+      "waarde": {
+        "temperature": 21
+      }
+    },
+    {
+      "id": "3",
+      "naam": "Voordeur",
+      "type": "deurslot",
+      "upcCode": "3456789012345",
+      "kamerId": "2",
+      "x": 50,
+      "y": 150,
+      "omschrijving": "Smart Lock Pro",
+      "defaultWaarde": {
+        "locked": false
+      },
+      "waarde": {
+        "locked": true
+      }
+    },
+    {
+      "id": "4",
+      "naam": "Woonkamer audio",
+      "type": "audio",
+      "upcCode": "4567890123456",
+      "kamerId": "2",
+      "x": 300,
+      "y": 300,
+      "omschrijving": "Sonos Speaker",
+      "defaultWaarde": {
+        "volume": 0,
+        "playlist": "classic"
+      },
+      "waarde": {
+        "volume": 12,
+        "playlist": "jazz"
+      }
+    },
+    {
+      "id": "33dd4a72-8e79-480b-89ca-e5a1c9f26489",
+      "naam": "eazezaze",
+      "type": "verwarming",
+      "upcCode": "1234567891011",
+      "kamerId": "1",
+      "x": 43.5,
+      "y": 76.625,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "temperature": 16
+      },
+      "waarde": {
+        "temperature": 16
+      }
+    },
+    {
+      "id": "475b18c8-60e4-494c-a7c5-08245d0ea2bc",
+      "naam": "Woonkamer",
+      "type": "audio",
+      "upcCode": "1010113132131",
+      "kamerId": "1",
+      "x": 43.5,
+      "y": 50,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "volume": 4,
+        "playlist": "jazz"
+      },
+      "waarde": {
+        "volume": 4,
+        "playlist": "jazz"
+      }
+    },
+    {
+      "id": "c4c76360-0b81-4f77-b00f-70b10018e56d",
+      "naam": "zerzer",
+      "type": "audio",
+      "upcCode": "1111111111111",
+      "kamerId": "2",
+      "x": 0,
+      "y": 0,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "volume": 15,
+        "playlist": "rock"
+      },
+      "waarde": {
+        "volume": 15,
+        "playlist": "rock"
+      }
+    },
+    {
+      "id": "4d3c9b81-6a70-4860-9555-a4f5e52a6561",
+      "naam": "zolder toilet",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "2",
+      "x": 156.5,
+      "y": 98.625,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": true
+      },
+      "waarde": {
+        "locked": true
+      }
+    },
+    {
+      "id": "a8172e57-437b-4cb7-aabd-d26e1aab0d41",
+      "naam": "Woonkamer",
+      "type": "audio",
+      "upcCode": "1111111111111",
+      "kamerId": "7c94098c-9954-4255-adfd-83316890f164",
+      "x": 11.0909423828125,
+      "y": 20.102279663085938,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "volume": 11,
+        "playlist": "jazz"
+      },
+      "waarde": {
+        "volume": 11,
+        "playlist": "jazz"
+      }
+    },
+    {
+      "id": "d8d87639-7bcb-4254-99d1-2503e1d4af63",
+      "naam": "hoofddeur",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 0,
+      "y": 20,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": true
+      },
+      "waarde": {
+        "locked": true
+      }
+    },
+    {
+      "id": "1a3e5ac1-b237-4979-bdad-3c2bf75b3e52",
+      "naam": "lamp",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 155,
+      "y": 181,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      }
+    },
+    {
+      "id": "da8827b2-5a81-463a-8c80-239772aabd28",
+      "naam": "zolder toilet",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 180,
+      "y": 136,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 37
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      }
+    },
+    {
+      "id": "c248aeef-a657-4fe1-804c-1056b2e2b45a",
+      "naam": "zolder toilet",
+      "type": "audio",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 89,
+      "y": 264,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "volume": 0,
+        "playlist": "electronic"
+      },
+      "waarde": {
+        "volume": 0,
+        "playlist": "electronic"
+      }
+    },
+    {
+      "id": "87de35bf-8424-49d8-9e95-2b77f108e5b7",
+      "naam": "Woonkamer",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 32,
+      "y": 0,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": false
+      },
+      "waarde": {
+        "locked": false
+      }
+    },
+    {
+      "id": "e8b3916b-8c60-4b0f-812b-b5d0512d3afd",
+      "naam": "Woonkamer",
+      "type": "verwarming",
+      "upcCode": "1111111111111",
+      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
+      "x": 195,
+      "y": 246,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "temperature": 30
+      },
+      "waarde": {
+        "temperature": 30
+      }
+    }
+  ],
+  "playlists": [
+    {
+      "id": "1",
+      "naam": "classic"
+    },
+    {
+      "id": "2",
+      "naam": "rock"
+    },
+    {
+      "id": "3",
+      "naam": "jazz"
+    },
+    {
+      "id": "4",
+      "naam": "electronic"
+    },
+    {
+      "id": "5",
+      "naam": "pop"
     }
   ]
 }
