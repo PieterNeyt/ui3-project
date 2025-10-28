@@ -136,11 +136,18 @@ export const FloorsPage: React.FC = () => {
                 </Alert>
             )}
 
-
             <Box
-                display="grid"
-                gridTemplateColumns="repeat(3, 1fr)"
-                gap={3}
+                sx={{
+                    display: 'grid',
+                    gridTemplateColumns: {
+                        xs: '1fr',
+                        sm: 'repeat(2, 1fr)',
+                        md: 'repeat(3, 1fr)'
+                    },
+                    gap: 3,
+                    width: '100%',
+                    maxWidth: 1200
+                }}
             >
                 {floors?.map((floor) => (
                     <Card key={floor.id}>

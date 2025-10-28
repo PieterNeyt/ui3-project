@@ -1,27 +1,39 @@
 import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
+import { useNavigate } from 'react-router';
 import type {Floor} from '../../types/floor';
 
 interface FloorPreviewProps {
     floor: Floor;
     scale?: number;
     onClick?: (floor: Floor) => void;
+    showClickable?: boolean;
 }
 
 export const FloorPreview: React.FC<FloorPreviewProps> = ({
                                                               floor,
                                                               scale = 0.5,
                                                               onClick,
+                                                              showClickable = true,
                                                           }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        if (showClickable) {
+            navigate(`/floors/${floor.id}/rooms`);
+        }
+        onClick?.(floor);
+    };
+
     return (
         <Paper
             elevation={2}
             sx={{
                 p: 2,
-                cursor: onClick ? 'pointer' : 'default',
-                '&:hover': onClick ? { bgcolor: 'action.hover' } : {},
+                cursor: showClickable ? 'pointer' : 'default',
+                '&:hover': showClickable ? { bgcolor: 'action.hover' } : {},
             }}
-            onClick={() => onClick?.(floor)}
+            onClick={handleClick}
         >
             <Typography variant="h6" gutterBottom>
                 {floor.naam}
@@ -69,6 +81,12 @@ export const FloorPreview: React.FC<FloorPreviewProps> = ({
             <Typography variant="body2" sx={{ mt: 1 }}>
                 Positie: ({floor.x}, {floor.y}) | Afmeting: {floor.width} × {floor.height}
             </Typography>
+
+            {showClickable && (
+                <Typography variant="body2" color="primary" sx={{ mt: 1, fontWeight: 'bold' }}>
+                    Klik om kamers te beheren →
+                </Typography>
+            )}
         </Paper>
     );
 };

@@ -1,13 +1,13 @@
 {
   "floors": [
     {
+      "id": "1",
       "naam": "Kelder",
       "width": 800,
       "height": 600,
       "x": 50,
       "y": 50,
-      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een d",
-      "id": "1"
+      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een dompelpomp"
     },
     {
       "id": "2",
@@ -28,13 +28,75 @@
       "omschrijving": "Slaapkamers en badkamer"
     },
     {
-      "naam": "zerzer",
+      "id": "0207324e-bdda-473b-9e3d-b45c7f78b168",
+      "naam": "zolder",
       "width": 100,
       "height": 1000,
       "x": 50,
-      "y": 5,
-      "omschrijving": "aaaaaaaaaaaaa",
-      "id": "c3dd5656-39a7-4445-a4df-cda3f63dc27f"
+      "y": 0,
+      "omschrijving": ""
+    }
+  ],
+  "rooms": [
+    {
+      "id": "1",
+      "naam": "Keuken",
+      "verdiepingId": "2",
+      "width": 300,
+      "height": 200,
+      "x": 100,
+      "y": 100,
+      "omschrijving": "Moderne keuken met alle voorzieningen"
+    },
+    {
+      "naam": "Woonkamer",
+      "verdiepingId": "2",
+      "width": 400,
+      "height": 500,
+      "x": 5,
+      "y": 150,
+      "omschrijving": "Gezellige woonkamer met open haard",
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "naam": "Slaapkamer 1",
+      "verdiepingId": "3",
+      "width": 350,
+      "height": 250,
+      "x": 100,
+      "y": 100,
+      "omschrijving": "Hoofdslaapkamer met eigen badkamer"
+    },
+    {
+      "id": "4",
+      "naam": "Badkamer",
+      "verdiepingId": "3",
+      "width": 200,
+      "height": 150,
+      "x": 500,
+      "y": 100,
+      "omschrijving": "Gemeenschappelijke badkamer"
+    },
+    {
+      "naam": "zolder toilet",
+      "verdiepingId": "0207324e-bdda-473b-9e3d-b45c7f78b168",
+      "width": 5,
+      "height": 500,
+      "x": 50,
+      "y": 0,
+      "omschrijving": "",
+      "id": "8655f105-9456-41a9-b272-a2d962744397"
+    },
+    {
+      "id": "7c94098c-9954-4255-adfd-83316890f164",
+      "naam": "zrtretert",
+      "verdiepingId": "3",
+      "width": 50,
+      "height": 50,
+      "x": 0,
+      "y": 0,
+      "omschrijving": ""
     }
   ]
 }
