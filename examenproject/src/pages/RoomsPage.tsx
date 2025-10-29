@@ -75,11 +75,11 @@ export const RoomsPage: React.FC = () => {
         setEditingRoom(null);
     };
 
-    if (!isAdmin() && !isGebruiker) {
+    if (!isAdmin() && !isGebruiker()) {
         return (
-            <Container sx={{mt: 12, mb: 4}}>
+            <Container sx={{ mt: 12, mb: 4 }}>
                 <Alert severity="error">
-                    Je hebt geen toegang tot deze pagina. Log in als admin.
+                    Je hebt geen toegang tot deze pagina. Log in als gebruiker of admin.
                 </Alert>
             </Container>
         );

@@ -27,7 +27,7 @@ import {useAuth} from "../context/useAuth.tsx";
 export const DevicesPage: React.FC = () => {
 
     const { kamerId } = useParams<{ kamerId: string }>();
-    const { isAdmin } = useAuth();
+    const { isAdmin, isGebruiker } = useAuth();
     const { data: floors } = useFloors();
     const { data: rooms } = useRooms();
     const { data: devices, error, isLoading, refetch } = useDevicesByRoom(kamerId || '');
@@ -74,7 +74,6 @@ export const DevicesPage: React.FC = () => {
                         ...data,
                         // Zorg ervoor dat waarde wordt bijgewerkt met nieuwe defaultWaarde
                         waarde: data.defaultWaarde,
-                        // Parse coordinaten naar numbers (voor komma problemen)
                         x: Number(data.x),
                         y: Number(data.y),
                     } as Partial<Device>
@@ -118,7 +117,15 @@ export const DevicesPage: React.FC = () => {
         }
     };
 
-
+    if (!isAdmin() && !isGebruiker()) {
+        return (
+            <Container sx={{ mt: 12, mb: 4 }}>
+                <Alert severity="error">
+                    Je hebt geen toegang tot deze pagina. Log in als gebruiker of admin.
+                </Alert>
+            </Container>
+        );
+    }
 
     if (!kamerId || !currentRoom || !currentFloor) {
         return (

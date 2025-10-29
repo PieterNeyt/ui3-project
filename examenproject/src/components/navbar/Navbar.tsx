@@ -1,4 +1,3 @@
-// src/components/navbar/Navbar.tsx
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -32,6 +31,10 @@ const Navbar: React.FC = () => {
 
                         <Button color="inherit" component={RouterLink} to="/floors">
                             Verdiepingen
+                        </Button>
+
+                        <Button color="inherit" component={RouterLink} to="/scenes">
+                            scenes
                         </Button>
 
                     </Box>

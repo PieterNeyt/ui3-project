@@ -1,0 +1,64 @@
+import axios from 'axios';
+import type { Scene, SceneFormData } from '../types/scene';
+
+const API_BASE_URL = 'http://localhost:3001';
+
+const api = axios.create({
+    baseURL: API_BASE_URL,
+});
+
+export const sceneService = {
+    // Get all scenes
+    getScenes: async (): Promise<Scene[]> => {
+        const response = await api.get('/scenes');
+        return response.data;
+    },
+
+    // Get single scene
+    getScene: async (id: string): Promise<Scene> => {
+        const response = await api.get(`/scenes/${id}`);
+        return response.data;
+    },
+
+    // Create scene
+    createScene: async (sceneData: SceneFormData): Promise<Scene> => {
+        const now = new Date().toISOString();
+        const sceneWithValues = {
+            ...sceneData,
+            id: crypto.randomUUID(),
+            createdAt: now,
+            updatedAt: now,
+            createdBy: 'current-user-id', // Dit zou uit auth context komen
+        };
+        const response = await api.post('/scenes', sceneWithValues);
+        return response.data;
+    },
+
+    // Update scene
+    updateScene: async (id: string, sceneData: Partial<SceneFormData>): Promise<Scene> => {
+        const dataWithTimestamp = {
+            ...sceneData,
+            updatedAt: new Date().toISOString(),
+        };
+        const response = await api.patch(`/scenes/${id}`, dataWithTimestamp);
+        return response.data;
+    },
+
+    // Delete scene
+    deleteScene: async (id: string): Promise<void> => {
+        await api.delete(`/scenes/${id}`);
+    },
+
+    // Activate scene
+    activateScene: async (id: string): Promise<void> => {
+        const scene = await sceneService.getScene(id);
+
+        // Update alle devices in de scene met hun waarden
+        for (const control of scene.controls) {
+            await axios.patch(`${API_BASE_URL}/devices/${control.deviceId}`, {
+                waarde: control.waarde,
+                updatedAt: new Date().toISOString(),
+            });
+        }
+    },
+};

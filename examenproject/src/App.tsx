@@ -1,4 +1,3 @@
-// src/App.tsx
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Navbar from "./components/navbar/Navbar";
@@ -10,6 +9,7 @@ import { RoomsPage } from "./pages/RoomsPage";
 import { Box, CssBaseline } from "@mui/material";
 import { DevicesPage } from "./pages/DevicesPage.tsx";
 import {DashboardPage} from "./pages/DashboardPage.tsx";
+import {ScenesPage} from "./pages/ScenesPage.tsx";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +32,7 @@ function App() {
                                 <Route path="/floors" element={<FloorsPage />} />
                                 <Route path="/floors/:verdiepingId/rooms" element={<RoomsPage />} />
                                 <Route path="/rooms/:kamerId/devices" element={<DevicesPage />} />
+                                <Route path="/scenes" element={<ScenesPage />} />
                             </Routes>
                         </Box>
                     </BrowserRouter>

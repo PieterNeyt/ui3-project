@@ -20,8 +20,7 @@ import {
     Tab,
     Alert,
     Snackbar,
-    TextField,
-    Paper,
+    TextField
 } from '@mui/material';
 import { Favorite, FavoriteBorder, Edit, Settings, Search } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router';
@@ -73,7 +72,6 @@ export const DashboardPage: React.FC = () => {
     const [tabValue, setTabValue] = useState(0);
     const [favorites, setFavorites] = useState<Set<string>>(new Set());
     const [snackbar, setSnackbar] = useState({ open: false, message: '' });
-    const [viewMode, setViewMode] = useState<'dashboard' | 'floorplan'>('dashboard');
 
     // Filter devices
     const filteredDevices = useMemo(() => {
@@ -161,9 +159,6 @@ export const DashboardPage: React.FC = () => {
                 onSuccess: () => {
                     setSnackbar({ open: true, message: `${device.naam} bijgewerkt` });
                 },
-                onError: (error) => {
-                    setSnackbar({ open: true, message: `Fout bij bijwerken: ${error.message}` });
-                }
             }
         );
     };
@@ -341,74 +336,6 @@ export const DashboardPage: React.FC = () => {
         }
     };
 
-    const renderFloorPlanView = () => {
-        return (
-            <Box>
-                <Typography variant="h6" gutterBottom>
-                    Platgrond Weergave
-                </Typography>
-                <Alert severity="info" sx={{ mb: 2 }}>
-                    Selecteer een verdieping om de platgrond te zien
-                </Alert>
-
-                <Box sx={{
-                    display: 'flex',
-                    flexWrap: 'wrap',
-                    gap: 3,
-                    justifyContent: { xs: 'center', md: 'flex-start' }
-                }}>
-                    {floors.map(floor => (
-                        <Paper
-                            key={floor.id}
-                            elevation={2}
-                            sx={{
-                                p: 2,
-                                width: { xs: '100%', sm: 'calc(50% - 12px)', md: 'calc(50% - 12px)' },
-                                maxWidth: 400
-                            }}
-                        >
-                            <Typography variant="h6" gutterBottom>
-                                {floor.naam}
-                            </Typography>
-                            <Box
-                                sx={{
-                                    position: 'relative',
-                                    width: '100%',
-                                    height: 200,
-                                    border: '2px solid',
-                                    borderColor: 'divider',
-                                    bgcolor: 'grey.100',
-                                }}
-                            >
-                                <Box
-                                    sx={{
-                                        width: '100%',
-                                        height: '100%',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        color: 'text.secondary',
-                                    }}
-                                >
-                                    Platgrond van {floor.naam}
-                                </Box>
-                            </Box>
-                            <Button
-                                variant="outlined"
-                                fullWidth
-                                sx={{ mt: 1 }}
-                                component={RouterLink}
-                                to={`/floors/${floor.id}/rooms`}
-                            >
-                                Bekijk Kamers
-                            </Button>
-                        </Paper>
-                    ))}
-                </Box>
-            </Box>
-        );
-    };
-
     const renderDashboardView = () => {
         return (
             <Box sx={{
@@ -503,21 +430,6 @@ export const DashboardPage: React.FC = () => {
                 </Typography>
             </Box>
 
-            {/* View Mode Toggle */}
-            <Box sx={{ mb: 3, display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-                <Button
-                    variant={viewMode === 'dashboard' ? 'contained' : 'outlined'}
-                    onClick={() => setViewMode('dashboard')}
-                >
-                    Dashboard Weergave
-                </Button>
-                <Button
-                    variant={viewMode === 'floorplan' ? 'contained' : 'outlined'}
-                    onClick={() => setViewMode('floorplan')}
-                >
-                    Platgrond Weergave
-                </Button>
-            </Box>
 
             {/* Search and Filter Section */}
             <Card sx={{ mb: 3 }}>
@@ -594,7 +506,6 @@ export const DashboardPage: React.FC = () => {
                 </CardContent>
             </Card>
 
-            {viewMode === 'dashboard' ? (
                 <>
                     {/* Tabs */}
                     <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 2 }}>
@@ -764,9 +675,7 @@ export const DashboardPage: React.FC = () => {
                         </Box>
                     </TabPanel>
                 </>
-            ) : (
-                renderFloorPlanView()
-            )}
+
 
             {/* Snackbar voor feedback */}
             <Snackbar
