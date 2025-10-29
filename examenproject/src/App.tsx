@@ -1,31 +1,40 @@
+// src/App.tsx
 import "./App.css";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router";
 import Navbar from "./components/navbar/Navbar";
 import { AuthProvider } from "./context/AuthProvider";
+import { CustomThemeProvider } from "./context/ThemeProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { FloorsPage } from "./pages/FloorsPage";
 import { RoomsPage } from "./pages/RoomsPage";
-import { Box } from "@mui/material";
-import {DevicesPage} from "./pages/DevicesPage.tsx";
+import { Box, CssBaseline } from "@mui/material";
+import { DevicesPage } from "./pages/DevicesPage.tsx";
 
 const queryClient = new QueryClient();
 
 function App() {
     return (
         <QueryClientProvider client={queryClient}>
-            <AuthProvider>
-                <BrowserRouter>
-                    <Navbar />
-                    <Box component="main" sx={{ minHeight: '100vh' }}>
-                        <Routes>
-                            <Route path="/" element={<Navigate to="/floors" />} />
-                            <Route path="/floors" element={<FloorsPage />} />
-                            <Route path="/floors/:verdiepingId/rooms" element={<RoomsPage />} />
-                            <Route path="/rooms/:kamerId/devices" element={<DevicesPage />} />
-                        </Routes>
-                    </Box>
-                </BrowserRouter>
-            </AuthProvider>
+            <CustomThemeProvider>
+                <CssBaseline />
+                <AuthProvider>
+                    <BrowserRouter>
+                        <Navbar />
+                        <Box component="main" sx={{
+                            minHeight: '100vh',
+                            bgcolor: 'background.default',
+                            color: 'text.primary',
+                        }}>
+                            <Routes>
+                                <Route path="/" element={<Navigate to="/floors" />} />
+                                <Route path="/floors" element={<FloorsPage />} />
+                                <Route path="/floors/:verdiepingId/rooms" element={<RoomsPage />} />
+                                <Route path="/rooms/:kamerId/devices" element={<DevicesPage />} />
+                            </Routes>
+                        </Box>
+                    </BrowserRouter>
+                </AuthProvider>
+            </CustomThemeProvider>
         </QueryClientProvider>
     );
 }

@@ -125,7 +125,6 @@ export const RoomsPage: React.FC = () => {
                         variant="h4"
                         component="h1"
                         gutterBottom
-                        sx={{ color: 'black' }}
                     >
                         Kamers Beheren - {currentFloor.naam}
                     </Typography>
@@ -172,7 +171,7 @@ export const RoomsPage: React.FC = () => {
             <Typography
                 variant="h5"
                 gutterBottom
-                sx={{ mt: 4, color: 'black' }}
+                sx={{ mt: 4 }}
             >
                 Alle Kamers ({rooms?.length || 0})
             </Typography>

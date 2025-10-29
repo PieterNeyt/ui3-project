@@ -161,7 +161,7 @@ export const DevicesPage: React.FC = () => {
             </Breadcrumbs>
 
             <Box mb={4}>
-                <Typography variant="h4" component="h1" gutterBottom  sx={{ color: 'black' }}>
+                <Typography variant="h4" component="h1" gutterBottom >
                     Domotica Controls - {currentRoom.naam}
                 </Typography>
                 {currentRoom.omschrijving && (
@@ -197,7 +197,7 @@ export const DevicesPage: React.FC = () => {
             )}
 
             {/* Devices List */}
-            <Typography variant="h5" gutterBottom sx={{ mt: 4,color: 'black' }} >
+            <Typography variant="h5" gutterBottom sx={{ mt: 4 }} >
                 Alle Controls ({devices?.length || 0})
             </Typography>
 

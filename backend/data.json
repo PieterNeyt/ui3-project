@@ -347,6 +347,24 @@
       "waarde": {
         "temperature": 30
       }
+    },
+    {
+      "id": "459e2a63-7aa7-4408-aaaf-5f2daf8cd9e5",
+      "naam": "lamp",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "2",
+      "x": 168,
+      "y": 170,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      }
     }
   ],
   "playlists": [
