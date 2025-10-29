@@ -8,13 +8,13 @@ interface AuthProviderProps {
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
 
-    const loginAsUser = () => setUser({ username: "Pieter Neyt", role: "gebruiker" });
+    const loginAsUser = () => setUser({ username: "Pieter Neyt", role: "user" });
     const loginAsAdmin = () => setUser({ username: "Admin User", role: "admin" });
     const logout = () => setUser(null);
 
     const isLoggedIn = () => user !== null;
     const isAdmin = () => user?.role === "admin";
-    const isGebruiker = () => user?.role === "gebruiker";
+    const isGebruiker = () => user?.role === "user";
 
     const value: AuthContextType = {
         user,

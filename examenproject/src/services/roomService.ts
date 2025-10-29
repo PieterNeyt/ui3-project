@@ -1,5 +1,6 @@
 import axios from 'axios';
-import type {Room, RoomFormData} from '../types/room';
+import type { Room, RoomFormData } from '../types/room';
+import { deviceService } from './deviceService';
 
 const API_BASE_URL = 'http://localhost:3001';
 
@@ -30,6 +31,7 @@ export const roomService = {
         });
         return response.data;
     },
+
     // Get all rooms
     getRooms: async (): Promise<Room[]> => {
         const response = await api.get('/rooms');
@@ -44,6 +46,17 @@ export const roomService = {
 
     // Delete room
     deleteRoom: async (id: string): Promise<void> => {
-        await api.delete(`/rooms/${id}`);
+        try {
+            const devices = await deviceService.getDevicesByRoom(id);
+
+            for (const device of devices) {
+                await deviceService.deleteDevice(device.id);
+            }
+
+            await api.delete(`/rooms/${id}`);
+        } catch (error) {
+            console.error('Error deleting room with associated devices:', error);
+            throw error;
+        }
     },
 };

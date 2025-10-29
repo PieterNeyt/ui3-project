@@ -2,6 +2,8 @@ import React from 'react';
 import { Box, Paper, Typography } from '@mui/material';
 import type {Floor} from '../../types/floor';
 import type {Room} from '../../types/room';
+import {useAuth} from "../../context/useAuth.tsx";
+import {useNavigate} from "react-router";
 
 interface FloorPlanProps {
     floor: Floor;
@@ -16,6 +18,9 @@ export const FloorPlan: React.FC<FloorPlanProps> = ({
                                                         onRoomClick,
                                                         scale = 1,
                                                     }) => {
+    const { isAdmin } = useAuth();
+    const navigate = useNavigate();
+
     return (
         <Paper elevation={3} sx={{ p: 3 }}>
             <Typography variant="h5" gutterBottom>
@@ -77,7 +82,13 @@ export const FloorPlan: React.FC<FloorPlanProps> = ({
                             textAlign: 'center',
                             p: 1,
                         }}
-                        onClick={() => onRoomClick?.(room)}
+                        onClick={() => {
+                            if (isAdmin()) {
+                                onRoomClick?.(room);
+                            }else {
+                                navigate(`/rooms/${room.id}/devices`);
+                            }
+                        }}
                     >
                         {room.naam}
                     </Box>

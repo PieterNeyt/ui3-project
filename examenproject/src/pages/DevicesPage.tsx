@@ -20,14 +20,14 @@ import { useFloors } from '../hooks/useFloors';
 import { RoomPlan } from '../components/device/RoomPlan';
 import { DeviceForm } from '../components/device/DeviceForm';
 import type { Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice, DeviceFormData } from '../types/device';
-import { useAuth } from '../context/useAuth';
 import type {Room} from "../types/room.ts";
 import type {Floor} from "../types/floor.ts";
+import {useAuth} from "../context/useAuth.tsx";
 
 export const DevicesPage: React.FC = () => {
-    const { isAdmin } = useAuth();
-    const { kamerId } = useParams<{ kamerId: string }>();
 
+    const { kamerId } = useParams<{ kamerId: string }>();
+    const { isAdmin } = useAuth();
     const { data: floors } = useFloors();
     const { data: rooms } = useRooms();
     const { data: devices, error, isLoading, refetch } = useDevicesByRoom(kamerId || '');
@@ -118,15 +118,7 @@ export const DevicesPage: React.FC = () => {
         }
     };
 
-    if (!isAdmin()) {
-        return (
-            <Container sx={{ mt: 12, mb: 4 }}>
-                <Alert severity="error">
-                    Je hebt geen toegang tot deze pagina. Log in als admin.
-                </Alert>
-            </Container>
-        );
-    }
+
 
     if (!kamerId || !currentRoom || !currentFloor) {
         return (
@@ -248,13 +240,14 @@ export const DevicesPage: React.FC = () => {
                             >
                                 <Edit />
                             </IconButton>
+                            {isAdmin() && (
                             <IconButton
                                 color="error"
                                 onClick={() => handleDeleteDevice(device.id)}
                                 disabled={deleteDeviceMutation.isPending}
                             >
                                 <Delete />
-                            </IconButton>
+                            </IconButton>)}
                         </CardActions>
                     </Card>
                 ))}

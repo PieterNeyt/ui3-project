@@ -24,19 +24,24 @@ export const deviceService = {
 
     // Create device
     createDevice: async (deviceData: DeviceFormData): Promise<Device> => {
-        // Set initial waarde equal to defaultWaarde
+        const now = new Date().toISOString();
         const deviceWithValues = {
             ...deviceData,
             id: crypto.randomUUID(),
             waarde: deviceData.defaultWaarde,
+            createdAt: now,
+            updatedAt: now,
         };
         const response = await api.post('/devices', deviceWithValues);
         return response.data;
     },
 
-    // Update device
     updateDevice: async (id: string, deviceData: Partial<Device>): Promise<Device> => {
-        const response = await api.patch(`/devices/${id}`, deviceData);
+        const dataWithTimestamp = {
+            ...deviceData,
+            updatedAt: new Date().toISOString(),
+        };
+        const response = await api.patch(`/devices/${id}`, dataWithTimestamp);
         return response.data;
     },
 

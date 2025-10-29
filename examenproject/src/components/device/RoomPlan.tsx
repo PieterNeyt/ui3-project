@@ -6,6 +6,7 @@ import type {Device, DeviceFormData} from '../../types/device';
 import { DeviceVisualization } from './DeviceVisualizations';
 import { DeviceForm } from './DeviceForm';
 import { useCreateDevice } from '../../hooks/useDevices';
+import {useAuth} from "../../context/useAuth.tsx";
 
 interface RoomPlanProps {
     room: Room;
@@ -26,8 +27,13 @@ export const RoomPlan: React.FC<RoomPlanProps> = ({
     const [showDeviceForm, setShowDeviceForm] = useState(false);
     const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
     const createDeviceMutation = useCreateDevice();
+    const { isAdmin } = useAuth();
 
     const handleRoomClick = (event: React.MouseEvent<HTMLDivElement>) => {
+        if (!isAdmin()) {
+            return;
+        }
+
         const rect = event.currentTarget.getBoundingClientRect();
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
@@ -50,13 +56,15 @@ export const RoomPlan: React.FC<RoomPlanProps> = ({
                 <Typography variant="h5">
                     {room.naam} - Domotica Controls
                 </Typography>
-                <Button
-                    variant="outlined"
-                    startIcon={<Add />}
-                    onClick={() => setShowDeviceForm(true)}
-                >
-                    Control Toevoegen
-                </Button>
+                {isAdmin() && (
+                    <Button
+                        variant="outlined"
+                        startIcon={<Add />}
+                        onClick={() => setShowDeviceForm(true)}
+                    >
+                        Control Toevoegen
+                    </Button>
+                )}
             </Box>
 
             <Box

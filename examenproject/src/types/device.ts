@@ -7,6 +7,8 @@ export interface BaseDevice {
     x: number;
     y: number;
     omschrijving?: string;
+    createdAt?: string;
+    updatedAt?: string;
 }
 
 export interface LightDevice extends BaseDevice {

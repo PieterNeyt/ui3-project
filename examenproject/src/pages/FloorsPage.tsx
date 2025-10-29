@@ -20,7 +20,7 @@ import { useAuth } from '../context/useAuth';
 
 
 export const FloorsPage: React.FC = () => {
-    const { isAdmin } = useAuth();
+    const { isAdmin, isGebruiker } = useAuth();
     const { data: floors, error, isLoading } = useFloors();
     const createFloorMutation = useCreateFloor();
     const updateFloorMutation = useUpdateFloor();
@@ -67,11 +67,11 @@ export const FloorsPage: React.FC = () => {
         setEditingFloor(null);
     };
 
-    if (!isAdmin()) {
+    if (!isAdmin() && !isGebruiker()) {
         return (
             <Container sx={{ mt: 12, mb: 4 }}>
                 <Alert severity="error">
-                    Je hebt geen toegang tot deze pagina. Log in als admin.
+                    Je hebt geen toegang tot deze pagina. Log in als gebruiker of admin.
                 </Alert>
             </Container>
         );
@@ -110,14 +110,16 @@ export const FloorsPage: React.FC = () => {
                     Verdiepingen Beheren
                 </Typography>
 
-                <Button
-                    variant="contained"
-                    startIcon={<Add />}
-                    onClick={() => setFormOpen(true)}
-                    sx={{ whiteSpace: 'nowrap' }}
-                >
-                    Nieuwe Verdieping
-                </Button>
+                {isAdmin() && (
+                    <Button
+                        variant="contained"
+                        startIcon={<Add />}
+                        onClick={() => setFormOpen(true)}
+                        sx={{ whiteSpace: 'nowrap' }}
+                    >
+                        Nieuwe Verdieping
+                    </Button>
+                )}
             </Box>
 
             {error && (
@@ -156,6 +158,7 @@ export const FloorsPage: React.FC = () => {
                         <CardContent>
                             <FloorPreview floor={floor} />
                         </CardContent>
+                        {isAdmin() && (
                         <CardActions>
                             <IconButton
                                 color="primary"
@@ -171,7 +174,7 @@ export const FloorsPage: React.FC = () => {
                             >
                                 <Delete />
                             </IconButton>
-                        </CardActions>
+                        </CardActions>)}
                     </Card>
                 ))}
             </Box>

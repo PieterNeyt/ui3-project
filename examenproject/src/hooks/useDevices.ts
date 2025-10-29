@@ -1,12 +1,13 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { deviceService } from '../services/deviceService';
-import type {Device} from '../types/device';
+import type { Device } from '../types/device';
+
 
 export const useDevicesByRoom = (kamerId: string) => {
     return useQuery({
         queryKey: ['devices', kamerId],
         queryFn: () => deviceService.getDevicesByRoom(kamerId),
-        refetchInterval: 30000, // Polling elke 30 seconden
+        refetchInterval: 30000,
         enabled: !!kamerId,
     });
 };
@@ -15,13 +16,14 @@ export const useDevice = (id: string) => {
     return useQuery({
         queryKey: ['devices', id],
         queryFn: () => deviceService.getDevice(id),
+        enabled: !!id,
     });
 };
 
 export const useDevices = () => {
     return useQuery({
-        queryKey: ['all-devices'],
-        queryFn: async () => {
+        queryKey: ['devices'],
+        queryFn: async (): Promise<Device[]> => {
             try {
                 const response = await fetch('http://localhost:3001/devices');
                 if (!response.ok) {
@@ -30,11 +32,13 @@ export const useDevices = () => {
                 return response.json();
             } catch (error) {
                 console.error('Error fetching devices:', error);
-                return [];
+                throw error;
             }
         },
+        refetchInterval: 30000,
     });
 };
+
 export const useCreateDevice = () => {
     const queryClient = useQueryClient();
 
@@ -42,6 +46,7 @@ export const useCreateDevice = () => {
         mutationFn: deviceService.createDevice,
         onSuccess: (data) => {
             queryClient.invalidateQueries({ queryKey: ['devices', data.kamerId] });
+            queryClient.invalidateQueries({ queryKey: ['devices'] });
         },
     });
 };
@@ -53,7 +58,11 @@ export const useUpdateDevice = () => {
         mutationFn: ({ id, data }: { id: string; data: Partial<Device> }) =>
             deviceService.updateDevice(id, data),
         onSuccess: (data) => {
+
             queryClient.invalidateQueries({ queryKey: ['devices', data.kamerId] });
+            queryClient.invalidateQueries({ queryKey: ['devices'] });
+
+            queryClient.invalidateQueries({ queryKey: ['devices', data.id] });
         },
     });
 };
@@ -64,6 +73,7 @@ export const useDeleteDevice = () => {
     return useMutation({
         mutationFn: deviceService.deleteDevice,
         onSuccess: () => {
+            // Invalideer alle device-related queries
             queryClient.invalidateQueries({ queryKey: ['devices'] });
         },
     });

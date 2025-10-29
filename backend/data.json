@@ -7,7 +7,7 @@
       "height": 600,
       "x": 50,
       "y": 50,
-      "omschrijving": "Staat onder water tot op enkelhoogte en bevat een dompelpomp"
+      "omschrijving": "Kelderruimte met wasplaats en opslag"
     },
     {
       "id": "2",
@@ -16,260 +16,196 @@
       "height": 800,
       "x": 0,
       "y": 0,
-      "omschrijving": "Hoofdverdieping met woonkamer en keuken"
-    },
-    {
-      "id": "3",
-      "naam": "Eerste verdieping",
-      "width": 900,
-      "height": 700,
-      "x": 50,
-      "y": 100,
-      "omschrijving": "Slaapkamers en badkamer"
-    },
-    {
-      "naam": "zolder",
-      "width": 500,
-      "height": 1000,
-      "x": 50,
-      "y": 0,
-      "omschrijving": "",
-      "id": "0207324e-bdda-473b-9e3d-b45c7f78b168"
+      "omschrijving": "Hoofdverdieping met woonkamer, keuken en inkomhal"
     }
   ],
   "rooms": [
     {
       "id": "1",
-      "naam": "Keuken",
-      "verdiepingId": "2",
-      "width": 300,
-      "height": 200,
+      "naam": "Wasplaats",
+      "verdiepingId": "1",
+      "width": 400,
+      "height": 300,
       "x": 100,
       "y": 100,
-      "omschrijving": "Moderne keuken met alle voorzieningen"
+      "omschrijving": "Kelder wasplaats met wasmachine en droogkast"
     },
     {
-      "naam": "Woonkamer",
-      "verdiepingId": "2",
-      "width": 400,
-      "height": 500,
-      "x": 500,
-      "y": 15,
-      "omschrijving": "Gezellige woonkamer met open haard",
-      "id": "2"
+      "id": "2",
+      "naam": "Opslag",
+      "verdiepingId": "1",
+      "width": 300,
+      "height": 400,
+      "x": 400,
+      "y": 100,
+      "omschrijving": "Kelder opslagruimte"
     },
     {
       "id": "3",
-      "naam": "Slaapkamer 1",
-      "verdiepingId": "3",
-      "width": 350,
-      "height": 250,
-      "x": 100,
+      "naam": "Woonkamer",
+      "verdiepingId": "2",
+      "width": 600,
+      "height": 400,
+      "x": 200,
       "y": 100,
-      "omschrijving": "Hoofdslaapkamer met eigen badkamer"
+      "omschrijving": "Gezellige woonkamer met zitplaatsen"
     },
     {
       "id": "4",
-      "naam": "Badkamer",
-      "verdiepingId": "3",
+      "naam": "Keuken",
+      "verdiepingId": "2",
+      "width": 400,
+      "height": 300,
+      "x": 100,
+      "y": 500,
+      "omschrijving": "Moderne keuken met eethoek"
+    },
+    {
+      "id": "5",
+      "naam": "Inkomhal",
+      "verdiepingId": "2",
       "width": 200,
       "height": 150,
-      "x": 500,
-      "y": 100,
-      "omschrijving": "Gemeenschappelijke badkamer"
-    },
-    {
-      "naam": "zolder toilet",
-      "verdiepingId": "0207324e-bdda-473b-9e3d-b45c7f78b168",
-      "width": 250,
-      "height": 500,
-      "x": 50,
+      "x": 0,
       "y": 0,
-      "omschrijving": "",
-      "id": "8655f105-9456-41a9-b272-a2d962744397"
+      "omschrijving": "Hoofdingang met garderobe"
     },
     {
-      "id": "7c94098c-9954-4255-adfd-83316890f164",
-      "naam": "zrtretert",
-      "verdiepingId": "3",
-      "width": 50,
+      "naam": "Woonkamer",
+      "verdiepingId": "1",
+      "width": 500,
       "height": 50,
       "x": 0,
       "y": 0,
-      "omschrijving": ""
-    },
-    {
-      "id": "686f90d2-894e-4747-8908-2ab716511495",
-      "naam": "studio",
-      "verdiepingId": "1",
-      "width": 500,
-      "height": 500,
-      "x": 50,
-      "y": 50,
-      "omschrijving": ""
+      "omschrijving": "",
+      "id": "daa39127-0db0-4b6a-96f6-c9534de6146e"
     }
   ],
   "devices": [
     {
+      "id": "1",
+      "naam": "Woonkamer verlichting",
+      "type": "licht",
+      "upcCode": "1234567890123",
+      "kamerId": "3",
+      "x": 300,
+      "y": 200,
+      "omschrijving": "Hoofdverlichting woonkamer",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 80
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 96
+      },
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2025-10-29T15:41:03.982Z"
+    },
+    {
       "id": "2",
       "naam": "Thermostaat woonkamer",
       "type": "verwarming",
-      "upcCode": "2345678901234",
-      "kamerId": "2",
+      "upcCode": "1234567890124",
+      "kamerId": "3",
       "x": 400,
-      "y": 200,
-      "omschrijving": "Nest Thermostaat",
+      "y": 100,
+      "omschrijving": "Smart thermostaat",
       "defaultWaarde": {
-        "temperature": 16
+        "temperature": 21
       },
       "waarde": {
         "temperature": 21
-      }
+      },
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2024-01-15T08:00:00.000Z"
     },
     {
       "id": "3",
-      "naam": "Voordeur",
+      "naam": "Voordeur slot",
       "type": "deurslot",
-      "upcCode": "3456789012345",
-      "kamerId": "2",
-      "x": 50,
-      "y": 150,
-      "omschrijving": "Smart Lock Pro",
+      "upcCode": "1234567890125",
+      "kamerId": "5",
+      "x": 0,
+      "y": 75,
+      "omschrijving": "Smart deurslot hoofdingang",
       "defaultWaarde": {
-        "locked": false
+        "locked": true
       },
       "waarde": {
         "locked": true
-      }
+      },
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2025-10-29T15:27:55.244Z"
     },
     {
       "id": "4",
-      "naam": "Woonkamer audio",
+      "naam": "Woonkamer speakers",
       "type": "audio",
-      "upcCode": "4567890123456",
-      "kamerId": "2",
-      "x": 300,
+      "upcCode": "1234567890126",
+      "kamerId": "3",
+      "x": 200,
       "y": 300,
-      "omschrijving": "Sonos Speaker",
+      "omschrijving": "Sonos sound system",
       "defaultWaarde": {
-        "volume": 0,
+        "volume": 25,
+        "playlist": "pop"
+      },
+      "waarde": {
+        "volume": 3,
         "playlist": "classic"
       },
-      "waarde": {
-        "volume": 12,
-        "playlist": "jazz"
-      }
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2025-10-29T15:41:24.610Z"
     },
     {
-      "id": "33dd4a72-8e79-480b-89ca-e5a1c9f26489",
-      "naam": "eazezaze",
-      "type": "verwarming",
-      "upcCode": "1234567891011",
+      "id": "5",
+      "naam": "Keuken verlichting",
+      "type": "licht",
+      "upcCode": "1234567890127",
+      "kamerId": "4",
+      "x": 200,
+      "y": 150,
+      "omschrijving": "LED spots keuken",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2024-01-15T08:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "naam": "Wasplaats verlichting",
+      "type": "licht",
+      "upcCode": "1234567890130",
       "kamerId": "1",
-      "x": 43.5,
-      "y": 76.625,
-      "omschrijving": "",
+      "x": 200,
+      "y": 150,
+      "omschrijving": "Functionele verlichting wasplaats",
       "defaultWaarde": {
-        "temperature": 16
+        "on_off": "off",
+        "brightness": 100
       },
       "waarde": {
-        "temperature": 16
-      }
-    },
-    {
-      "id": "475b18c8-60e4-494c-a7c5-08245d0ea2bc",
-      "naam": "Woonkamer",
-      "type": "audio",
-      "upcCode": "1010113132131",
-      "kamerId": "1",
-      "x": 43.5,
-      "y": 50,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "volume": 4,
-        "playlist": "jazz"
+        "on_off": "off",
+        "brightness": 100
       },
-      "waarde": {
-        "volume": 4,
-        "playlist": "jazz"
-      }
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2024-01-15T08:00:00.000Z"
     },
     {
-      "id": "c4c76360-0b81-4f77-b00f-70b10018e56d",
-      "naam": "zerzer",
-      "type": "audio",
-      "upcCode": "1111111111111",
-      "kamerId": "2",
-      "x": 0,
-      "y": 0,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "volume": 15,
-        "playlist": "rock"
-      },
-      "waarde": {
-        "volume": 15,
-        "playlist": "rock"
-      }
-    },
-    {
-      "id": "4d3c9b81-6a70-4860-9555-a4f5e52a6561",
-      "naam": "zolder toilet",
-      "type": "deurslot",
-      "upcCode": "1111111111111",
-      "kamerId": "2",
-      "x": 156.5,
-      "y": 98.625,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "locked": true
-      },
-      "waarde": {
-        "locked": true
-      }
-    },
-    {
-      "id": "a8172e57-437b-4cb7-aabd-d26e1aab0d41",
-      "naam": "Woonkamer",
-      "type": "audio",
-      "upcCode": "1111111111111",
-      "kamerId": "7c94098c-9954-4255-adfd-83316890f164",
-      "x": 11.0909423828125,
-      "y": 20.102279663085938,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "volume": 11,
-        "playlist": "jazz"
-      },
-      "waarde": {
-        "volume": 11,
-        "playlist": "jazz"
-      }
-    },
-    {
-      "id": "d8d87639-7bcb-4254-99d1-2503e1d4af63",
-      "naam": "hoofddeur",
-      "type": "deurslot",
-      "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 0,
-      "y": 20,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "locked": true
-      },
-      "waarde": {
-        "locked": true
-      }
-    },
-    {
-      "id": "1a3e5ac1-b237-4979-bdad-3c2bf75b3e52",
+      "id": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
       "naam": "lamp",
       "type": "licht",
       "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 155,
-      "y": 181,
+      "kamerId": "1",
+      "x": 136,
+      "y": 94,
       "omschrijving": "",
       "defaultWaarde": {
         "on_off": "on",
@@ -278,109 +214,29 @@
       "waarde": {
         "on_off": "on",
         "brightness": 100
-      }
-    },
-    {
-      "id": "da8827b2-5a81-463a-8c80-239772aabd28",
-      "naam": "zolder toilet",
-      "type": "licht",
-      "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 180,
-      "y": 136,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "on_off": "on",
-        "brightness": 37
       },
-      "waarde": {
-        "on_off": "on",
-        "brightness": 100
-      }
+      "createdAt": "2025-10-29T15:35:46.546Z",
+      "updatedAt": "2025-10-29T15:35:46.546Z"
     },
     {
-      "id": "c248aeef-a657-4fe1-804c-1056b2e2b45a",
-      "naam": "zolder toilet",
+      "id": "e247593a-a9c6-4b80-837a-0efb194534e4",
+      "naam": "Woonkamer",
       "type": "audio",
       "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 89,
-      "y": 264,
+      "kamerId": "1",
+      "x": 170,
+      "y": 115,
       "omschrijving": "",
       "defaultWaarde": {
-        "volume": 0,
-        "playlist": "electronic"
+        "volume": 13,
+        "playlist": "rock"
       },
       "waarde": {
-        "volume": 0,
-        "playlist": "electronic"
-      }
-    },
-    {
-      "id": "87de35bf-8424-49d8-9e95-2b77f108e5b7",
-      "naam": "Woonkamer",
-      "type": "deurslot",
-      "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 32,
-      "y": 0,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "locked": false
+        "volume": 6,
+        "playlist": "rock"
       },
-      "waarde": {
-        "locked": false
-      }
-    },
-    {
-      "id": "e8b3916b-8c60-4b0f-812b-b5d0512d3afd",
-      "naam": "Woonkamer",
-      "type": "verwarming",
-      "upcCode": "1111111111111",
-      "kamerId": "686f90d2-894e-4747-8908-2ab716511495",
-      "x": 195,
-      "y": 246,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "temperature": 30
-      },
-      "waarde": {
-        "temperature": 30
-      }
-    },
-    {
-      "id": "459e2a63-7aa7-4408-aaaf-5f2daf8cd9e5",
-      "naam": "lamp",
-      "type": "licht",
-      "upcCode": "1111111111111",
-      "kamerId": "2",
-      "x": 168,
-      "y": 170,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "on_off": "on",
-        "brightness": 100
-      },
-      "waarde": {
-        "on_off": "on",
-        "brightness": 100
-      }
-    },
-    {
-      "id": "b5816063-4f64-4d87-83a0-8ea166d93871",
-      "naam": "hoofddeur",
-      "type": "deurslot",
-      "upcCode": "1111111111111",
-      "kamerId": "8655f105-9456-41a9-b272-a2d962744397",
-      "x": 0,
-      "y": 375,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "locked": false
-      },
-      "waarde": {
-        "locked": false
-      }
+      "createdAt": "2025-10-29T15:36:04.542Z",
+      "updatedAt": "2025-10-29T15:41:18.788Z"
     }
   ],
   "playlists": [

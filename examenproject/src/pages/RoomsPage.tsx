@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
     Container,
     Typography,
@@ -13,21 +13,21 @@ import {
     Breadcrumbs,
     Link,
 } from '@mui/material';
-import { Edit, Delete, Add, Home, Settings } from '@mui/icons-material';
-import { Link as RouterLink, useParams } from 'react-router';
-import { useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom } from '../hooks/useRooms';
-import { useFloors } from '../hooks/useFloors';
-import { RoomForm } from '../components/room/RoomForm';
-import { FloorPlan } from '../components/room/FloorPlan';
+import {Edit, Delete, Add, Home, Settings} from '@mui/icons-material';
+import {Link as RouterLink, useParams} from 'react-router';
+import {useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom} from '../hooks/useRooms';
+import {useFloors} from '../hooks/useFloors';
+import {RoomForm} from '../components/room/RoomForm';
+import {FloorPlan} from '../components/room/FloorPlan';
 import type {Room, RoomFormData} from '../types/room';
-import { useAuth } from '../context/useAuth';
+import {useAuth} from '../context/useAuth';
 
 export const RoomsPage: React.FC = () => {
-    const { isAdmin } = useAuth();
-    const { verdiepingId } = useParams<{ verdiepingId: string }>();
+    const {isAdmin, isGebruiker} = useAuth();
+    const {verdiepingId} = useParams<{ verdiepingId: string }>();
 
-    const { data: floors } = useFloors();
-    const { data: rooms, error, isLoading } = useRoomsByFloor(verdiepingId || '');
+    const {data: floors} = useFloors();
+    const {data: rooms, error, isLoading} = useRoomsByFloor(verdiepingId || '');
     const createRoomMutation = useCreateRoom();
     const updateRoomMutation = useUpdateRoom();
     const deleteRoomMutation = useDeleteRoom();
@@ -48,7 +48,7 @@ export const RoomsPage: React.FC = () => {
     const handleUpdateRoom = (data: RoomFormData) => {
         if (editingRoom) {
             updateRoomMutation.mutate(
-                { id: editingRoom.id, data },
+                {id: editingRoom.id, data},
                 {
                     onSuccess: () => {
                         setFormOpen(false);
@@ -75,9 +75,9 @@ export const RoomsPage: React.FC = () => {
         setEditingRoom(null);
     };
 
-    if (!isAdmin()) {
+    if (!isAdmin() && !isGebruiker) {
         return (
-            <Container sx={{ mt: 12, mb: 4 }}>
+            <Container sx={{mt: 12, mb: 4}}>
                 <Alert severity="error">
                     Je hebt geen toegang tot deze pagina. Log in als admin.
                 </Alert>
@@ -87,7 +87,7 @@ export const RoomsPage: React.FC = () => {
 
     if (!verdiepingId) {
         return (
-            <Container sx={{ mt: 12, mb: 4 }}>
+            <Container sx={{mt: 12, mb: 4}}>
                 <Alert severity="error">
                     Geen verdieping geselecteerd.
                 </Alert>
@@ -97,7 +97,7 @@ export const RoomsPage: React.FC = () => {
 
     if (!currentFloor) {
         return (
-            <Container sx={{ mt: 12, mb: 4 }}>
+            <Container sx={{mt: 12, mb: 4}}>
                 <Alert severity="error">
                     Verdieping niet gevonden.
                 </Alert>
@@ -106,11 +106,11 @@ export const RoomsPage: React.FC = () => {
     }
 
     return (
-        <Container sx={{ mt: 12, mb: 4 }}>
+        <Container sx={{mt: 12, mb: 4}}>
 
-            <Breadcrumbs sx={{ mb: 3 }}>
+            <Breadcrumbs sx={{mb: 3}}>
                 <Link component={RouterLink} to="/" color="inherit" underline="hover">
-                    <Home sx={{ mr: 0.5 }} fontSize="inherit" />
+                    <Home sx={{mr: 0.5}} fontSize="inherit"/>
                     Home
                 </Link>
                 <Link component={RouterLink} to="/floors" color="inherit" underline="hover">
@@ -134,17 +134,18 @@ export const RoomsPage: React.FC = () => {
                         </Typography>
                     )}
                 </Box>
-                <Button
-                    variant="contained"
-                    startIcon={<Add />}
-                    onClick={() => setFormOpen(true)}
-                >
-                    Nieuwe Kamer
-                </Button>
+                {isAdmin() && (
+                    <Button
+                        variant="contained"
+                        startIcon={<Add/>}
+                        onClick={() => setFormOpen(true)}
+                    >
+                        Nieuwe Kamer
+                    </Button>)}
             </Box>
 
             {error && (
-                <Alert severity="error" sx={{ mb: 2 }}>
+                <Alert severity="error" sx={{mb: 2}}>
                     Fout bij het laden van kamers: {(error as Error).message}
                 </Alert>
             )}
@@ -163,7 +164,7 @@ export const RoomsPage: React.FC = () => {
 
             {isLoading && (
                 <Box display="flex" justifyContent="center" my={4}>
-                    <CircularProgress />
+                    <CircularProgress/>
                 </Box>
             )}
 
@@ -171,7 +172,7 @@ export const RoomsPage: React.FC = () => {
             <Typography
                 variant="h5"
                 gutterBottom
-                sx={{ mt: 4 }}
+                sx={{mt: 4}}
             >
                 Alle Kamers ({rooms?.length || 0})
             </Typography>
@@ -213,28 +214,30 @@ export const RoomsPage: React.FC = () => {
                             </Typography>
                         </CardContent>
                         <CardActions>
+                            {isAdmin() && (
                             <IconButton
                                 color="primary"
                                 onClick={() => handleEditRoom(room)}
                                 disabled={createRoomMutation.isPending || updateRoomMutation.isPending}
                             >
-                                <Edit />
-                            </IconButton>
+                                <Edit/>
+                            </IconButton>)}
                             <IconButton
                                 color="secondary"
                                 component={RouterLink}
                                 to={`/rooms/${room.id}/devices`}
                                 title="Domotica Controls Beheren"
                             >
-                                <Settings />
+                                <Settings/>
                             </IconButton>
+                            {isAdmin() && (
                             <IconButton
                                 color="error"
                                 onClick={() => handleDeleteRoom(room.id)}
                                 disabled={deleteRoomMutation.isPending}
                             >
-                                <Delete />
-                            </IconButton>
+                                <Delete/>
+                            </IconButton>)}
                         </CardActions>
                     </Card>
                 ))}
