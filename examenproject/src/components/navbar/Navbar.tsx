@@ -10,7 +10,7 @@ import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import { Link as RouterLink } from 'react-router';
 import { useAuth } from '../../context/useAuth';
-import { useThemeContext } from '../../hooks/useThemeContext';
+import { useThemeContext } from '../../hooks/useThemeContext.ts';
 import { Brightness4, Brightness7 } from '@mui/icons-material';
 
 const Navbar: React.FC = () => {
@@ -26,6 +26,9 @@ const Navbar: React.FC = () => {
 
                 {isLoggedIn() && (
                     <Box display="flex" gap={2}>
+                        <Button color="inherit" component={RouterLink} to="/dashboard">
+                            Dashboard
+                        </Button>
                         {isAdmin() && (
                             <Button color="inherit" component={RouterLink} to="/floors">
                                 Verdiepingen

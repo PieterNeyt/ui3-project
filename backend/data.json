@@ -28,13 +28,13 @@
       "omschrijving": "Slaapkamers en badkamer"
     },
     {
-      "id": "0207324e-bdda-473b-9e3d-b45c7f78b168",
       "naam": "zolder",
-      "width": 100,
+      "width": 500,
       "height": 1000,
       "x": 50,
       "y": 0,
-      "omschrijving": ""
+      "omschrijving": "",
+      "id": "0207324e-bdda-473b-9e3d-b45c7f78b168"
     }
   ],
   "rooms": [
@@ -54,7 +54,7 @@
       "width": 400,
       "height": 500,
       "x": 500,
-      "y": 150,
+      "y": 15,
       "omschrijving": "Gezellige woonkamer met open haard",
       "id": "2"
     },
@@ -81,7 +81,7 @@
     {
       "naam": "zolder toilet",
       "verdiepingId": "0207324e-bdda-473b-9e3d-b45c7f78b168",
-      "width": 50,
+      "width": 250,
       "height": 500,
       "x": 50,
       "y": 0,
@@ -364,6 +364,22 @@
       "waarde": {
         "on_off": "on",
         "brightness": 100
+      }
+    },
+    {
+      "id": "b5816063-4f64-4d87-83a0-8ea166d93871",
+      "naam": "hoofddeur",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "8655f105-9456-41a9-b272-a2d962744397",
+      "x": 0,
+      "y": 375,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": false
+      },
+      "waarde": {
+        "locked": false
       }
     }
   ],

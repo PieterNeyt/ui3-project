@@ -18,6 +18,23 @@ export const useDevice = (id: string) => {
     });
 };
 
+export const useDevices = () => {
+    return useQuery({
+        queryKey: ['all-devices'],
+        queryFn: async () => {
+            try {
+                const response = await fetch('http://localhost:3001/devices');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch devices');
+                }
+                return response.json();
+            } catch (error) {
+                console.error('Error fetching devices:', error);
+                return [];
+            }
+        },
+    });
+};
 export const useCreateDevice = () => {
     const queryClient = useQueryClient();
 

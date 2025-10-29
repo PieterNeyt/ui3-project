@@ -77,3 +77,23 @@ export interface Playlist {
     id: string;
     naam: string;
 }
+
+export type LightValue = {
+    on_off: 'on' | 'off';
+    brightness: number;
+};
+
+export type HeatingValue = {
+    temperature: number;
+};
+
+export type DoorLockValue = {
+    locked: boolean;
+};
+
+export type AudioValue = {
+    volume: number;
+    playlist: string;
+};
+
+export type DeviceValue = LightValue | HeatingValue | DoorLockValue | AudioValue;
