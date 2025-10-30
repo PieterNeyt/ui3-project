@@ -3,7 +3,7 @@
     {
       "naam": "Kelder",
       "width": 800,
-      "height": 60,
+      "height": 600,
       "x": 50,
       "y": 50,
       "omschrijving": "Kelderruimte met wasplaats en opslag",
@@ -97,10 +97,10 @@
       },
       "waarde": {
         "on_off": "on",
-        "brightness": 80
+        "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:21.811Z"
+      "updatedAt": "2025-10-30T15:15:01.900Z"
     },
     {
       "id": "2",
@@ -115,10 +115,10 @@
         "temperature": 21
       },
       "waarde": {
-        "temperature": 21
+        "temperature": 22
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:21.830Z"
+      "updatedAt": "2025-10-30T12:48:18.764Z"
     },
     {
       "id": "3",
@@ -168,15 +168,15 @@
       "y": 150,
       "omschrijving": "LED spots keuken",
       "defaultWaarde": {
-        "on_off": "on",
-        "brightness": 63
+        "on_off": "off",
+        "brightness": 21
       },
       "waarde": {
-        "on_off": "on",
-        "brightness": 63
+        "on_off": "off",
+        "brightness": 21
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:22.760Z"
+      "updatedAt": "2025-10-30T12:30:47.162Z"
     },
     {
       "id": "8",
@@ -266,13 +266,51 @@
       "y": 75,
       "omschrijving": "",
       "defaultWaarde": {
-        "temperature": 16
+        "temperature": 28
       },
       "waarde": {
-        "temperature": 16
+        "temperature": 28
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-10-30T00:11:24.342Z"
+      "updatedAt": "2025-10-30T12:29:00.850Z"
+    },
+    {
+      "id": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "naam": "zerzer",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "4",
+      "x": 0,
+      "y": 124,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": false
+      },
+      "waarde": {
+        "locked": false
+      },
+      "createdAt": "2025-10-30T12:29:44.976Z",
+      "updatedAt": "2025-10-30T12:29:44.976Z"
+    },
+    {
+      "id": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "naam": "lars",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "4",
+      "x": 101,
+      "y": 174,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 31
+      },
+      "waarde": {
+        "on_off": "off",
+        "brightness": 31
+      },
+      "createdAt": "2025-10-30T12:46:35.698Z",
+      "updatedAt": "2025-10-30T12:48:22.305Z"
     }
   ],
   "playlists": [
@@ -316,18 +354,55 @@
       "createdAt": "2025-10-29T20:47:32.105Z",
       "updatedAt": "2025-10-29T23:40:28.557Z",
       "createdBy": "current-user-id"
+    },
+    {
+      "id": "bf668394-1a28-4b6f-bbaa-b02747d7d52a",
+      "naam": "ochtendroutine",
+      "controls": [
+        {
+          "deviceId": "3",
+          "waarde": {
+            "locked": true
+          }
+        },
+        {
+          "deviceId": "8",
+          "waarde": {
+            "on_off": "on",
+            "brightness": 100
+          }
+        }
+      ],
+      "image": "",
+      "omschrijving": "",
+      "isGlobal": true,
+      "createdAt": "2025-10-30T12:34:31.232Z",
+      "updatedAt": "2025-10-30T12:34:31.232Z",
+      "createdBy": "current-user-id"
     }
   ],
   "timeslots": [
     {
       "id": "ccdf9a18-0d58-4396-8d98-0a7e073c2957",
       "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
-      "startTime": "01:09",
-      "endTime": "01:11",
+      "startTime": "13:32",
+      "endTime": "21:11",
       "isActive": true,
       "createdAt": "2025-10-30T00:08:32.770Z",
-      "updatedAt": "2025-10-30T00:10:38.671Z",
+      "updatedAt": "2025-10-30T12:31:26.326Z",
       "createdBy": "current-user-id"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "Pieter Neyt",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "username": "Admin User",
+      "role": "admin"
     }
   ]
 }

@@ -11,9 +11,10 @@ import {Link as RouterLink} from 'react-router';
 import {useAuth} from '../../context/useAuth';
 import {useThemeContext} from '../../hooks/useThemeContext.ts';
 import {Brightness4, Brightness7} from '@mui/icons-material';
+import {CircularProgress} from "@mui/material";
 
 const Navbar: React.FC = () => {
-    const {user, loginAsUser, loginAsAdmin, logout, isLoggedIn} = useAuth();
+    const {user, loginAsUser, loginAsAdmin, logout, isLoggedIn, loading } = useAuth();
     const {mode, toggleColorMode} = useThemeContext();
 
     return (
@@ -64,11 +65,21 @@ const Navbar: React.FC = () => {
                         </Box>
                     ) : (
                         <Box display="flex" gap={1}>
-                            <Button variant="contained" color="info" onClick={loginAsUser}>
-                                Log in als Gebruiker
+                            <Button
+                                variant="contained"
+                                color="info"
+                                onClick={loginAsUser}
+                                disabled={loading}
+                            >
+                                {loading ? <CircularProgress size={24} /> : 'Log in als Gebruiker'}
                             </Button>
-                            <Button variant="contained" color="error" onClick={loginAsAdmin}>
-                                Log in als Admin
+                            <Button
+                                variant="contained"
+                                color="error"
+                                onClick={loginAsAdmin}
+                                disabled={loading}
+                            >
+                                {loading ? <CircularProgress size={24} /> : 'Log in als Admin'}
                             </Button>
                         </Box>
                     )}
