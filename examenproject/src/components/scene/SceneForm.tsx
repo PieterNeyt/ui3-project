@@ -54,7 +54,7 @@ export const SceneForm: React.FC<SceneFormProps> = ({
                                                         onSave,
                                                         onClose,
                                                     }) => {
-    const { isAdmin } = useAuth();
+    const { isAdmin, user } = useAuth();
     const { data: devices = [], isLoading: devicesLoading } = useDevices();
     const { data: playlists = [] } = usePlaylists();
 
@@ -67,6 +67,7 @@ export const SceneForm: React.FC<SceneFormProps> = ({
         image: '',
         omschrijving: '',
         isGlobal: defaultIsGlobal,
+        userId: user?.id as string
     });
 
     useEffect(() => {
@@ -78,9 +79,10 @@ export const SceneForm: React.FC<SceneFormProps> = ({
                 image: scene.image || '',
                 omschrijving: scene.omschrijving || '',
                 isGlobal: scene.isGlobal,
+                userId: user?.id as string
             });
         } else {
-
+            // Bij nieuwe scene: admin kan kiezen, gebruiker altijd false
             const newIsGlobal = isAdmin();
             setFormData({
                 naam: '',
@@ -88,6 +90,7 @@ export const SceneForm: React.FC<SceneFormProps> = ({
                 image: '',
                 omschrijving: '',
                 isGlobal: newIsGlobal,
+                userId: user?.id as string
             });
         }
     }, [scene, open, isAdmin]);

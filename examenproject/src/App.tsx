@@ -12,6 +12,7 @@ import {DashboardPage} from "./pages/DashboardPage.tsx";
 import {ScenesPage} from "./pages/ScenesPage.tsx";
 import {SceneDetailPage} from "./pages/SceneDetailPage.tsx";
 import { TimeSlotManager } from "./components/timeslot/TimeSlotManager";
+import {LoggingView} from "./components/logging/LoggingView.tsx";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ function App() {
                                 <Route path="/rooms/:kamerId/devices" element={<DevicesPage />} />
                                 <Route path="/scenes" element={<ScenesPage />} />
                                 <Route path="/scenes/:id" element={<SceneDetailPage />} />
+                                <Route path="/logging" element={<LoggingView />} />
                             </Routes>
                         </Box>
                     </BrowserRouter>

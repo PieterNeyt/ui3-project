@@ -100,7 +100,7 @@
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T16:34:56.810Z",
+      "updatedAt": "2025-10-30T19:03:59.941Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -116,10 +116,10 @@
         "temperature": 21
       },
       "waarde": {
-        "temperature": 22
+        "temperature": 25
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T12:48:18.764Z"
+      "updatedAt": "2025-10-30T19:03:14.515Z"
     },
     {
       "id": "3",
@@ -134,10 +134,10 @@
         "locked": true
       },
       "waarde": {
-        "locked": true
+        "locked": false
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T16:30:45.405Z",
+      "updatedAt": "2025-10-30T19:02:19.241Z",
       "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
@@ -154,11 +154,11 @@
         "playlist": "pop"
       },
       "waarde": {
-        "volume": 25,
-        "playlist": "pop"
+        "volume": 7,
+        "playlist": "classic"
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:22.528Z"
+      "updatedAt": "2025-10-30T19:02:21.843Z"
     },
     {
       "id": "5",
@@ -178,7 +178,7 @@
         "brightness": 82
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T16:30:47.917Z",
+      "updatedAt": "2025-10-30T19:04:01.906Z",
       "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
@@ -216,11 +216,11 @@
         "brightness": 0
       },
       "waarde": {
-        "on_off": "off",
-        "brightness": 0
+        "on_off": "on",
+        "brightness": 20
       },
       "createdAt": "2025-10-29T15:35:46.546Z",
-      "updatedAt": "2025-10-30T00:11:23.389Z"
+      "updatedAt": "2025-10-30T19:01:23.841Z"
     },
     {
       "id": "e247593a-a9c6-4b80-837a-0efb194534e4",
@@ -237,10 +237,10 @@
       },
       "waarde": {
         "volume": 13,
-        "playlist": "rock"
+        "playlist": "electronic"
       },
       "createdAt": "2025-10-29T15:36:04.542Z",
-      "updatedAt": "2025-10-30T00:11:23.880Z"
+      "updatedAt": "2025-10-30T18:43:39.706Z"
     },
     {
       "id": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
@@ -255,10 +255,10 @@
         "locked": false
       },
       "waarde": {
-        "locked": true
+        "locked": false
       },
       "createdAt": "2025-10-29T19:14:11.639Z",
-      "updatedAt": "2025-10-30T16:26:08.679Z",
+      "updatedAt": "2025-10-30T18:43:34.370Z",
       "lastActivatedBy": "c1bd8199-ea4e-4513-9d50-5d4280256739"
     },
     {
@@ -274,10 +274,10 @@
         "temperature": 28
       },
       "waarde": {
-        "temperature": 17
+        "temperature": 30
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-10-30T16:35:37.785Z",
+      "updatedAt": "2025-10-30T19:04:01.915Z",
       "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
@@ -296,7 +296,7 @@
         "locked": false
       },
       "createdAt": "2025-10-30T12:29:44.976Z",
-      "updatedAt": "2025-10-30T12:29:44.976Z"
+      "updatedAt": "2025-10-30T19:01:26.791Z"
     },
     {
       "id": "443accfa-1d11-4b12-a97e-69fef721d766",
@@ -313,10 +313,30 @@
       },
       "waarde": {
         "on_off": "off",
-        "brightness": 31
+        "brightness": 60
       },
       "createdAt": "2025-10-30T12:46:35.698Z",
-      "updatedAt": "2025-10-30T12:48:22.305Z"
+      "updatedAt": "2025-10-30T18:08:30.500Z"
+    },
+    {
+      "id": "c89d66cd-8207-4925-b572-cb5acabd6bc5",
+      "naam": "lamp",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "3",
+      "x": 139,
+      "y": 145,
+      "omschrijving": "azeaze",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "createdAt": "2025-10-30T18:59:17.764Z",
+      "updatedAt": "2025-10-30T18:59:17.764Z"
     }
   ],
   "playlists": [
@@ -422,6 +442,16 @@
       "createdAt": "2025-10-30T00:08:32.770Z",
       "updatedAt": "2025-10-30T12:31:26.326Z",
       "createdBy": "current-user-id"
+    },
+    {
+      "id": "3650c065-53a4-443b-98b2-3962987e03f3",
+      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
+      "startTime": "07:00",
+      "endTime": "10:00",
+      "isActive": true,
+      "createdAt": "2025-10-30T18:51:17.697Z",
+      "updatedAt": "2025-10-30T18:51:17.697Z",
+      "createdBy": "current-user-id"
     }
   ],
   "users": [
@@ -434,6 +464,398 @@
       "id": "2",
       "username": "Admin User",
       "role": "admin"
+    }
+  ],
+  "deviceChangeLogs": [
+    {
+      "id": "bc15e9f3-d21e-40fc-a93b-09cb74037124",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 21
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 52
+      },
+      "timestamp": "2025-10-30T19:01:17.414Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "36f47312-e05b-4c03-8f81-b5d4d8cfc299",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 52
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 52
+      },
+      "timestamp": "2025-10-30T19:01:18.333Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "37fa3b2f-bf8b-45f0-ad01-1abff03fbfbb",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 12
+      },
+      "newValue": {
+        "temperature": 21
+      },
+      "timestamp": "2025-10-30T19:01:18.882Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b1756a75-33cb-46fa-a082-e31f8b1005d1",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 21
+      },
+      "newValue": {
+        "temperature": 22
+      },
+      "timestamp": "2025-10-30T19:01:19.559Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dd5641b3-ab85-40da-b06e-42b3e85ed980",
+      "deviceId": "3",
+      "deviceName": "Voordeur slot",
+      "deviceType": "deurslot",
+      "roomId": "5",
+      "roomName": "Inkomhal",
+      "changeType": "state_changed",
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-10-30T19:01:20.112Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bb412e62-5ed9-4229-a0f5-1027361e3d23",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 13,
+        "playlist": "classic"
+      },
+      "newValue": {
+        "volume": 13,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-10-30T19:01:21.527Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "da4839bc-6bc9-476b-8b60-4f6d8fdb265a",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 13,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 17,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-10-30T19:01:22.363Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ba45bf2a-adca-4ddd-aa02-0c7a746c0a9e",
+      "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 48
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 20
+      },
+      "timestamp": "2025-10-30T19:01:23.407Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fff95b6f-ae8e-476c-abd7-22ea1c8558c8",
+      "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 20
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 20
+      },
+      "timestamp": "2025-10-30T19:01:23.892Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fb82b4b6-390d-49a6-85ee-ab07a83dbb4a",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-10-30T19:01:25.364Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "db2f0a90-23bd-4240-ac12-c5a813d54c77",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": false
+      },
+      "timestamp": "2025-10-30T19:01:25.811Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "10f642e8-571d-49e6-808d-0a8bc0202936",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-10-30T19:01:26.380Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bdbc5f8b-b6d4-42b0-83e1-a3d46bff2597",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": false
+      },
+      "timestamp": "2025-10-30T19:01:26.841Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5505e0c4-c00e-492c-8335-cd8c510584d0",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 22
+      },
+      "newValue": {
+        "temperature": 17
+      },
+      "timestamp": "2025-10-30T19:02:18.180Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "e590223d-2c05-4cc9-bc49-e6e0e44c3571",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 17
+      },
+      "newValue": {
+        "temperature": 22
+      },
+      "timestamp": "2025-10-30T19:02:18.676Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "0a811e2d-4766-4177-9689-ec4765202f41",
+      "deviceId": "3",
+      "deviceName": "Voordeur slot",
+      "deviceType": "deurslot",
+      "roomId": "5",
+      "roomName": "Inkomhal",
+      "changeType": "state_changed",
+      "newValue": {
+        "locked": false
+      },
+      "timestamp": "2025-10-30T19:02:19.341Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "955150ea-7d49-4c1d-bda3-b42894465828",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 17,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 7,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-10-30T19:02:19.962Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "23819ce2-02ef-4841-8a3c-78174d022feb",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 7,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 7,
+        "playlist": "classic"
+      },
+      "timestamp": "2025-10-30T19:02:21.956Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "daf092f6-95f6-42e9-b6fe-4a2320f70e7c",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 22
+      },
+      "newValue": {
+        "temperature": 16
+      },
+      "timestamp": "2025-10-30T19:03:13.554Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c86affe4-9c59-4bbb-8c86-f0632c9646a8",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 16
+      },
+      "newValue": {
+        "temperature": 25
+      },
+      "timestamp": "2025-10-30T19:03:14.667Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a37824b9-c505-4abf-b41d-8d54d91f329b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 52
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-10-30T19:03:59.950Z",
+      "userId": "2",
+      "userName": "Admin User"
     }
   ]
 }
