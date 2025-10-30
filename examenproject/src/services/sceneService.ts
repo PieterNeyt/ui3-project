@@ -19,30 +19,37 @@ export const sceneService = {
         const response = await api.get(`/scenes/${id}`);
         return response.data;
     },
-
-    // Create scene
+    // Create scene met gebruiker context
     createScene: async (sceneData: SceneFormData): Promise<Scene> => {
         const now = new Date().toISOString();
+
         const sceneWithValues = {
             ...sceneData,
             id: crypto.randomUUID(),
             createdAt: now,
             updatedAt: now,
-            createdBy: 'current-user-id', // Dit zou uit auth context komen
+            createdBy: sceneData.userId,
         };
+
         const response = await api.post('/scenes', sceneWithValues);
         return response.data;
     },
 
-    // Update scene
+    // Update scene met toegangscontrole
     updateScene: async (id: string, sceneData: Partial<SceneFormData>): Promise<Scene> => {
+        // Eerst de scene ophalen om te controleren of het een globale scene is
+
         const dataWithTimestamp = {
             ...sceneData,
             updatedAt: new Date().toISOString(),
         };
+
         const response = await api.patch(`/scenes/${id}`, dataWithTimestamp);
         return response.data;
     },
+    // Create scene
+
+
 
     // Delete scene
     deleteScene: async (id: string): Promise<void> => {

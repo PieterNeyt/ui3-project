@@ -24,4 +24,5 @@ export interface SceneFormData {
     image?: string;
     omschrijving?: string;
     isGlobal: boolean;
+    userId: string;
 }

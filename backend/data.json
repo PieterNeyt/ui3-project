@@ -379,6 +379,80 @@
       "createdAt": "2025-10-30T12:34:31.232Z",
       "updatedAt": "2025-10-30T12:34:31.232Z",
       "createdBy": "current-user-id"
+    },
+    {
+      "id": "c1bd8199-ea4e-4513-9d50-5d4280256739",
+      "naam": "baanaaaaan",
+      "controls": [
+        {
+          "deviceId": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
+          "waarde": {
+            "locked": true
+          },
+          "device": {
+            "id": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
+            "naam": "Woonkamer",
+            "type": "deurslot",
+            "upcCode": "1111111111111",
+            "kamerId": "1",
+            "x": 0,
+            "y": 94,
+            "omschrijving": "",
+            "defaultWaarde": {
+              "locked": false
+            },
+            "waarde": {
+              "locked": false
+            },
+            "createdAt": "2025-10-29T19:14:11.639Z",
+            "updatedAt": "2025-10-30T00:11:24.038Z"
+          }
+        }
+      ],
+      "image": "",
+      "omschrijving": "azeaze",
+      "isGlobal": false,
+      "createdAt": "2025-10-30T15:37:44.846Z",
+      "updatedAt": "2025-10-30T16:07:46.182Z",
+      "createdBy": "current-user-id"
+    },
+    {
+      "id": "bec28cbe-e0d8-4671-9ef3-8f1a8611d749",
+      "naam": "azeaze",
+      "controls": [
+        {
+          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+          "waarde": {
+            "temperature": 20
+          }
+        }
+      ],
+      "image": "a",
+      "omschrijving": "",
+      "isGlobal": false,
+      "userId": "2",
+      "createdAt": "2025-10-30T16:05:40.380Z",
+      "updatedAt": "2025-10-30T16:05:40.380Z",
+      "createdBy": "2"
+    },
+    {
+      "id": "1b2daba2-946c-4961-84fa-3bb6b7f2c1fe",
+      "naam": "aaaaaaa",
+      "controls": [
+        {
+          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+          "waarde": {
+            "temperature": 20
+          }
+        }
+      ],
+      "image": "",
+      "omschrijving": "",
+      "isGlobal": false,
+      "userId": "1",
+      "createdAt": "2025-10-30T16:06:42.884Z",
+      "updatedAt": "2025-10-30T16:06:42.884Z",
+      "createdBy": "1"
     }
   ],
   "timeslots": [

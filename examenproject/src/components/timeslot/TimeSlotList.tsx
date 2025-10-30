@@ -21,6 +21,7 @@ interface TimeSlotListProps {
     onEditTimeSlot: (timeslot: TimeSlot) => void;
     onDeleteTimeSlot: (id: string) => void;
     isAdmin: boolean;
+    isGlobalScene?: boolean;
 }
 
 export const TimeSlotList: React.FC<TimeSlotListProps> = ({
@@ -29,6 +30,7 @@ export const TimeSlotList: React.FC<TimeSlotListProps> = ({
                                                               onEditTimeSlot,
                                                               onDeleteTimeSlot,
                                                               isAdmin,
+                                                              isGlobalScene = false,
                                                           }) => {
     const { data: timeslots = [], isLoading, error } = useTimeSlotsByScene(sceneId);
 
@@ -50,7 +52,7 @@ export const TimeSlotList: React.FC<TimeSlotListProps> = ({
                 <Typography variant="h6" sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Schedule /> Tijdsloten
                 </Typography>
-                {isAdmin && (
+                {isAdmin && isGlobalScene && (
                     <Button
                         variant="outlined"
                         startIcon={<Add />}
@@ -62,7 +64,12 @@ export const TimeSlotList: React.FC<TimeSlotListProps> = ({
                 )}
             </Box>
 
-            {timeslots.length === 0 ? (
+            {!isGlobalScene ? (
+                <Alert severity="info">
+                    Tijdsloten zijn alleen beschikbaar voor globale scenes.
+                    Persoonlijke scenes kunnen niet automatisch geactiveerd worden via tijdsloten.
+                </Alert>
+            ) : timeslots.length === 0 ? (
                 <Alert severity="info">
                     Geen tijdsloten gevonden. Voeg een tijdslot toe om deze scene automatisch te activeren.
                 </Alert>
@@ -73,7 +80,7 @@ export const TimeSlotList: React.FC<TimeSlotListProps> = ({
                             key={timeslot.id}
                             divider
                             secondaryAction={
-                                isAdmin ? (
+                                isAdmin && isGlobalScene ? (
                                     <Stack direction="row" spacing={1}>
                                         <IconButton
                                             onClick={() => onEditTimeSlot(timeslot)}
