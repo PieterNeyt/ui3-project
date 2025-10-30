@@ -10,6 +10,8 @@ import { Box, CssBaseline } from "@mui/material";
 import { DevicesPage } from "./pages/DevicesPage.tsx";
 import {DashboardPage} from "./pages/DashboardPage.tsx";
 import {ScenesPage} from "./pages/ScenesPage.tsx";
+import {SceneDetailPage} from "./pages/SceneDetailPage.tsx";
+import { TimeSlotManager } from "./components/timeslot/TimeSlotManager";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +23,7 @@ function App() {
                 <AuthProvider>
                     <BrowserRouter>
                         <Navbar />
+                        <TimeSlotManager />
                         <Box component="main" sx={{
                             minHeight: '100vh',
                             bgcolor: 'background.default',
@@ -33,6 +36,7 @@ function App() {
                                 <Route path="/floors/:verdiepingId/rooms" element={<RoomsPage />} />
                                 <Route path="/rooms/:kamerId/devices" element={<DevicesPage />} />
                                 <Route path="/scenes" element={<ScenesPage />} />
+                                <Route path="/scenes/:id" element={<SceneDetailPage />} />
                             </Routes>
                         </Box>
                     </BrowserRouter>

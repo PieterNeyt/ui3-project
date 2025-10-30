@@ -11,8 +11,10 @@ import {
     Menu,
     MenuItem,
 } from '@mui/material';
-import { MoreVert, PlayArrow, Edit, Delete } from '@mui/icons-material';
+import { MoreVert, PlayArrow, Edit, Delete, Info } from '@mui/icons-material';
 import type { Scene } from '../../types/scene';
+import {useActiveTimeSlot} from "../../hooks/useTimeSlots.ts";
+import {useNavigate} from "react-router";
 
 interface SceneCardProps {
     scene: Scene;
@@ -30,6 +32,10 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                                                         isAdmin,
                                                     }) => {
     const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
+
+    const { data: activeTimeSlot } = useActiveTimeSlot();
+    const isSceneActive = activeTimeSlot?.sceneId === scene.id;
+    const navigate = useNavigate();
 
     const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
         setMenuAnchor(event.currentTarget);
@@ -112,7 +118,14 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                         sx={{ mb: 1 }}
                     />
                 )}
-
+                {isSceneActive && (
+                    <Chip
+                        label="Actief via tijdslot"
+                        size="small"
+                        color="success"
+                        sx={{ mb: 1, ml: 1 }}
+                    />
+                )}
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
                     {getDeviceSummary()}
                 </Typography>
@@ -136,6 +149,26 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                         </Typography>
                     )}
                 </Box>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
+                    <Typography
+                        variant="h6"
+                        component="h2"
+                        noWrap
+                        sx={{
+                            cursor: 'pointer',
+                            '&:hover': { color: 'primary.main' }
+                        }}
+                        onClick={() => navigate(`/scenes/${scene.id}`)}
+                    >
+                        {scene.naam}
+                    </Typography>
+
+                    {isAdmin && (
+                        <IconButton size="small" onClick={handleMenuOpen}>
+                            <MoreVert />
+                        </IconButton>
+                    )}
+                </Box>
             </CardContent>
 
             <Box sx={{ p: 1, display: 'flex', gap: 1 }}>
@@ -146,6 +179,14 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                     fullWidth
                 >
                     Activate
+                </Button>
+                <Button
+                    variant="outlined"
+                    startIcon={<Info />}
+                    onClick={() => navigate(`/scenes/${scene.id}`)}
+                    fullWidth
+                >
+                    Details
                 </Button>
             </Box>
 
@@ -162,6 +203,7 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                     <Delete sx={{ mr: 1 }} /> Delete
                 </MenuItem>
             </Menu>
+
         </Card>
     );
 };

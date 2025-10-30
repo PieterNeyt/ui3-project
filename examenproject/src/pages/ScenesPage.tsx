@@ -31,6 +31,8 @@ export const ScenesPage: React.FC = () => {
     const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
     const [sceneToDelete, setSceneToDelete] = useState<string | null>(null);
 
+
+
     const handleCreateScene = async (sceneData: SceneFormData) => {
         try {
             await createSceneMutation.mutateAsync(sceneData);

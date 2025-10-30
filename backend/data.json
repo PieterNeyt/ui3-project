@@ -97,10 +97,10 @@
       },
       "waarde": {
         "on_off": "on",
-        "brightness": 97
+        "brightness": 80
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T20:56:35.479Z"
+      "updatedAt": "2025-10-30T00:11:21.811Z"
     },
     {
       "id": "2",
@@ -118,7 +118,7 @@
         "temperature": 21
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T21:17:11.501Z"
+      "updatedAt": "2025-10-30T00:11:21.830Z"
     },
     {
       "id": "3",
@@ -136,7 +136,7 @@
         "locked": true
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T20:10:28.681Z"
+      "updatedAt": "2025-10-30T00:11:22.150Z"
     },
     {
       "id": "4",
@@ -152,11 +152,11 @@
         "playlist": "pop"
       },
       "waarde": {
-        "volume": 47,
+        "volume": 25,
         "playlist": "pop"
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T21:15:35.746Z"
+      "updatedAt": "2025-10-30T00:11:22.528Z"
     },
     {
       "id": "5",
@@ -176,7 +176,7 @@
         "brightness": 63
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T19:14:55.294Z"
+      "updatedAt": "2025-10-30T00:11:22.760Z"
     },
     {
       "id": "8",
@@ -193,10 +193,10 @@
       },
       "waarde": {
         "on_off": "off",
-        "brightness": 50
+        "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-29T20:10:28.690Z"
+      "updatedAt": "2025-10-30T00:11:22.968Z"
     },
     {
       "id": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
@@ -212,11 +212,11 @@
         "brightness": 0
       },
       "waarde": {
-        "on_off": "on",
-        "brightness": 58
+        "on_off": "off",
+        "brightness": 0
       },
       "createdAt": "2025-10-29T15:35:46.546Z",
-      "updatedAt": "2025-10-29T21:15:35.796Z"
+      "updatedAt": "2025-10-30T00:11:23.389Z"
     },
     {
       "id": "e247593a-a9c6-4b80-837a-0efb194534e4",
@@ -232,11 +232,11 @@
         "playlist": "rock"
       },
       "waarde": {
-        "volume": 6,
+        "volume": 13,
         "playlist": "rock"
       },
       "createdAt": "2025-10-29T15:36:04.542Z",
-      "updatedAt": "2025-10-29T15:41:18.788Z"
+      "updatedAt": "2025-10-30T00:11:23.880Z"
     },
     {
       "id": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
@@ -251,10 +251,10 @@
         "locked": false
       },
       "waarde": {
-        "locked": true
+        "locked": false
       },
       "createdAt": "2025-10-29T19:14:11.639Z",
-      "updatedAt": "2025-10-29T21:15:35.773Z"
+      "updatedAt": "2025-10-30T00:11:24.038Z"
     },
     {
       "id": "bd872aab-e033-4013-822e-a67572ee3a95",
@@ -269,10 +269,10 @@
         "temperature": 16
       },
       "waarde": {
-        "temperature": 30
+        "temperature": 16
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-10-29T21:15:35.786Z"
+      "updatedAt": "2025-10-30T00:11:24.342Z"
     }
   ],
   "playlists": [
@@ -303,105 +303,10 @@
       "naam": "testezezeaaa",
       "controls": [
         {
-          "deviceId": "4",
-          "waarde": {
-            "volume": 47,
-            "playlist": "pop"
-          },
-          "device": {
-            "id": "4",
-            "naam": "Woonkamer speakers",
-            "type": "audio",
-            "upcCode": "1234567890126",
-            "kamerId": "3",
-            "x": 200,
-            "y": 300,
-            "omschrijving": "Sonos sound system",
-            "defaultWaarde": {
-              "volume": 25,
-              "playlist": "pop"
-            },
-            "waarde": {
-              "volume": 47,
-              "playlist": "pop"
-            },
-            "createdAt": "2024-01-15T08:00:00.000Z",
-            "updatedAt": "2025-10-29T21:15:35.746Z"
-          }
-        },
-        {
-          "deviceId": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
-          "waarde": {
-            "locked": true
-          },
-          "device": {
-            "id": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
-            "naam": "Woonkamer",
-            "type": "deurslot",
-            "upcCode": "1111111111111",
-            "kamerId": "1",
-            "x": 0,
-            "y": 94,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "locked": false
-            },
-            "waarde": {
-              "locked": true
-            },
-            "createdAt": "2025-10-29T19:14:11.639Z",
-            "updatedAt": "2025-10-29T21:15:35.773Z"
-          }
-        },
-        {
-          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
-          "waarde": {
-            "temperature": 30
-          },
-          "device": {
-            "id": "bd872aab-e033-4013-822e-a67572ee3a95",
-            "naam": "verwarming",
-            "type": "verwarming",
-            "upcCode": "1111111111111",
-            "kamerId": "4",
-            "x": 106,
-            "y": 75,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "temperature": 16
-            },
-            "waarde": {
-              "temperature": 30
-            },
-            "createdAt": "2025-10-29T19:16:08.717Z",
-            "updatedAt": "2025-10-29T21:15:35.786Z"
-          }
-        },
-        {
-          "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+          "deviceId": "1",
           "waarde": {
             "on_off": "on",
-            "brightness": 58
-          },
-          "device": {
-            "id": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
-            "naam": "lamp",
-            "type": "licht",
-            "upcCode": "1111111111111",
-            "kamerId": "1",
-            "x": 136,
-            "y": 94,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "on_off": "off",
-              "brightness": 0
-            },
-            "waarde": {
-              "on_off": "on",
-              "brightness": 58
-            },
-            "createdAt": "2025-10-29T15:35:46.546Z",
-            "updatedAt": "2025-10-29T21:15:35.796Z"
+            "brightness": 100
           }
         }
       ],
@@ -409,7 +314,19 @@
       "omschrijving": "erzeraaaaaaaaaaaaaaaaa",
       "isGlobal": true,
       "createdAt": "2025-10-29T20:47:32.105Z",
-      "updatedAt": "2025-10-29T21:17:29.707Z",
+      "updatedAt": "2025-10-29T23:40:28.557Z",
+      "createdBy": "current-user-id"
+    }
+  ],
+  "timeslots": [
+    {
+      "id": "ccdf9a18-0d58-4396-8d98-0a7e073c2957",
+      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
+      "startTime": "01:09",
+      "endTime": "01:11",
+      "isActive": true,
+      "createdAt": "2025-10-30T00:08:32.770Z",
+      "updatedAt": "2025-10-30T00:10:38.671Z",
       "createdBy": "current-user-id"
     }
   ]
