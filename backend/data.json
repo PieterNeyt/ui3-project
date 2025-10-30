@@ -100,7 +100,8 @@
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T15:15:01.900Z"
+      "updatedAt": "2025-10-30T16:34:56.810Z",
+      "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
       "id": "2",
@@ -136,7 +137,8 @@
         "locked": true
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:22.150Z"
+      "updatedAt": "2025-10-30T16:30:45.405Z",
+      "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
       "id": "4",
@@ -172,11 +174,12 @@
         "brightness": 21
       },
       "waarde": {
-        "on_off": "off",
-        "brightness": 21
+        "on_off": "on",
+        "brightness": 82
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T12:30:47.162Z"
+      "updatedAt": "2025-10-30T16:30:47.917Z",
+      "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
       "id": "8",
@@ -192,11 +195,12 @@
         "brightness": 100
       },
       "waarde": {
-        "on_off": "off",
+        "on_off": "on",
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-30T00:11:22.968Z"
+      "updatedAt": "2025-10-30T16:30:45.417Z",
+      "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
       "id": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
@@ -251,10 +255,11 @@
         "locked": false
       },
       "waarde": {
-        "locked": false
+        "locked": true
       },
       "createdAt": "2025-10-29T19:14:11.639Z",
-      "updatedAt": "2025-10-30T00:11:24.038Z"
+      "updatedAt": "2025-10-30T16:26:08.679Z",
+      "lastActivatedBy": "c1bd8199-ea4e-4513-9d50-5d4280256739"
     },
     {
       "id": "bd872aab-e033-4013-822e-a67572ee3a95",
@@ -269,10 +274,11 @@
         "temperature": 28
       },
       "waarde": {
-        "temperature": 28
+        "temperature": 17
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-10-30T12:29:00.850Z"
+      "updatedAt": "2025-10-30T16:35:37.785Z",
+      "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
       "id": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
@@ -381,77 +387,28 @@
       "createdBy": "current-user-id"
     },
     {
-      "id": "c1bd8199-ea4e-4513-9d50-5d4280256739",
-      "naam": "baanaaaaan",
+      "id": "f6195bf3-c6bd-421a-980c-05ceb1288124",
+      "naam": "ochtendroutine",
       "controls": [
         {
-          "deviceId": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
+          "deviceId": "5",
           "waarde": {
-            "locked": true
-          },
-          "device": {
-            "id": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
-            "naam": "Woonkamer",
-            "type": "deurslot",
-            "upcCode": "1111111111111",
-            "kamerId": "1",
-            "x": 0,
-            "y": 94,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "locked": false
-            },
-            "waarde": {
-              "locked": false
-            },
-            "createdAt": "2025-10-29T19:14:11.639Z",
-            "updatedAt": "2025-10-30T00:11:24.038Z"
+            "on_off": "on",
+            "brightness": 82
           }
-        }
-      ],
-      "image": "",
-      "omschrijving": "azeaze",
-      "isGlobal": false,
-      "createdAt": "2025-10-30T15:37:44.846Z",
-      "updatedAt": "2025-10-30T16:07:46.182Z",
-      "createdBy": "current-user-id"
-    },
-    {
-      "id": "bec28cbe-e0d8-4671-9ef3-8f1a8611d749",
-      "naam": "azeaze",
-      "controls": [
+        },
         {
           "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
           "waarde": {
-            "temperature": 20
+            "temperature": 30
           }
         }
       ],
-      "image": "a",
-      "omschrijving": "",
+      "image": "https://i.pinimg.com/736x/1e/48/79/1e4879e068d2d60fa87594e2cfb842bd.jpg",
+      "omschrijving": "een goedde ochtenstond heeft goud in de mond",
       "isGlobal": false,
-      "userId": "2",
-      "createdAt": "2025-10-30T16:05:40.380Z",
-      "updatedAt": "2025-10-30T16:05:40.380Z",
-      "createdBy": "2"
-    },
-    {
-      "id": "1b2daba2-946c-4961-84fa-3bb6b7f2c1fe",
-      "naam": "aaaaaaa",
-      "controls": [
-        {
-          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
-          "waarde": {
-            "temperature": 20
-          }
-        }
-      ],
-      "image": "",
-      "omschrijving": "",
-      "isGlobal": false,
-      "userId": "1",
-      "createdAt": "2025-10-30T16:06:42.884Z",
-      "updatedAt": "2025-10-30T16:06:42.884Z",
+      "createdAt": "2025-10-30T16:30:33.261Z",
+      "updatedAt": "2025-10-30T16:30:33.261Z",
       "createdBy": "1"
     }
   ],

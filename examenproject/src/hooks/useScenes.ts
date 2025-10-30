@@ -2,6 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { sceneService } from '../services/sceneService';
 import { deviceService } from '../services/deviceService';
 import type { Scene, SceneFormData } from '../types/scene';
+import { useAuth } from '../context/useAuth';
 
 export const useScenes = () => {
     return useQuery({
@@ -9,7 +10,6 @@ export const useScenes = () => {
         queryFn: async (): Promise<Scene[]> => {
             const scenesData = await sceneService.getScenes();
 
-            // Verrijk scenes met device informatie
             const enrichedScenes = await Promise.all(
                 scenesData.map(async (scene) => {
                     const controlsWithDevices = await Promise.all(
@@ -41,9 +41,11 @@ export const useScene = (id: string) => {
 
 export const useCreateScene = () => {
     const queryClient = useQueryClient();
+    const { user } = useAuth();
 
     return useMutation({
-        mutationFn: sceneService.createScene,
+        mutationFn: (sceneData: SceneFormData) =>
+            sceneService.createScene(sceneData, user?.id || ''),
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['scenes'] });
         },
@@ -78,10 +80,30 @@ export const useActivateScene = () => {
 
     return useMutation({
         mutationFn: sceneService.activateScene,
-        onSuccess: () => {
+        onSuccess: (_, sceneId) => {
             // Invalideer zowel scenes als devices queries
             queryClient.invalidateQueries({ queryKey: ['scenes'] });
             queryClient.invalidateQueries({ queryKey: ['devices'] });
+            queryClient.invalidateQueries({ queryKey: ['activeTimeSlot'] });
+
+            console.log(`Scene ${sceneId} succesvol geactiveerd`);
+        },
+        onError: (error, sceneId) => {
+            console.error(`Fout bij activeren scene ${sceneId}:`, error);
+        },
+    });
+};
+
+export const useDeactivateScene = () => {
+    const queryClient = useQueryClient();
+
+    return useMutation({
+        mutationFn: sceneService.deactivateScene,
+        onSuccess: () => {
+            // Invalideer queries om refresh te forceren
+            queryClient.invalidateQueries({ queryKey: ['devices'] });
+            queryClient.invalidateQueries({ queryKey: ['activeTimeSlot'] });
+
         },
     });
 };

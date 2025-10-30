@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
     Container,
     Typography,
@@ -12,8 +12,8 @@ import {
     DialogActions,
     Divider,
 } from '@mui/material';
-import { Add } from '@mui/icons-material';
-import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateScene } from '../hooks/useScenes';
+import { Add, Stop } from '@mui/icons-material';
+import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateScene, useDeactivateScene } from '../hooks/useScenes';
 import { SceneCard } from '../components/scene/SceneCard';
 import { SceneForm } from '../components/scene/SceneForm';
 import type { Scene, SceneFormData } from '../types/scene';
@@ -26,11 +26,42 @@ export const ScenesPage: React.FC = () => {
     const updateSceneMutation = useUpdateScene();
     const deleteSceneMutation = useDeleteScene();
     const activateSceneMutation = useActivateScene();
+    const deactivateSceneMutation = useDeactivateScene();
 
     const [isFormOpen, setIsFormOpen] = useState(false);
     const [editingScene, setEditingScene] = useState<Scene | null>(null);
     const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
     const [sceneToDelete, setSceneToDelete] = useState<string | null>(null);
+    const [manuallyActivatedSceneId, setManuallyActivatedSceneId] = useState<string | null>(null);
+
+    // Haal handmatig geactiveerde scene op bij mount
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const lastManualScene = localStorage.getItem('lastManuallyActivatedScene');
+            if (lastManualScene) {
+                setManuallyActivatedSceneId(lastManualScene);
+            }
+        }
+    }, []);
+
+    // Luister naar activatie events
+    useEffect(() => {
+        const handleManualActivation = (event: CustomEvent) => {
+            setManuallyActivatedSceneId(event.detail.sceneId);
+        };
+
+        const handleManualDeactivation = () => {
+            setManuallyActivatedSceneId(null);
+        };
+
+        window.addEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
+        window.addEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
+
+        return () => {
+            window.removeEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
+            window.removeEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
+        };
+    }, []);
 
     // Filter scenes
     const { globalScenes, personalScenes } = useMemo(() => {
@@ -44,14 +75,12 @@ export const ScenesPage: React.FC = () => {
         return { globalScenes: global, personalScenes: personal };
     }, [scenes, isAdmin, user]);
 
-    // Bepaal of gebruiker scenes kan bewerken/verwijderen
     const canEditScene = (scene: Scene): boolean => {
         return isAdmin() || (!scene.isGlobal && scene.createdBy === user?.id);
     };
 
     const handleCreateScene = async (sceneData: SceneFormData) => {
         try {
-            sceneData.userId= user?.id as string;
             await createSceneMutation.mutateAsync(sceneData);
             setIsFormOpen(false);
         } catch (err) {
@@ -86,28 +115,34 @@ export const ScenesPage: React.FC = () => {
     const handleActivateScene = async (sceneId: string) => {
         try {
             await activateSceneMutation.mutateAsync(sceneId);
+
+            // Stuur custom event voor TimeSlotManager
+            window.dispatchEvent(new CustomEvent('sceneManuallyActivated', {
+                detail: { sceneId }
+            }));
+
+            // Toast/success message
+            const scene = scenes.find(s => s.id === sceneId);
+            if (scene) {
+                console.log(` Scene "${scene.naam}" geactiveerd!`);
+            }
         } catch (err) {
             console.error('Failed to activate scene:', err);
         }
     };
 
-    if (!isAdmin() && !isGebruiker()) {
-        return (
-            <Container sx={{ mt: 12, mb: 4 }}>
-                <Alert severity="error">
-                    Je hebt geen toegang tot deze pagina. Log in als gebruiker of admin.
-                </Alert>
-            </Container>
-        );
-    }
+    const handleDeactivateScene = async () => {
+        try {
+            await deactivateSceneMutation.mutateAsync();
 
-    if (isLoading) {
-        return (
-            <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
-                <CircularProgress />
-            </Container>
-        );
-    }
+            // Stuur custom event voor TimeSlotManager
+            window.dispatchEvent(new CustomEvent('sceneManuallyDeactivated'));
+
+            console.log(' Scene gedeactiveerd - terug naar tijdslot/default');
+        } catch (err) {
+            console.error('Failed to deactivate scene:', err);
+        }
+    };
 
     const renderSceneSection = (
         title: string,
@@ -159,6 +194,7 @@ export const ScenesPage: React.FC = () => {
                             <SceneCard
                                 scene={scene}
                                 onActivate={handleActivateScene}
+                                onDeactivate={handleDeactivateScene}
                                 onEdit={canEditScene(scene) ? (scene) => {
                                     setEditingScene(scene);
                                     setIsFormOpen(true);
@@ -168,6 +204,7 @@ export const ScenesPage: React.FC = () => {
                                     setDeleteConfirmOpen(true);
                                 } : () => {}}
                                 isAdmin={isAdmin()}
+                                isCurrentlyActive={scene.id === manuallyActivatedSceneId}
                             />
                         </Box>
                     ))}
@@ -175,6 +212,24 @@ export const ScenesPage: React.FC = () => {
             )}
         </Box>
     );
+
+    if (!isAdmin() && !isGebruiker()) {
+        return (
+            <Container sx={{ mt: 12, mb: 4 }}>
+                <Alert severity="error">
+                    Je hebt geen toegang tot deze pagina. Log in als gebruiker of admin.
+                </Alert>
+            </Container>
+        );
+    }
+
+    if (isLoading) {
+        return (
+            <Container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50vh' }}>
+                <CircularProgress />
+            </Container>
+        );
+    }
 
     return (
         <Container maxWidth="lg" sx={{ mt: 12, mb: 4, py: 4 }}>
@@ -189,16 +244,29 @@ export const ScenesPage: React.FC = () => {
                     </Typography>
                 </Box>
 
-                {(isAdmin() || isGebruiker()) && (
-                    <Button
-                        variant="contained"
-                        startIcon={<Add />}
-                        onClick={() => setIsFormOpen(true)}
-                        size="large"
-                    >
-                        Nieuwe Scene
-                    </Button>
-                )}
+                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
+                    {manuallyActivatedSceneId && (
+                        <Button
+                            variant="outlined"
+                            color="warning"
+                            startIcon={<Stop />}
+                            onClick={handleDeactivateScene}
+                        >
+                            Alle Scenes Deactiveren
+                        </Button>
+                    )}
+
+                    {(isAdmin() || isGebruiker()) && (
+                        <Button
+                            variant="contained"
+                            startIcon={<Add />}
+                            onClick={() => setIsFormOpen(true)}
+                            size="large"
+                        >
+                            Nieuwe Scene
+                        </Button>
+                    )}
+                </Box>
             </Box>
 
             {error && (
