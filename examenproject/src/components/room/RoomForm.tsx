@@ -37,14 +37,14 @@ interface RoomFormProps {
     isSubmitting: boolean;
 }
 
-export const RoomForm: React.FC<RoomFormProps> = ({
+export const RoomForm = ({
                                                       open,
                                                       onClose,
                                                       onSubmit,
                                                       room,
                                                       floors,
                                                       isSubmitting,
-                                                  }) => {
+                                                  }:RoomFormProps) => {
     const {
         control,
         handleSubmit,

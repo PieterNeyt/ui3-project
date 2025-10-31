@@ -5,7 +5,7 @@ import {useUpdateDevice} from '../../hooks/useDevices';
 import {useScenes} from "../../hooks/useScenes.ts";
 import type {AudioValue, DoorLockValue, HeatingValue, LightValue} from "../../types/device.ts";
 
-export const TimeSlotManager: React.FC = () => {
+export const TimeSlotManager= () => {
     const {data: activeTimeSlot, refetch: refetchActiveTimeSlot} = useActiveTimeSlot();
     const {data: scenes = []} = useScenes();
     const {data: devices = []} = useDevices();

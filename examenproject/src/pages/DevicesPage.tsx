@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import {
     Container,
     Typography,
@@ -24,7 +24,7 @@ import type {Room} from "../types/room.ts";
 import type {Floor} from "../types/floor.ts";
 import {useAuth} from "../context/useAuth.tsx";
 
-export const DevicesPage: React.FC = () => {
+export const DevicesPage= () => {
 
     const { kamerId } = useParams<{ kamerId: string }>();
     const { isAdmin, isGebruiker } = useAuth();

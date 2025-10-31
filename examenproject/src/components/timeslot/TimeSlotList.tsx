@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Box,
     Typography,
@@ -24,14 +23,14 @@ interface TimeSlotListProps {
     isGlobalScene?: boolean;
 }
 
-export const TimeSlotList: React.FC<TimeSlotListProps> = ({
+export const TimeSlotList = ({
                                                               sceneId,
                                                               onAddTimeSlot,
                                                               onEditTimeSlot,
                                                               onDeleteTimeSlot,
                                                               isAdmin,
                                                               isGlobalScene = false,
-                                                          }) => {
+                                                          }:TimeSlotListProps) => {
     const { data: timeslots = [], isLoading, error } = useTimeSlotsByScene(sceneId);
 
     const formatTimeRange = (startTime: string, endTime: string): string => {

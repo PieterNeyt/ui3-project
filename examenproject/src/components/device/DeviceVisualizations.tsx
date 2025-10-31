@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Tooltip } from '@mui/material';
 import { Lightbulb, Thermostat, Lock, LockOpen, VolumeUp } from '@mui/icons-material';
 import type {Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice} from '../../types/device';
@@ -9,11 +8,11 @@ interface DeviceVisualizationProps {
     scale?: number;
 }
 
-export const DeviceVisualization: React.FC<DeviceVisualizationProps> = ({
+export const DeviceVisualization = ({
                                                                             device,
                                                                             onClick,
                                                                             scale = 1,
-                                                                        }) => {
+                                                                        }: DeviceVisualizationProps) => {
     const handleClick = () => {
         onClick?.(device);
     };

@@ -30,13 +30,13 @@ interface FloorFormProps {
     isSubmitting: boolean;
 }
 
-export const FloorForm: React.FC<FloorFormProps> = ({
+export const FloorForm = ({
                                                         open,
                                                         onClose,
                                                         onSubmit,
                                                         floor,
                                                         isSubmitting,
-                                                    }) => {
+                                                    }:FloorFormProps) => {
     const {
         control,
         handleSubmit,

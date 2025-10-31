@@ -15,13 +15,6 @@ export const useDevicesByRoom = (kamerId: string) => {
     });
 };
 
-export const useDevice = (id: string) => {
-    return useQuery({
-        queryKey: ['devices', id],
-        queryFn: () => deviceService.getDevice(id),
-        enabled: !!id,
-    });
-};
 
 export const useDevices = () => {
     return useQuery({

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import  {useState} from 'react';
 import {
     Container,
     Typography,
@@ -22,7 +22,7 @@ import {FloorPlan} from '../components/room/FloorPlan';
 import type {Room, RoomFormData} from '../types/room';
 import {useAuth} from '../context/useAuth';
 
-export const RoomsPage: React.FC = () => {
+export const RoomsPage = () => {
     const {isAdmin, isGebruiker} = useAuth();
     const {verdiepingId} = useParams<{ verdiepingId: string }>();
 

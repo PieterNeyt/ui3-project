@@ -1,4 +1,3 @@
-import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -13,7 +12,7 @@ import { useThemeContext } from '../../hooks/useThemeContext.ts';
 import { Brightness4, Brightness7, Analytics } from '@mui/icons-material';
 import { CircularProgress } from "@mui/material";
 
-const Navbar: React.FC = () => {
+const Navbar = () => {
     const { user, loginAsUser, loginAsAdmin, logout, isLoggedIn, loading } = useAuth();
     const { mode, toggleColorMode } = useThemeContext();
 

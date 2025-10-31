@@ -17,13 +17,13 @@ interface RoomPlanProps {
     rooms: Room[];
 }
 
-export const RoomPlan: React.FC<RoomPlanProps> = ({
+export const RoomPlan = ({
                                                       room,
                                                       devices,
                                                       onDeviceClick,
                                                       scale = 1,
                                                       rooms,
-                                                  }) => {
+                                                  }:RoomPlanProps) => {
     const [showDeviceForm, setShowDeviceForm] = useState(false);
     const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
     const createDeviceMutation = useCreateDevice();

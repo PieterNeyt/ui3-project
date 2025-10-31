@@ -21,7 +21,11 @@ import { useDeviceChangeLogs } from '../../hooks/useLogging';
 import type { LogFilter, DeviceValue } from '../../types/logging';
 import { format } from 'date-fns';
 
-const ChangeTypeChip: React.FC<{ changeType: string }> = ({ changeType }) => {
+type ChangeTypeChipProps = {
+    changeType: string;
+};
+
+const ChangeTypeChip = ({ changeType }: ChangeTypeChipProps) => {
     const getColor = (type: string) => {
         switch (type) {
             case 'created': return 'success';
@@ -57,7 +61,7 @@ interface ValueDisplayProps {
     value: DeviceValue | undefined;
 }
 
-const ValueDisplay: React.FC<ValueDisplayProps> = ({ value }) => {
+const ValueDisplay= ({ value }:ValueDisplayProps) => {
     if (!value) {
         return <Typography variant="body2">-</Typography>;
     }
@@ -77,7 +81,7 @@ const ValueDisplay: React.FC<ValueDisplayProps> = ({ value }) => {
     );
 };
 
-export const DeviceChangeLogs: React.FC = () => {
+export const DeviceChangeLogs= () => {
     const [filters, setFilters] = useState<LogFilter>({
         startDate: format(new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), 'yyyy-MM-dd'),
         endDate: format(new Date(), 'yyyy-MM-dd'),

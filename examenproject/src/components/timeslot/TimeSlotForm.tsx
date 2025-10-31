@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import {
     Dialog,
     DialogTitle,
@@ -31,13 +31,13 @@ interface TimeSlotFormProps {
     isSubmitting?: boolean;
 }
 
-export const TimeSlotForm: React.FC<TimeSlotFormProps> = ({
+export const TimeSlotForm = ({
                                                               open,
                                                               timeslot,
                                                               onSave,
                                                               onClose,
                                                               isSubmitting = false,
-                                                          }) => {
+                                                          }:TimeSlotFormProps) => {
     const { data: scenes = [] } = useScenes();
     const checkOverlapMutation = useCheckOverlap();
 

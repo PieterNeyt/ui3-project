@@ -2,12 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { timeSlotService } from '../services/timeslotService';
 import type { TimeSlotFormData } from '../types/timeslot';
 
-export const useTimeSlots = () => {
-    return useQuery({
-        queryKey: ['timeslots'],
-        queryFn: timeSlotService.getTimeSlots,
-    });
-};
+
 
 export const useTimeSlotsByScene = (sceneId: string) => {
     return useQuery({
@@ -17,7 +12,6 @@ export const useTimeSlotsByScene = (sceneId: string) => {
     });
 };
 
-// src/hooks/useTimeSlots.ts
 export const useActiveTimeSlot = () => {
     return useQuery({
         queryKey: ['activeTimeSlot'],

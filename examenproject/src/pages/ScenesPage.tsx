@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import  { useState, useMemo, useEffect } from 'react';
 import {
     Container,
     Typography,
@@ -19,7 +19,7 @@ import { SceneForm } from '../components/scene/SceneForm';
 import type { Scene, SceneFormData } from '../types/scene';
 import { useAuth } from "../context/useAuth.tsx";
 
-export const ScenesPage: React.FC = () => {
+export const ScenesPage= () => {
     const { isAdmin, isGebruiker, user } = useAuth();
     const { data: scenes = [], isLoading, error } = useScenes();
     const createSceneMutation = useCreateScene();

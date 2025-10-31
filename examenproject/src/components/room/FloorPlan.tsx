@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Paper, Typography } from '@mui/material';
 import type {Floor} from '../../types/floor';
 import type {Room} from '../../types/room';
@@ -12,12 +11,12 @@ interface FloorPlanProps {
     scale?: number;
 }
 
-export const FloorPlan: React.FC<FloorPlanProps> = ({
+export const FloorPlan= ({
                                                         floor,
                                                         rooms,
                                                         onRoomClick,
                                                         scale = 1,
-                                                    }) => {
+                                                    }:FloorPlanProps) => {
     const { isAdmin } = useAuth();
     const navigate = useNavigate();
 

@@ -44,7 +44,7 @@ interface TabPanelProps {
     value: number;
 }
 
-const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other }) => {
+const TabPanel = ({ children, value, index, ...other }:TabPanelProps) => {
     return (
         <div
             role="tabpanel"
@@ -58,7 +58,7 @@ const TabPanel: React.FC<TabPanelProps> = ({ children, value, index, ...other })
     );
 };
 
-export const DashboardPage: React.FC = () => {
+export const DashboardPage = () => {
     const { isAdmin, isGebruiker } = useAuth();
     const { data: devices = [] } = useDevices();
     const { data: rooms = [] } = useRooms();

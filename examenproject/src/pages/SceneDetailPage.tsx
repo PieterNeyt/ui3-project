@@ -1,5 +1,4 @@
-// src/pages/SceneDetailPage.tsx
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import {
     Container,
     Typography,
@@ -24,7 +23,7 @@ import { TimeSlotForm } from '../components/timeslot/TimeSlotForm';
 import type { TimeSlot, TimeSlotFormData } from '../types/timeslot';
 import { useAuth } from '../context/useAuth';
 
-export const SceneDetailPage: React.FC = () => {
+export const SceneDetailPage= () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const { isAdmin, user } = useAuth();

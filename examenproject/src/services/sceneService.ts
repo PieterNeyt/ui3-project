@@ -1,4 +1,3 @@
-// src/services/sceneService.ts
 import axios from 'axios';
 import type {Scene, SceneFormData} from '../types/scene';
 

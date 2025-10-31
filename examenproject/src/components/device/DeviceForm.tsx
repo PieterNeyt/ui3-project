@@ -50,7 +50,7 @@ interface DeviceFormProps {
     existingDevices?: Device[];
 }
 
-export const DeviceForm: React.FC<DeviceFormProps> = ({
+export const DeviceForm = ({
                                                           open,
                                                           onClose,
                                                           onSubmit,
@@ -61,7 +61,7 @@ export const DeviceForm: React.FC<DeviceFormProps> = ({
                                                           initialKamerId = '',
                                                           device,
                                                           existingDevices = [],
-                                                      }) => {
+                                                      }: DeviceFormProps ) => {
     const [deviceType, setDeviceType] = React.useState<DeviceType>(device?.type || 'licht');
     const [selectedRoom, setSelectedRoom] = React.useState<string>(initialKamerId);
     const [formErrors, setFormErrors] = React.useState<{deurslot?: string}>({});

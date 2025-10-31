@@ -53,7 +53,7 @@ export const SceneForm: React.FC<SceneFormProps> = ({
                                                         scene,
                                                         onSave,
                                                         onClose,
-                                                    }) => {
+                                                    }:SceneFormProps) => {
     const { isAdmin, user } = useAuth();
     const { data: devices = [], isLoading: devicesLoading } = useDevices();
     const { data: playlists = [] } = usePlaylists();

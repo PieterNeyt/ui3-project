@@ -10,13 +10,6 @@ export const useFloors = () => {
     });
 };
 
-export const useFloor = (id: string) => {
-    return useQuery({
-        queryKey: ['floors', id],
-        queryFn: () => floorService.getFloor(id),
-    });
-};
-
 export const useCreateFloor = () => {
     const queryClient = useQueryClient();
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import {
     Container,
     Typography,
@@ -19,7 +19,7 @@ import type { Floor, FloorFormData } from '../types/floor';
 import { useAuth } from '../context/useAuth';
 
 
-export const FloorsPage: React.FC = () => {
+export const FloorsPage = () => {
     const { isAdmin, isGebruiker } = useAuth();
     const { data: floors, error, isLoading } = useFloors();
     const createFloorMutation = useCreateFloor();

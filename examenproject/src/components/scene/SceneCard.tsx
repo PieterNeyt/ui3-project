@@ -36,7 +36,7 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                                                         onDelete,
                                                         isAdmin,
                                                         isCurrentlyActive = false,
-                                                    }) => {
+                                                    }:SceneCardProps) => {
     const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
     const { data: activeTimeSlot } = useActiveTimeSlot();
     const isSceneActiveViaTimeSlot = activeTimeSlot?.sceneId === scene.id;

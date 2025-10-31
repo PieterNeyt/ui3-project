@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import { useNavigate } from 'react-router';
 import type {Floor} from '../../types/floor';
@@ -10,12 +9,12 @@ interface FloorPreviewProps {
     showClickable?: boolean;
 }
 
-export const FloorPreview: React.FC<FloorPreviewProps> = ({
+export const FloorPreview= ({
                                                               floor,
                                                               scale = 0.5,
                                                               onClick,
                                                               showClickable = true,
-                                                          }) => {
+                                                          }:FloorPreviewProps) => {
     const navigate = useNavigate();
 
     const handleClick = () => {

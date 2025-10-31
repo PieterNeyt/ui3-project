@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Box,
     Typography,
@@ -23,10 +22,10 @@ interface StatisticsChartsProps {
     compact?: boolean;
 }
 
-export const StatisticsCharts: React.FC<StatisticsChartsProps> = ({
+export const StatisticsCharts = ({
                                                                       type = 'all',
                                                                       compact = false
-                                                                  }) => {
+                                                                  }:StatisticsChartsProps) => {
     const { data: statistics, isLoading } = useDeviceStatistics();
 
     if (isLoading) {

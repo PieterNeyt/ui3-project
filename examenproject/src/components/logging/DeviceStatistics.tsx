@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Box,
     Card,
@@ -32,7 +31,7 @@ interface DeviceStatisticsProps {
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
-export const DeviceStatistics: React.FC<DeviceStatisticsProps> = ({ type = 'all' }) => {
+export const DeviceStatistics = ({ type = 'all' }:DeviceStatisticsProps) => {
     const { data: statistics, isLoading } = useDeviceStatistics();
 
     if (isLoading) {

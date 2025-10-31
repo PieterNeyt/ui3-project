@@ -1,5 +1,4 @@
-// src/context/ThemeProvider.tsx
-import React, { useState, useMemo, type ReactNode } from 'react';
+import  { useState, useMemo, type ReactNode } from 'react';
 import { ThemeProvider as MuiThemeProvider, createTheme } from '@mui/material/styles';
 
 import { ThemeContext, type ThemeContextType } from './ThemeContext';
@@ -16,7 +15,7 @@ const getSystemThemePreference = (): 'light' | 'dark' => {
     return 'light'; // Fallback
 };
 
-export const CustomThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const CustomThemeProvider = ({ children }:ThemeProviderProps) => {
     // Standaard is het systeemthema van de gebruiker
     const [mode, setMode] = useState<'light' | 'dark'>(() => {
         const savedMode = localStorage.getItem('themeMode') as string;
