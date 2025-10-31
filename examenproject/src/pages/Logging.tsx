@@ -10,9 +10,9 @@ import {
     CardContent,
 } from '@mui/material';
 import { Timeline, Analytics, BarChart, ShowChart } from '@mui/icons-material';
-import { DeviceChangeLogs } from './DeviceChangeLogs';
-import { StatisticsCharts } from './StatisticsCharts';
-import { DeviceStatistics } from './DeviceStatistics';
+import { DeviceChangeLogs } from '../components/logging/DeviceChangeLogs.tsx';
+import { StatisticsCharts } from '../components/logging/StatisticsCharts.tsx';
+import { DeviceStatistics } from '../components/logging/DeviceStatistics.tsx';
 
 interface TabPanelProps {
     children?: React.ReactNode;
@@ -34,7 +34,7 @@ const TabPanel = ({ children, value, index, ...other }:TabPanelProps) => {
     );
 };
 
-export const LoggingView: React.FC = () => {
+export default function Logging()  {
     const [currentTab, setCurrentTab] = useState(0);
 
     const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {

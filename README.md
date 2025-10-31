@@ -27,8 +27,8 @@ Voorbeeld:
 - [x] [US4] Globale scenes beheren (CRUD) zodat deze toegankelijk zijn voor alle gebruikers
 - [x] [US5] Tijdsloten koppelen aan scènes (CRUD) zodat deze periodiek actief worden
 - [x] [US6] Domotica controls zoeken, filteren, bekijken en aanpassen
-- [x] [US7] Scenes (CRUD) beheren om eenvoudig eigen voorkeuren in te stellen
-- [x] [US8] Scenes activeren en deactiveren om onmiddellijk een bepaalde situatie of sfeer te bekomen
+- [x] [US7] Index (CRUD) beheren om eenvoudig eigen voorkeuren in te stellen
+- [x] [US8] Index activeren en deactiveren om onmiddellijk een bepaalde situatie of sfeer te bekomen
 - [x] [US9] De interface in dark/light/system modus zetten (system volgt het dark/light schema van het systeem van de gebruiker)
 - [x] [US10] Een logging view met data die de wijzigingen aan controls bevat in verschillende views oa. een grafiek view en wat interessante data (meest geschakelde lampen, temperatuurverloop over de tijd)
 

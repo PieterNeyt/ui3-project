@@ -15,14 +15,14 @@ import {
 } from '@mui/material';
 import {Edit, Delete, Add, Home, Settings} from '@mui/icons-material';
 import {Link as RouterLink, useParams} from 'react-router';
-import {useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom} from '../hooks/useRooms';
-import {useFloors} from '../hooks/useFloors';
-import {RoomForm} from '../components/room/RoomForm';
-import {FloorPlan} from '../components/room/FloorPlan';
-import type {Room, RoomFormData} from '../types/room';
-import {useAuth} from '../context/useAuth';
+import {useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom} from '../../../hooks/useRooms.ts';
+import {useFloors} from '../../../hooks/useFloors.ts';
+import {RoomForm} from '../../../components/room/RoomForm.tsx';
+import {FloorPlan} from '../../../components/room/FloorPlan.tsx';
+import type {Room, RoomFormData} from '../../../types/room.ts';
+import {useAuth} from '../../../context/useAuth.tsx';
 
-export const RoomsPage = () => {
+export default function Rooms() {
     const {isAdmin, isGebruiker} = useAuth();
     const {verdiepingId} = useParams<{ verdiepingId: string }>();
 

@@ -16,14 +16,14 @@ import {
 } from '@mui/material';
 import { NavigateNext, ArrowBack } from '@mui/icons-material';
 import { useParams, useNavigate } from 'react-router';
-import { useScene } from '../hooks/useScenes';
-import { useCreateTimeSlot, useUpdateTimeSlot, useDeleteTimeSlot } from '../hooks/useTimeSlots';
-import { TimeSlotList } from '../components/timeslot/TimeSlotList';
-import { TimeSlotForm } from '../components/timeslot/TimeSlotForm';
-import type { TimeSlot, TimeSlotFormData } from '../types/timeslot';
-import { useAuth } from '../context/useAuth';
+import { useScene } from '../../hooks/useScenes.ts';
+import { useCreateTimeSlot, useUpdateTimeSlot, useDeleteTimeSlot } from '../../hooks/useTimeSlots.ts';
+import { TimeSlotList } from '../../components/timeslot/TimeSlotList.tsx';
+import { TimeSlotForm } from '../../components/timeslot/TimeSlotForm.tsx';
+import type { TimeSlot, TimeSlotFormData } from '../../types/timeslot.ts';
+import { useAuth } from '../../context/useAuth.tsx';
 
-export const SceneDetailPage= () => {
+export default function Id()  {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const { isAdmin, user } = useAuth();

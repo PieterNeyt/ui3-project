@@ -13,13 +13,13 @@ import {
     Divider,
 } from '@mui/material';
 import { Add, Stop } from '@mui/icons-material';
-import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateScene, useDeactivateScene } from '../hooks/useScenes';
-import { SceneCard } from '../components/scene/SceneCard';
-import { SceneForm } from '../components/scene/SceneForm';
-import type { Scene, SceneFormData } from '../types/scene';
-import { useAuth } from "../context/useAuth.tsx";
+import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateScene, useDeactivateScene } from '../../hooks/useScenes.ts';
+import { SceneCard } from '../../components/scene/SceneCard.tsx';
+import { SceneForm } from '../../components/scene/SceneForm.tsx';
+import type { Scene, SceneFormData } from '../../types/scene.ts';
+import { useAuth } from "../../context/useAuth.tsx";
 
-export const ScenesPage= () => {
+export default function Index()  {
     const { isAdmin, isGebruiker, user } = useAuth();
     const { data: scenes = [], isLoading, error } = useScenes();
     const createSceneMutation = useCreateScene();
@@ -275,9 +275,9 @@ export const ScenesPage= () => {
                 </Alert>
             )}
 
-            {/* Globale Scenes Sectie */}
+            {/* Globale Index Sectie */}
             {renderSceneSection(
-                "Globale Scenes",
+                "Globale Index",
                 globalScenes,
                 isAdmin()
                     ? "Er zijn nog geen globale scenes. Maak er een aan om te delen met alle gebruikers."
@@ -287,9 +287,9 @@ export const ScenesPage= () => {
 
             <Divider sx={{ my: 4 }} />
 
-            {/* Persoonlijke Scenes Sectie */}
+            {/* Persoonlijke Index Sectie */}
             {renderSceneSection(
-                isAdmin() ? "Persoonlijke Scenes" : "Mijn Scenes",
+                isAdmin() ? "Persoonlijke Index" : "Mijn Index",
                 personalScenes,
                 isAdmin()
                     ? "Er zijn nog geen persoonlijke scenes aangemaakt door gebruikers."

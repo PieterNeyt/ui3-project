@@ -14,17 +14,17 @@ import {
 } from '@mui/material';
 import { Edit, Delete, Home } from '@mui/icons-material';
 import { Link as RouterLink, useParams } from 'react-router';
-import { useDevicesByRoom, useDeleteDevice, useUpdateDevice } from '../hooks/useDevices';
-import { useRooms } from '../hooks/useRooms';
-import { useFloors } from '../hooks/useFloors';
-import { RoomPlan } from '../components/device/RoomPlan';
-import { DeviceForm } from '../components/device/DeviceForm';
-import type { Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice, DeviceFormData } from '../types/device';
-import type {Room} from "../types/room.ts";
-import type {Floor} from "../types/floor.ts";
-import {useAuth} from "../context/useAuth.tsx";
+import { useDevicesByRoom, useDeleteDevice, useUpdateDevice } from '../../../hooks/useDevices.ts';
+import { useRooms } from '../../../hooks/useRooms.ts';
+import { useFloors } from '../../../hooks/useFloors.ts';
+import { RoomPlan } from '../../../components/device/RoomPlan.tsx';
+import { DeviceForm } from '../../../components/device/DeviceForm.tsx';
+import type { Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice, DeviceFormData } from '../../../types/device.ts';
+import type {Room} from "../../../types/room.ts";
+import type {Floor} from "../../../types/floor.ts";
+import {useAuth} from "../../../context/useAuth.tsx";
 
-export const DevicesPage= () => {
+export default function Devices()  {
 
     const { kamerId } = useParams<{ kamerId: string }>();
     const { isAdmin, isGebruiker } = useAuth();

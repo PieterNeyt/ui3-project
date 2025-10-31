@@ -12,14 +12,14 @@ import {
     CardActions,
 } from '@mui/material';
 import {Edit, Delete, Add} from '@mui/icons-material';
-import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../hooks/useFloors';
-import { FloorForm } from '../components/floor/FloorForm';
-import { FloorPreview } from '../components/floor/FloorPreview';
-import type { Floor, FloorFormData } from '../types/floor';
-import { useAuth } from '../context/useAuth';
+import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../../hooks/useFloors.ts';
+import { FloorForm } from '../../components/floor/FloorForm.tsx';
+import { FloorPreview } from '../../components/floor/FloorPreview.tsx';
+import type { Floor, FloorFormData } from '../../types/floor.ts';
+import { useAuth } from '../../context/useAuth.tsx';
 
 
-export const FloorsPage = () => {
+export default function  Index ()  {
     const { isAdmin, isGebruiker } = useAuth();
     const { data: floors, error, isLoading } = useFloors();
     const createFloorMutation = useCreateFloor();

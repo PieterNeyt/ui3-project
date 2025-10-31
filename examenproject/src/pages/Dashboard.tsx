@@ -58,7 +58,7 @@ const TabPanel = ({ children, value, index, ...other }:TabPanelProps) => {
     );
 };
 
-export const DashboardPage = () => {
+export default function Dashboard() {
     const { isAdmin, isGebruiker } = useAuth();
     const { data: devices = [] } = useDevices();
     const { data: rooms = [] } = useRooms();
