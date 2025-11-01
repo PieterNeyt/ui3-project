@@ -1,102 +1,44 @@
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
-import Chip from '@mui/material/Chip';
-import IconButton from '@mui/material/IconButton';
-import Tooltip from '@mui/material/Tooltip';
-import { Link as RouterLink } from 'react-router';
-import { useAuth } from '../../context/useAuth';
-import { useThemeContext } from '../../hooks/useThemeContext.ts';
-import { Brightness4, Brightness7, Analytics } from '@mui/icons-material';
-import { CircularProgress } from "@mui/material";
+import { useAuth } from '../../hooks/useAuth.tsx';
+import { NavbarLinks } from './NavbarLinks';
+import { NavbarThemeToggle } from './NavbarThemeToggle';
+import { NavbarUserSection } from './NavbarUserSection';
+import { NavbarLoginButtons } from './NavbarLoginButtons';
 
-const Navbar = () => {
+export function Navbar() {
     const { user, loginAsUser, loginAsAdmin, logout, isLoggedIn, loading } = useAuth();
-    const { mode, toggleColorMode } = useThemeContext();
 
     return (
         <AppBar position="fixed" elevation={3}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                <Typography variant="h6" component={RouterLink} to="/" sx={{ textDecoration: 'none', color: 'inherit' }}>
+                <Typography
+                    variant="h6"
+                    component="a"
+                    href="/"
+                    sx={{ textDecoration: 'none', color: 'inherit' }}
+                >
                     SmartNest
                 </Typography>
 
-                {isLoggedIn() && (
-                    <Box display="flex" gap={2}>
-                        <Button color="inherit" component={RouterLink} to="/dashboard">
-                            Dashboard
-                        </Button>
-
-                        <Button color="inherit" component={RouterLink} to="/floors">
-                            Verdiepingen
-                        </Button>
-
-                        <Button color="inherit" component={RouterLink} to="/scenes">
-                            Scenes
-                        </Button>
-
-                        {/* Toon logging knop alleen voor admins */}
-                        {user?.role === 'admin' && (
-                            <Button
-                                color="inherit"
-                                component={RouterLink}
-                                to="/logging"
-                                startIcon={<Analytics />}
-                            >
-                                Logging
-                            </Button>
-                        )}
-                    </Box>
-                )}
+                {isLoggedIn() && <NavbarLinks user={user} />}
 
                 <Box display="flex" alignItems="center" gap={2}>
-                    {/* Eenvoudige theme toggle */}
-                    <Tooltip title={`Schakel naar ${mode === 'light' ? 'donkere' : 'lichte'} modus`}>
-                        <IconButton color="inherit" onClick={toggleColorMode} sx={{ ml: 1 }}>
-                            {mode === 'dark' ? <Brightness7 /> : <Brightness4 />}
-                        </IconButton>
-                    </Tooltip>
+                    <NavbarThemeToggle />
 
                     {isLoggedIn() ? (
-                        <Box display="flex" alignItems="center" gap={2}>
-                            <Box display="flex" alignItems="center" gap={1}>
-                                <Typography>{user?.username}</Typography>
-                                <Chip
-                                    label={user?.role === 'admin' ? 'Admin' : 'Gebruiker'}
-                                    color={user?.role === 'admin' ? 'error' : 'info'}
-                                    size="small"
-                                />
-                            </Box>
-                            <Button variant="outlined" color="inherit" onClick={logout}>
-                                Uitloggen
-                            </Button>
-                        </Box>
+                        <NavbarUserSection user={user!} logout={logout} />
                     ) : (
-                        <Box display="flex" gap={1}>
-                            <Button
-                                variant="contained"
-                                color="info"
-                                onClick={loginAsUser}
-                                disabled={loading}
-                            >
-                                {loading ? <CircularProgress size={24} /> : 'Log in als Gebruiker'}
-                            </Button>
-                            <Button
-                                variant="contained"
-                                color="error"
-                                onClick={loginAsAdmin}
-                                disabled={loading}
-                            >
-                                {loading ? <CircularProgress size={24} /> : 'Log in als Admin'}
-                            </Button>
-                        </Box>
+                        <NavbarLoginButtons
+                            loginAsUser={loginAsUser}
+                            loginAsAdmin={loginAsAdmin}
+                            loading={loading}
+                        />
                     )}
                 </Box>
             </Toolbar>
         </AppBar>
     );
-};
-
-export default Navbar;
+}

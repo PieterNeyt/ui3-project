@@ -20,7 +20,7 @@ import {useFloors} from '../../../hooks/useFloors.ts';
 import {RoomForm} from '../../../components/room/RoomForm.tsx';
 import {FloorPlan} from '../../../components/room/FloorPlan.tsx';
 import type {Room, RoomFormData} from '../../../types/room.ts';
-import {useAuth} from '../../../context/useAuth.tsx';
+import {useAuth} from '../../../hooks/useAuth.tsx';
 
 export default function Rooms() {
     const {isAdmin, isGebruiker} = useAuth();

@@ -1,38 +1,29 @@
 import React, { useState } from 'react';
-import { Box, Paper, Typography, Button } from '@mui/material';
-import { Add } from '@mui/icons-material';
-import type {Room} from '../../types/room';
-import type {Device, DeviceFormData} from '../../types/device';
-import { DeviceVisualization } from './DeviceVisualizations';
+import { Paper, Typography, Box } from '@mui/material';
+import type { Room } from '../../types/room';
+import type { Device, DeviceFormData } from '../../types/device';
 import { DeviceForm } from './DeviceForm';
+import { RoomHeader } from './RoomHeader';
+import { RoomCanvas } from './RoomCanvas';
 import { useCreateDevice } from '../../hooks/useDevices';
-import {useAuth} from "../../context/useAuth.tsx";
+import { useAuth } from '../../hooks/useAuth.tsx';
 
 interface RoomPlanProps {
     room: Room;
     devices: Device[];
-    onDeviceClick?: (device: Device) => void;
-    onDeviceUpdate?: (device: Device) => void;
-    scale?: number;
     rooms: Room[];
+    onDeviceClick?: (device: Device) => void;
+    scale?: number;
 }
 
-export const RoomPlan = ({
-                                                      room,
-                                                      devices,
-                                                      onDeviceClick,
-                                                      scale = 1,
-                                                      rooms,
-                                                  }:RoomPlanProps) => {
+export function RoomPlan({ room, devices, rooms, onDeviceClick, scale = 1 }: RoomPlanProps) {
     const [showDeviceForm, setShowDeviceForm] = useState(false);
     const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
     const createDeviceMutation = useCreateDevice();
     const { isAdmin } = useAuth();
 
     const handleRoomClick = (event: React.MouseEvent<HTMLDivElement>) => {
-        if (!isAdmin()) {
-            return;
-        }
+        if (!isAdmin()) return;
 
         const rect = event.currentTarget.getBoundingClientRect();
         const x = event.clientX - rect.left;
@@ -44,69 +35,25 @@ export const RoomPlan = ({
 
     const handleCreateDevice = (deviceData: DeviceFormData) => {
         createDeviceMutation.mutate(deviceData, {
-            onSuccess: () => {
-                setShowDeviceForm(false);
-            },
+            onSuccess: () => setShowDeviceForm(false),
         });
     };
 
     return (
         <Paper elevation={3} sx={{ p: 3, position: 'relative' }}>
-            <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                <Typography variant="h5">
-                    {room.naam} - Domotica Controls
-                </Typography>
-                {isAdmin() && (
-                    <Button
-                        variant="outlined"
-                        startIcon={<Add />}
-                        onClick={() => setShowDeviceForm(true)}
-                    >
-                        Control Toevoegen
-                    </Button>
-                )}
-            </Box>
+            <RoomHeader roomName={room.naam} deviceCount={devices.length} onAdd={() => setShowDeviceForm(true)} />
 
-            <Box
-                key={`room-${room.id}-devices-${devices.length}`}
-                sx={{
-                    position: 'relative',
-                    width: room.width * scale,
-                    height: room.height * scale,
-                    border: '3px solid',
-                    borderColor: 'text.primary',
-                    bgcolor: 'grey.100',
-                    overflow: 'hidden',
-                    margin: '0 auto',
-                    cursor: 'crosshair',
-                }}
-                onClick={handleRoomClick}
-            >
-                {/* Room background */}
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        width: '100%',
-                        height: '100%',
-                        bgcolor: 'background.paper',
-                    }}
-                />
-
-                {/* Devices */}
-                {devices.map((device) => (
-                    <DeviceVisualization
-                        key={device.id}
-                        device={device}
-                        onClick={onDeviceClick}
-                        scale={scale * 0.8}
-                    />
-                ))}
-            </Box>
+            <RoomCanvas
+                room={room}
+                devices={devices}
+                scale={scale}
+                onRoomClick={handleRoomClick}
+                onDeviceClick={onDeviceClick}
+            />
 
             <Box sx={{ mt: 2 }}>
                 <Typography variant="body2" color="text.secondary">
-                    Klik ergens in de kamer om een control toe te voegen |
-                    Aantal devices: {devices.length}
+                    Klik ergens in de kamer om een control toe te voegen | Aantal devices: {devices.length}
                 </Typography>
             </Box>
 
@@ -123,4 +70,4 @@ export const RoomPlan = ({
             />
         </Paper>
     );
-};
+}

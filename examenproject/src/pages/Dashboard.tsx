@@ -36,7 +36,7 @@ import type {
     AudioDevice,
     DeviceValue, LightValue, HeatingValue, DoorLockValue, AudioValue
 } from '../types/device';
-import { useAuth } from '../context/useAuth';
+import { useAuth } from '../hooks/useAuth.tsx';
 
 interface TabPanelProps {
     children?: React.ReactNode;

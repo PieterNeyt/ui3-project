@@ -10,13 +10,13 @@
       "id": "1"
     },
     {
-      "id": "2",
-      "naam": "Gelijkvloers",
+      "naam": "Gelijkvloerss",
       "width": 1000,
       "height": 800,
       "x": 0,
       "y": 0,
-      "omschrijving": "Hoofdverdieping met woonkamer, keuken en inkomhal"
+      "omschrijving": "Hoofdverdieping met woonkamer, keuken en inkomhal",
+      "id": "2"
     }
   ],
   "rooms": [

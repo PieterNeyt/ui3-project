@@ -1,6 +1,8 @@
-import { Box, Typography, Paper } from '@mui/material';
+import { Paper, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
 import type {Floor} from '../../types/floor';
+import { FloorBox } from './FloorBox';
+import { FloorInfo } from './FloorInfo';
 
 interface FloorPreviewProps {
     floor: Floor;
@@ -9,12 +11,7 @@ interface FloorPreviewProps {
     showClickable?: boolean;
 }
 
-export const FloorPreview= ({
-                                                              floor,
-                                                              scale = 0.5,
-                                                              onClick,
-                                                              showClickable = true,
-                                                          }:FloorPreviewProps) => {
+export function FloorPreview({ floor, scale = 0.5, onClick, showClickable = true }: FloorPreviewProps) {
     const navigate = useNavigate();
 
     const handleClick = () => {
@@ -37,55 +34,14 @@ export const FloorPreview= ({
             <Typography variant="h6" gutterBottom>
                 {floor.naam}
             </Typography>
-
             {floor.omschrijving && (
                 <Typography variant="body2" color="text.secondary" gutterBottom>
                     {floor.omschrijving}
                 </Typography>
             )}
 
-            <Box
-                sx={{
-                    position: 'relative',
-                    width: '100%',
-                    height: 200,
-                    border: '2px solid',
-                    borderColor: 'divider',
-                    bgcolor: 'background.default',
-                    overflow: 'hidden',
-                }}
-            >
-                <Box
-                    sx={{
-                        position: 'absolute',
-                        left: floor.x * scale,
-                        top: floor.y * scale,
-                        width: floor.width * scale,
-                        height: floor.height * scale,
-                        bgcolor: 'primary.main',
-                        opacity: 0.7,
-                        border: '1px solid',
-                        borderColor: 'primary.dark',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: 'white',
-                        fontSize: '0.8rem',
-                    }}
-                >
-                    {floor.width} x {floor.height}
-                </Box>
-            </Box>
-
-            <Typography variant="body2" sx={{ mt: 1 }}>
-                Positie: ({floor.x}, {floor.y}) | Afmeting: {floor.width} × {floor.height}
-            </Typography>
-
-            {showClickable && (
-                <Typography variant="body2" color="primary" sx={{ mt: 1, fontWeight: 'bold' }}>
-                    Klik om kamers te beheren →
-                </Typography>
-            )}
+            <FloorBox floor={floor} scale={scale} />
+            <FloorInfo floor={floor} showClickable={showClickable} />
         </Paper>
     );
-};
+}

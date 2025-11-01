@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { sceneService } from '../services/sceneService';
 import { deviceService } from '../services/deviceService';
 import type { Scene, SceneFormData } from '../types/scene';
-import { useAuth } from '../context/useAuth';
+import { useAuth } from './useAuth.tsx';
 
 export const useScenes = () => {
     return useQuery({

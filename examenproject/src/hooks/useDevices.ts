@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { deviceService } from '../services/deviceService';
 import type { Device } from '../types/device';
 import {useAddLogEntry} from "./useLogging.ts";
-import {useAuth} from "../context/useAuth.tsx";
+import {useAuth} from "./useAuth.tsx";
 import {useRooms} from "./useRooms.ts";
 
 

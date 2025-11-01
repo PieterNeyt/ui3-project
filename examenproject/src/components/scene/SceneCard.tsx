@@ -16,7 +16,7 @@ import { MoreVert,  Edit, Delete, Info, PowerSettingsNew, Stop } from '@mui/icon
 import type { Scene } from '../../types/scene';
 import { useActiveTimeSlot } from "../../hooks/useTimeSlots.ts";
 import { useNavigate } from "react-router";
-import { useAuth } from '../../context/useAuth';
+import { useAuth } from '../../hooks/useAuth.tsx';
 
 interface SceneCardProps {
     scene: Scene;

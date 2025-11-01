@@ -1,7 +1,7 @@
 import { Box, Paper, Typography } from '@mui/material';
 import type {Floor} from '../../types/floor';
 import type {Room} from '../../types/room';
-import {useAuth} from "../../context/useAuth.tsx";
+import {useAuth} from "../../hooks/useAuth.tsx";
 import {useNavigate} from "react-router";
 
 interface FloorPlanProps {
