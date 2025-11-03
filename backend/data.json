@@ -6,7 +6,7 @@
       "height": 600,
       "x": 50,
       "y": 50,
-      "omschrijving": "Kelderruimte met wasplaats en opslag",
+      "omschrijving": "Kelderruimte met wasplaats ",
       "id": "1"
     },
     {
@@ -17,6 +17,15 @@
       "y": 0,
       "omschrijving": "Hoofdverdieping met woonkamer, keuken en inkomhal",
       "id": "2"
+    },
+    {
+      "id": "97035d29-ae60-49d8-8eea-088a7c9d1b8b",
+      "naam": "zolder",
+      "width": 500,
+      "height": 500,
+      "x": 0,
+      "y": 0,
+      "omschrijving": "zolder"
     }
   ],
   "rooms": [
@@ -79,6 +88,16 @@
       "y": 0,
       "omschrijving": "",
       "id": "daa39127-0db0-4b6a-96f6-c9534de6146e"
+    },
+    {
+      "id": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
+      "naam": "kot",
+      "verdiepingId": "2",
+      "width": 50,
+      "height": 50,
+      "x": 100,
+      "y": 0,
+      "omschrijving": ""
     }
   ],
   "devices": [
@@ -93,14 +112,14 @@
       "omschrijving": "Hoofdverlichting woonkamer",
       "defaultWaarde": {
         "on_off": "on",
-        "brightness": 80
+        "brightness": 100
       },
       "waarde": {
         "on_off": "on",
-        "brightness": 80
+        "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:11:47.946Z",
+      "updatedAt": "2025-11-03T13:09:13.838Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -116,10 +135,10 @@
         "temperature": 21
       },
       "waarde": {
-        "temperature": 21
+        "temperature": 16
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:11:48.055Z"
+      "updatedAt": "2025-11-03T13:08:21.680Z"
     },
     {
       "id": "3",
@@ -137,7 +156,7 @@
         "locked": true
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:11:48.098Z",
+      "updatedAt": "2025-11-03T13:08:21.681Z",
       "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
@@ -150,15 +169,16 @@
       "y": 300,
       "omschrijving": "Sonos sound system",
       "defaultWaarde": {
-        "volume": 25,
-        "playlist": "pop"
+        "volume": 8,
+        "playlist": "electronic"
       },
       "waarde": {
-        "volume": 25,
-        "playlist": "pop"
+        "volume": 100,
+        "playlist": "classic"
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:11:48.139Z"
+      "updatedAt": "2025-11-03T13:10:22.429Z",
+      "lastActivatedBy": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2"
     },
     {
       "id": "5",
@@ -170,15 +190,15 @@
       "y": 150,
       "omschrijving": "LED spots keuken",
       "defaultWaarde": {
-        "on_off": "off",
-        "brightness": 21
+        "on_off": "on",
+        "brightness": 100
       },
       "waarde": {
         "on_off": "off",
-        "brightness": 21
+        "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:11:48.171Z",
+      "updatedAt": "2025-11-03T13:08:41.613Z",
       "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
@@ -199,7 +219,7 @@
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-10-31T20:24:42.047Z",
+      "updatedAt": "2025-11-03T13:08:41.614Z",
       "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
@@ -217,10 +237,11 @@
       },
       "waarde": {
         "on_off": "off",
-        "brightness": 0
+        "brightness": 50
       },
       "createdAt": "2025-10-29T15:35:46.546Z",
-      "updatedAt": "2025-10-31T20:11:48.228Z"
+      "updatedAt": "2025-11-03T13:10:22.442Z",
+      "lastActivatedBy": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2"
     },
     {
       "id": "e247593a-a9c6-4b80-837a-0efb194534e4",
@@ -255,10 +276,10 @@
         "locked": false
       },
       "waarde": {
-        "locked": false
+        "locked": true
       },
       "createdAt": "2025-10-29T19:14:11.639Z",
-      "updatedAt": "2025-10-31T20:11:48.283Z",
+      "updatedAt": "2025-11-03T13:08:21.681Z",
       "lastActivatedBy": "c1bd8199-ea4e-4513-9d50-5d4280256739"
     },
     {
@@ -271,13 +292,13 @@
       "y": 75,
       "omschrijving": "",
       "defaultWaarde": {
-        "temperature": 28
+        "temperature": 10
       },
       "waarde": {
-        "temperature": 28
+        "temperature": 16
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-10-31T20:11:48.317Z",
+      "updatedAt": "2025-11-03T13:08:21.680Z",
       "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
@@ -293,10 +314,10 @@
         "locked": false
       },
       "waarde": {
-        "locked": false
+        "locked": true
       },
       "createdAt": "2025-10-30T12:29:44.976Z",
-      "updatedAt": "2025-10-31T20:11:48.355Z"
+      "updatedAt": "2025-11-03T13:08:21.681Z"
     },
     {
       "id": "443accfa-1d11-4b12-a97e-69fef721d766",
@@ -312,11 +333,11 @@
         "brightness": 31
       },
       "waarde": {
-        "on_off": "on",
+        "on_off": "off",
         "brightness": 31
       },
       "createdAt": "2025-10-30T12:46:35.698Z",
-      "updatedAt": "2025-10-31T20:11:48.372Z"
+      "updatedAt": "2025-11-03T13:08:41.614Z"
     },
     {
       "id": "c89d66cd-8207-4925-b572-cb5acabd6bc5",
@@ -332,11 +353,31 @@
         "brightness": 100
       },
       "waarde": {
-        "on_off": "on",
+        "on_off": "off",
         "brightness": 100
       },
       "createdAt": "2025-10-30T18:59:17.764Z",
-      "updatedAt": "2025-10-30T18:59:17.764Z"
+      "updatedAt": "2025-11-03T13:08:41.614Z"
+    },
+    {
+      "id": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "naam": "speaker",
+      "type": "audio",
+      "upcCode": "1111111111111",
+      "kamerId": "4",
+      "x": 231,
+      "y": 56,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "volume": 9,
+        "playlist": "jazz"
+      },
+      "waarde": {
+        "volume": 9,
+        "playlist": "jazz"
+      },
+      "createdAt": "2025-11-03T13:06:48.626Z",
+      "updatedAt": "2025-11-03T13:06:48.626Z"
     }
   ],
   "playlists": [
@@ -430,6 +471,33 @@
       "createdAt": "2025-10-30T16:30:33.261Z",
       "updatedAt": "2025-10-30T16:30:33.261Z",
       "createdBy": "1"
+    },
+    {
+      "id": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2",
+      "naam": "filmavond",
+      "controls": [
+        {
+          "deviceId": "4",
+          "waarde": {
+            "volume": 100,
+            "playlist": "classic"
+          }
+        },
+        {
+          "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+          "waarde": {
+            "on_off": "off",
+            "brightness": 50
+          }
+        }
+      ],
+      "image": "data:image/jpeg;base64,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",
+      "omschrijving": "film",
+      "isGlobal": false,
+      "userId": "1",
+      "createdAt": "2025-11-03T13:10:19.325Z",
+      "updatedAt": "2025-11-03T13:10:19.325Z",
+      "createdBy": "1"
     }
   ],
   "timeslots": [
@@ -441,16 +509,6 @@
       "isActive": true,
       "createdAt": "2025-10-30T00:08:32.770Z",
       "updatedAt": "2025-10-30T12:31:26.326Z",
-      "createdBy": "current-user-id"
-    },
-    {
-      "id": "3650c065-53a4-443b-98b2-3962987e03f3",
-      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
-      "startTime": "07:00",
-      "endTime": "10:00",
-      "isActive": true,
-      "createdAt": "2025-10-30T18:51:17.697Z",
-      "updatedAt": "2025-10-30T18:51:17.697Z",
       "createdBy": "current-user-id"
     }
   ],
@@ -1236,6 +1294,510 @@
         "brightness": 100
       },
       "timestamp": "2025-10-31T20:24:42.098Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "1e3a0a13-0e98-40b9-aa8c-930a6ce9ce9e",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 80
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 30
+      },
+      "timestamp": "2025-11-03T12:40:28.446Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "cad39ab7-b0b8-400c-be42-c0f1591514b6",
+      "deviceId": "5",
+      "deviceName": "Keuken verlichting",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 21
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 21
+      },
+      "timestamp": "2025-11-03T13:06:07.394Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9e265b75-961a-49e4-97f5-f55ff4d86a2f",
+      "deviceId": "5",
+      "deviceName": "Keuken verlichting",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 21
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:06:11.358Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d1acb224-aa58-492b-aec9-ae43dd1a5a40",
+      "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+      "deviceName": "verwarming",
+      "deviceType": "verwarming",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 28
+      },
+      "newValue": {
+        "temperature": 10
+      },
+      "timestamp": "2025-11-03T13:06:20.578Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c0376dae-7423-46b4-9e5c-14a04288f315",
+      "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+      "deviceName": "verwarming",
+      "deviceType": "verwarming",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 10
+      },
+      "newValue": {
+        "temperature": 16
+      },
+      "timestamp": "2025-11-03T13:08:21.706Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "8ca79149-358e-42b5-8cbb-39588e9a95f8",
+      "deviceId": "3",
+      "deviceName": "Voordeur slot",
+      "deviceType": "deurslot",
+      "roomId": "5",
+      "roomName": "Inkomhal",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T13:08:21.707Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "1f6a140d-137e-44b4-89e5-cec123a1b7eb",
+      "deviceId": "ae8fe262-1be2-4fc7-b865-e97286746dcc",
+      "deviceName": "Woonkamer",
+      "deviceType": "deurslot",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T13:08:21.708Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "32b85a55-12aa-4532-8f6d-6d2239deaf28",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T13:08:21.751Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "96ecbb50-a9da-4fea-946a-f85b0d6c6e65",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 21
+      },
+      "newValue": {
+        "temperature": 16
+      },
+      "timestamp": "2025-11-03T13:08:21.751Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "0aec86ae-b549-4001-a172-cc6a3217fe2c",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 30
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 32
+      },
+      "timestamp": "2025-11-03T13:08:31.167Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "1f6e5097-2b7c-434f-ad35-565873848402",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 32
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 81
+      },
+      "timestamp": "2025-11-03T13:08:32.149Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "33dbf55a-fce3-4098-8540-3fb02c280fdf",
+      "deviceId": "5",
+      "deviceName": "Keuken verlichting",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:35.577Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "6fc45ee4-7b04-45fd-8aea-550735f57616",
+      "deviceId": "8",
+      "deviceName": "Wasplaats verlichting",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:35.577Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "5a3e7b59-1888-4470-a7f5-42f75b09d365",
+      "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "deviceName": "lars",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 31
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 31
+      },
+      "timestamp": "2025-11-03T13:08:35.612Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "73bef103-8e71-4da8-a7d4-b30acf4ac078",
+      "deviceId": "c89d66cd-8207-4925-b572-cb5acabd6bc5",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:35.612Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "41e2867e-237d-49f1-a968-350bcf168ce5",
+      "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 0
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 0
+      },
+      "timestamp": "2025-11-03T13:08:35.613Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "2c193e6c-de47-4a2b-b1ef-bac7d1275c25",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 81
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 81
+      },
+      "timestamp": "2025-11-03T13:08:35.638Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "bd48c066-5db3-40fb-9e8d-d576bbb7a060",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 81
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 81
+      },
+      "timestamp": "2025-11-03T13:08:39.588Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "464c71d3-d227-465c-8660-c97f76952037",
+      "deviceId": "5",
+      "deviceName": "Keuken verlichting",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:41.636Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "990e16fa-bdd8-48b0-b417-e084e8709b88",
+      "deviceId": "8",
+      "deviceName": "Wasplaats verlichting",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:41.636Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "388d2f4a-20e7-4ade-afea-73c0961da156",
+      "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "1",
+      "roomName": "Wasplaats",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 0
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 0
+      },
+      "timestamp": "2025-11-03T13:08:41.637Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "d4456e8c-071d-46e4-9630-b06fe4af9a96",
+      "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "deviceName": "lars",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 31
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 31
+      },
+      "timestamp": "2025-11-03T13:08:41.671Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "60703e51-0430-4aef-8e49-6fd2c728841e",
+      "deviceId": "c89d66cd-8207-4925-b572-cb5acabd6bc5",
+      "deviceName": "lamp",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:08:41.671Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "69e195bb-3bb4-48ac-832c-9aee0d86b81b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 81
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 81
+      },
+      "timestamp": "2025-11-03T13:08:41.672Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "bf685185-2959-4106-9125-60e77ea3dbab",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "newValue": {
+        "volume": 8,
+        "playlist": "electronic"
+      },
+      "timestamp": "2025-11-03T13:09:10.238Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "8b9a7779-8aeb-42d3-9472-687fb90243ad",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 81
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T13:09:13.886Z",
       "userId": "1",
       "userName": "Pieter Neyt"
     }
