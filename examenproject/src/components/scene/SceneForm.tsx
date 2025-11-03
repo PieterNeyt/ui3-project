@@ -22,7 +22,7 @@ import {
 import { Add, Delete } from '@mui/icons-material';
 import { useDevices } from '../../hooks/useDevices';
 import { usePlaylists } from '../../hooks/useDevices';
-import { useAuth } from '../../hooks/useAuth.tsx'; // Import useAuth
+import { useAuth } from '../../hooks/useAuth.ts'; // Import useAuth
 import type { Scene, SceneFormData, SceneControl } from '../../types/scene';
 import type { DeviceType, DeviceValue, LightValue, HeatingValue, DoorLockValue, AudioValue } from '../../types/device';
 

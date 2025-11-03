@@ -17,7 +17,7 @@ import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateS
 import { SceneCard } from '../../components/scene/SceneCard.tsx';
 import { SceneForm } from '../../components/scene/SceneForm.tsx';
 import type { Scene, SceneFormData } from '../../types/scene.ts';
-import { useAuth } from "../../hooks/useAuth.tsx";
+import { useAuth } from "../../hooks/useAuth.ts";
 
 export default function Index()  {
     const { isAdmin, isGebruiker, user } = useAuth();

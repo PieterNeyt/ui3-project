@@ -2,7 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { useAuth } from '../../hooks/useAuth.tsx';
+import { useAuth } from '../../hooks/useAuth.ts';
 import { NavbarLinks } from './NavbarLinks';
 import { NavbarThemeToggle } from './NavbarThemeToggle';
 import { NavbarUserSection } from './NavbarUserSection';

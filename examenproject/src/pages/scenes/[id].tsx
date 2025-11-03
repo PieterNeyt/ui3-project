@@ -21,7 +21,7 @@ import { useCreateTimeSlot, useUpdateTimeSlot, useDeleteTimeSlot } from '../../h
 import { TimeSlotList } from '../../components/timeslot/TimeSlotList.tsx';
 import { TimeSlotForm } from '../../components/timeslot/TimeSlotForm.tsx';
 import type { TimeSlot, TimeSlotFormData } from '../../types/timeslot.ts';
-import { useAuth } from '../../hooks/useAuth.tsx';
+import { useAuth } from '../../hooks/useAuth.ts';
 
 export default function Id()  {
     const { id } = useParams<{ id: string }>();

@@ -22,7 +22,7 @@ import { DeviceForm } from '../../../components/device/DeviceForm.tsx';
 import type { Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice, DeviceFormData } from '../../../types/device.ts';
 import type {Room} from "../../../types/room.ts";
 import type {Floor} from "../../../types/floor.ts";
-import {useAuth} from "../../../hooks/useAuth.tsx";
+import {useAuth} from "../../../hooks/useAuth.ts";
 
 export default function Devices()  {
 

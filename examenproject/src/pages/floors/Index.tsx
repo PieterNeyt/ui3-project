@@ -16,7 +16,7 @@ import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../..
 import { FloorForm } from '../../components/floor/FloorForm.tsx';
 import { FloorPreview } from '../../components/floor/FloorPreview.tsx';
 import type { Floor, FloorFormData } from '../../types/floor.ts';
-import { useAuth } from '../../hooks/useAuth.tsx';
+import { useAuth } from '../../hooks/useAuth.ts';
 
 
 export default function  Index ()  {

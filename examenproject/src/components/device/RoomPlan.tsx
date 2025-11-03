@@ -6,7 +6,7 @@ import { DeviceForm } from './DeviceForm';
 import { RoomHeader } from './RoomHeader';
 import { RoomCanvas } from './RoomCanvas';
 import { useCreateDevice } from '../../hooks/useDevices';
-import { useAuth } from '../../hooks/useAuth.tsx';
+import { useAuth } from '../../hooks/useAuth.ts';
 
 interface RoomPlanProps {
     room: Room;

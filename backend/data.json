@@ -111,15 +111,15 @@
       "y": 200,
       "omschrijving": "Hoofdverlichting woonkamer",
       "defaultWaarde": {
-        "on_off": "on",
-        "brightness": 100
+        "on_off": "off",
+        "brightness": 18
       },
       "waarde": {
-        "on_off": "on",
-        "brightness": 100
+        "on_off": "off",
+        "brightness": 18
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T13:09:13.838Z",
+      "updatedAt": "2025-11-03T15:25:12.558Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -130,15 +130,15 @@
       "kamerId": "3",
       "x": 400,
       "y": 100,
-      "omschrijving": "Smart thermostaat",
+      "omschrijving": "Smart therazeazeaz",
       "defaultWaarde": {
-        "temperature": 21
+        "temperature": 26
       },
       "waarde": {
-        "temperature": 16
+        "temperature": 26
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T13:08:21.680Z"
+      "updatedAt": "2025-11-03T15:28:35.583Z"
     },
     {
       "id": "3",
@@ -169,15 +169,15 @@
       "y": 300,
       "omschrijving": "Sonos sound system",
       "defaultWaarde": {
-        "volume": 8,
+        "volume": 0,
         "playlist": "electronic"
       },
       "waarde": {
-        "volume": 100,
-        "playlist": "classic"
+        "volume": 0,
+        "playlist": "electronic"
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T13:10:22.429Z",
+      "updatedAt": "2025-11-03T15:22:05.837Z",
       "lastActivatedBy": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2"
     },
     {
@@ -378,6 +378,44 @@
       },
       "createdAt": "2025-11-03T13:06:48.626Z",
       "updatedAt": "2025-11-03T13:06:48.626Z"
+    },
+    {
+      "id": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "naam": "hoofddeur",
+      "type": "deurslot",
+      "upcCode": "1111111111111",
+      "kamerId": "3",
+      "x": 0,
+      "y": 0,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "locked": false
+      },
+      "waarde": {
+        "locked": false
+      },
+      "createdAt": "2025-11-03T15:10:51.411Z",
+      "updatedAt": "2025-11-03T15:10:51.411Z"
+    },
+    {
+      "id": "5430fc97-54cf-421d-8527-656711e7dfd1",
+      "naam": "lamp",
+      "type": "licht",
+      "upcCode": "1111111111111",
+      "kamerId": "3",
+      "x": 168,
+      "y": 36,
+      "omschrijving": "azeaze",
+      "defaultWaarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "waarde": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "createdAt": "2025-11-03T15:22:23.167Z",
+      "updatedAt": "2025-11-03T15:22:23.167Z"
     }
   ],
   "playlists": [
@@ -1798,6 +1836,212 @@
         "brightness": 100
       },
       "timestamp": "2025-11-03T13:09:13.886Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "f4de6293-bdb2-4104-9742-c4ba2d74b3d3",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 30
+      },
+      "timestamp": "2025-11-03T15:08:22.538Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "4da6771c-effd-4646-a774-a620c6bca1dd",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 16
+      },
+      "newValue": {
+        "temperature": 30
+      },
+      "timestamp": "2025-11-03T15:08:27.068Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "fa51e810-0d35-45b1-b743-1fc3f7d5c04c",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 30
+      },
+      "newValue": {
+        "temperature": 10
+      },
+      "timestamp": "2025-11-03T15:08:34.253Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "ee164599-099d-4e0e-a566-d386ed00ecc3",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 10
+      },
+      "newValue": {
+        "temperature": 20
+      },
+      "timestamp": "2025-11-03T15:10:37.746Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "899733ae-81af-4706-b9f2-857bb163ef00",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 30
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T15:22:01.193Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fa69642e-331a-4ae4-80a4-2783f7bdf386",
+      "deviceId": "4",
+      "deviceName": "Woonkamer speakers",
+      "deviceType": "audio",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 100,
+        "playlist": "classic"
+      },
+      "newValue": {
+        "volume": 0,
+        "playlist": "electronic"
+      },
+      "timestamp": "2025-11-03T15:22:05.907Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "59e697e3-520f-42fe-913c-2dfc8686a56d",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 20
+      },
+      "newValue": {
+        "temperature": 14
+      },
+      "timestamp": "2025-11-03T15:24:08.805Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8baf94fe-d924-4827-9459-df17574e48ee",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 14
+      },
+      "newValue": {
+        "temperature": 27
+      },
+      "timestamp": "2025-11-03T15:24:12.806Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b6b11eb5-de38-47f4-b64d-3adc0ea33fd1",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 27
+      },
+      "newValue": {
+        "temperature": 15
+      },
+      "timestamp": "2025-11-03T15:25:08.730Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "22785bc9-bb03-49da-9074-75d0a6346c36",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 18
+      },
+      "timestamp": "2025-11-03T15:25:12.603Z",
+      "userId": "1",
+      "userName": "Pieter Neyt"
+    },
+    {
+      "id": "1ccd91be-efe1-4d19-b964-ebfe2178e5a3",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 15
+      },
+      "newValue": {
+        "temperature": 26
+      },
+      "timestamp": "2025-11-03T15:28:35.631Z",
       "userId": "1",
       "userName": "Pieter Neyt"
     }
