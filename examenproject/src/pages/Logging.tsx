@@ -10,7 +10,7 @@ import {
     CardContent,
 } from '@mui/material';
 import { Timeline, BarChart } from '@mui/icons-material';
-import { DeviceChangeLogs } from '../components/logging/DeviceChangeLogs.tsx';
+import { DeviceChangeLogs } from '../components/logging/logging/DeviceChangeLogs.tsx';
 import { DeviceStatistics } from '../components/logging/DeviceStatistics.tsx';
 
 interface TabPanelProps {
