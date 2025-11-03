@@ -1,27 +1,19 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Dialog,
     DialogTitle,
     DialogContent,
     DialogActions,
-    Button,
-    FormControl,
-    InputLabel,
-    Select,
-    MenuItem,
-    FormControlLabel,
-    Switch,
     Box,
-    Alert,
-    Typography,
 } from '@mui/material';
-import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { format, parse } from 'date-fns';
 import { useScenes } from '../../hooks/useScenes';
 import { useCheckOverlap } from '../../hooks/useTimeSlots';
 import type { TimeSlot, TimeSlotFormData } from '../../types/timeslot';
+import { TimeSlotFormFields } from './TimeSlotFormFields';
+import { TimeSlotFormActions } from './TimeSlotFormActions';
+import type {Scene} from "../../types/scene.ts";
 
 interface TimeSlotFormProps {
     open: boolean;
@@ -32,14 +24,17 @@ interface TimeSlotFormProps {
 }
 
 export const TimeSlotForm = ({
-                                                              open,
-                                                              timeslot,
-                                                              onSave,
-                                                              onClose,
-                                                              isSubmitting = false,
-                                                          }:TimeSlotFormProps) => {
+                                 open,
+                                 timeslot,
+                                 onSave,
+                                 onClose,
+                                 isSubmitting = false,
+                             }: TimeSlotFormProps) => {
     const { data: scenes = [] } = useScenes();
     const checkOverlapMutation = useCheckOverlap();
+
+    // Filter alleen globale scenes
+    const globalScenes = scenes.filter(scene => scene.isGlobal);
 
     const [formData, setFormData] = useState<TimeSlotFormData>({
         sceneId: '',
@@ -72,52 +67,38 @@ export const TimeSlotForm = ({
     }, [timeslot, open]);
 
     const validateForm = async (): Promise<boolean> => {
-        const newErrors: Record<string, string> = {};
-
-        if (!formData.sceneId) {
-            newErrors.sceneId = 'Scene is verplicht';
-        }
-
-        if (!formData.startTime) {
-            newErrors.startTime = 'Starttijd is verplicht';
-        }
-
-        if (!formData.endTime) {
-            newErrors.endTime = 'Eindtijd is verplicht';
-        }
-
-        if (formData.startTime && formData.endTime) {
-            const startMinutes = timeToMinutes(formData.startTime);
-            const endMinutes = timeToMinutes(formData.endTime);
-
-            if (startMinutes === endMinutes) {
-                newErrors.endTime = 'Start- en eindtijd mogen niet gelijk zijn';
-            }
-        }
-
+        const newErrors = validateFormData(formData, globalScenes);
         setErrors(newErrors);
 
-        // Check for overlaps
-        if (formData.sceneId && formData.startTime && formData.endTime && Object.keys(newErrors).length === 0) {
+        if (Object.keys(newErrors).length === 0) {
+            return await checkForOverlaps();
+        }
+
+        return false;
+    };
+
+    const checkForOverlaps = async (): Promise<boolean> => {
+        if (formData.sceneId && formData.startTime && formData.endTime) {
             try {
+                // BELANGRIJKE WIJZIGING: Check overlap GLOBAAL (niet meer per scene)
                 const hasOverlap = await checkOverlapMutation.mutateAsync({
-                    sceneId: formData.sceneId,
                     startTime: formData.startTime,
                     endTime: formData.endTime,
                     excludeId: timeslot?.id,
+                    sceneId: formData.sceneId
                 });
 
                 if (hasOverlap) {
-                    setOverlapError('Dit tijdslot overlapt met een bestaand tijdslot voor deze scene');
+                    setOverlapError('Dit tijdslot overlapt met een bestaand tijdslot. Tijdsloten mogen niet overlappen over alle scenes heen.');
                     return false;
                 }
                 setOverlapError('');
+                return true;
             } catch (error) {
                 console.error('Error checking overlap:', error);
             }
         }
-
-        return Object.keys(newErrors).length === 0 && !overlapError;
+        return false;
     };
 
     const handleSubmit = async (): Promise<void> => {
@@ -127,15 +108,8 @@ export const TimeSlotForm = ({
         onSave(formData);
     };
 
-    const handleTimeChange = (field: 'startTime' | 'endTime', date: Date | null) => {
-        if (date) {
-            const timeString = format(date, 'HH:mm');
-            setFormData(prev => ({ ...prev, [field]: timeString }));
-        }
-    };
-
-    const parseTimeString = (timeString: string): Date => {
-        return parse(timeString, 'HH:mm', new Date());
+    const handleFormDataChange = (updates: Partial<TimeSlotFormData>) => {
+        setFormData(prev => ({ ...prev, ...updates }));
     };
 
     return (
@@ -146,99 +120,65 @@ export const TimeSlotForm = ({
                 </DialogTitle>
                 <DialogContent>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 1 }}>
-                        {overlapError && (
-                            <Alert severity="error">{overlapError}</Alert>
-                        )}
-
-                        <FormControl fullWidth error={!!errors.sceneId}>
-                            <InputLabel>Scene *</InputLabel>
-                            <Select
-                                value={formData.sceneId}
-                                label="Scene *"
-                                onChange={(e) => setFormData(prev => ({ ...prev, sceneId: e.target.value }))}
-                            >
-                                <MenuItem value="">
-                                    <em>Selecteer een scene</em>
-                                </MenuItem>
-                                {scenes.map(scene => (
-                                    <MenuItem key={scene.id} value={scene.id}>
-                                        {scene.naam}
-                                    </MenuItem>
-                                ))}
-                            </Select>
-                            {errors.sceneId && (
-                                <Typography variant="caption" color="error">
-                                    {errors.sceneId}
-                                </Typography>
-                            )}
-                        </FormControl>
-
-                        <Box sx={{ display: 'flex', gap: 2 }}>
-                            <TimePicker
-                                label="Starttijd *"
-                                value={parseTimeString(formData.startTime)}
-                                onChange={(date) => handleTimeChange('startTime', date)}
-                                ampm={false} // Dit forceert 24u formaat
-                                format="HH:mm" // 24u formaat
-                                slotProps={{
-                                    textField: {
-                                        fullWidth: true,
-                                        error: !!errors.startTime,
-                                        helperText: errors.startTime,
-                                        placeholder: "00:00",
-                                    },
-                                }}
-                            />
-
-                            <TimePicker
-                                label="Eindtijd *"
-                                value={parseTimeString(formData.endTime)}
-                                onChange={(date) => handleTimeChange('endTime', date)}
-                                ampm={false} // Dit forceert 24u formaat
-                                format="HH:mm" // 24u formaat
-                                slotProps={{
-                                    textField: {
-                                        fullWidth: true,
-                                        error: !!errors.endTime,
-                                        helperText: errors.endTime,
-                                        placeholder: "23:59",
-                                    },
-                                }}
-                            />
-                        </Box>
-
-                        <FormControlLabel
-                            control={
-                                <Switch
-                                    checked={formData.isActive}
-                                    onChange={(e) => setFormData(prev => ({ ...prev, isActive: e.target.checked }))}
-                                />
-                            }
-                            label="Actief"
+                        <TimeSlotFormFields
+                            formData={formData}
+                            errors={errors}
+                            overlapError={overlapError}
+                            scenes={globalScenes}
+                            onFormDataChange={handleFormDataChange}
                         />
-
-                        <Alert severity="info">
-                            Het tijdslot wordt dagelijks herhaald. Tijdsloten mogen niet overlappen.
-                            Gebruik 24-uurs notatie (00:00 - 23:59).
-                        </Alert>
                     </Box>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={onClose}>Annuleren</Button>
-                    <Button
-                        onClick={handleSubmit}
-                        variant="contained"
-                        disabled={isSubmitting}
-                    >
-                        {isSubmitting ? 'Bezig...' : timeslot ? 'Bijwerken' : 'Aanmaken'}
-                    </Button>
+                    <TimeSlotFormActions
+                        onClose={onClose}
+                        onSubmit={handleSubmit}
+                        isSubmitting={isSubmitting}
+                        timeslot={timeslot}
+                    />
                 </DialogActions>
             </Dialog>
         </LocalizationProvider>
     );
 };
 
-// Helper function
+// Validation helper functions
+const validateFormData = (
+    formData: TimeSlotFormData,
+    globalScenes: Scene[]
+): Record<string, string> => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.sceneId) {
+        newErrors.sceneId = 'Scene is verplicht';
+    } else {
+        // Controleer of de geselecteerde scene globaal is
+        const selectedScene = globalScenes.find(s => s.id === formData.sceneId);
+        if (!selectedScene) {
+            newErrors.sceneId = 'Alleen globale scenes kunnen aan tijdsloten worden gekoppeld';
+        }
+    }
+
+    if (!formData.startTime) {
+        newErrors.startTime = 'Starttijd is verplicht';
+    }
+
+    if (!formData.endTime) {
+        newErrors.endTime = 'Eindtijd is verplicht';
+    }
+
+    if (formData.startTime && formData.endTime) {
+        const startMinutes = timeToMinutes(formData.startTime);
+        const endMinutes = timeToMinutes(formData.endTime);
+
+        if (startMinutes === endMinutes) {
+            newErrors.endTime = 'Start- en eindtijd mogen niet gelijk zijn';
+        }
+    }
+
+    return newErrors;
+};
+
 const timeToMinutes = (time: string): number => {
     const [hours, minutes] = time.split(':').map(Number);
     return hours * 60 + minutes;

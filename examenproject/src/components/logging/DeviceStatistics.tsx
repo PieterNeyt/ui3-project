@@ -1,11 +1,11 @@
 import { Box, LinearProgress, Typography } from '@mui/material';
-import { useDeviceStatistics } from '../../../hooks/useLogging.ts';
-import { SummaryCards } from './SummaryCards.tsx';
-import { MostSwitchedLights } from './MostSwitchedLights.tsx';
-import { TopActiveDevices } from './TopActiveDevices.tsx';
-import { MostActiveRooms } from './MostActiveRooms.tsx';
-import { DeviceTypeStats } from './DeviceTypeStats.tsx';
-import { RecentActivity } from './RecentActivity.tsx';
+import { useDeviceStatistics } from '../../hooks/useLogging.ts';
+import { SummaryCards } from './analytics/SummaryCards.tsx';
+import { MostSwitchedLights } from './analytics/MostSwitchedLights.tsx';
+import { TopActiveDevices } from './analytics/TopActiveDevices.tsx';
+import { MostActiveRooms } from './analytics/MostActiveRooms.tsx';
+import { DeviceTypeStats } from './analytics/DeviceTypeStats.tsx';
+import { RecentActivity } from './analytics/RecentActivity.tsx';
 
 interface DeviceStatisticsProps {
     type?: 'mostSwitchedLights' | 'topActiveDevices' | 'all' | 'summary';

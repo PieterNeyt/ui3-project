@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { Box, Alert } from '@mui/material';
-import { useDeviceChangeLogs } from '../../../hooks/useLogging.ts';
-import type { LogFilter } from '../../../types/logging.ts';
+import { useDeviceChangeLogs } from '../../hooks/useLogging.ts';
+import type { LogFilter } from '../../types/logging.ts';
 import { format } from 'date-fns';
-import { DeviceChangeLogsFilters } from './DeviceChangeLogsFilters.tsx';
-import { DeviceChangeLogsTable } from './DeviceChangeLogsTable.tsx';
+import { DeviceChangeLogsFilters } from './logging/DeviceChangeLogsFilters.tsx';
+import { DeviceChangeLogsTable } from './logging/DeviceChangeLogsTable.tsx';
 
 export const DeviceChangeLogs = () => {
     const [filters, setFilters] = useState<LogFilter>({

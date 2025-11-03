@@ -464,7 +464,7 @@
     },
     {
       "id": "bf668394-1a28-4b6f-bbaa-b02747d7d52a",
-      "naam": "ochtendroutine",
+      "naam": "ochtendroutineazeazeazeazeaze",
       "controls": [
         {
           "deviceId": "8",
@@ -499,6 +499,26 @@
           "waarde": {
             "volume": 75,
             "playlist": "jazz"
+          },
+          "device": {
+            "id": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+            "naam": "speaker",
+            "type": "audio",
+            "upcCode": "1111111111111",
+            "kamerId": "4",
+            "x": 231,
+            "y": 56,
+            "omschrijving": "",
+            "defaultWaarde": {
+              "volume": 9,
+              "playlist": "jazz"
+            },
+            "waarde": {
+              "volume": 9,
+              "playlist": "jazz"
+            },
+            "createdAt": "2025-11-03T13:06:48.626Z",
+            "updatedAt": "2025-11-03T13:06:48.626Z"
           }
         }
       ],
@@ -506,7 +526,7 @@
       "omschrijving": "",
       "isGlobal": true,
       "createdAt": "2025-10-30T12:34:31.232Z",
-      "updatedAt": "2025-11-03T16:13:22.248Z",
+      "updatedAt": "2025-11-03T16:29:47.561Z",
       "createdBy": "current-user-id",
       "userId": "2"
     },
@@ -572,6 +592,16 @@
       "isActive": true,
       "createdAt": "2025-10-30T00:08:32.770Z",
       "updatedAt": "2025-10-30T12:31:26.326Z",
+      "createdBy": "current-user-id"
+    },
+    {
+      "id": "6c7a31b8-0464-4086-9060-75a9a5a6954e",
+      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
+      "startTime": "07:00",
+      "endTime": "10:00",
+      "isActive": true,
+      "createdAt": "2025-11-03T16:50:29.205Z",
+      "updatedAt": "2025-11-03T16:50:29.205Z",
       "createdBy": "current-user-id"
     }
   ],

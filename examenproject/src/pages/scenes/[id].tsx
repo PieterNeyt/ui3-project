@@ -46,7 +46,7 @@ export default function Id()  {
     const [timeSlotToDelete, setTimeSlotToDelete] = useState<string | null>(null);
 
     const handleAddTimeSlot = () => {
-        // VOEG DEZE CHECK TOE - voorkom toevoegen voor persoonlijke scenes
+
         if (!scene?.isGlobal) {
             alert('Tijdsloten kunnen alleen worden toegevoegd aan globale scenes');
             return;

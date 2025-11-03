@@ -10,7 +10,7 @@ import {
     Alert,
     Stack,
 } from '@mui/material';
-import { Add, Edit, Delete, Schedule } from '@mui/icons-material';
+import { Add, Edit, Delete, Schedule, Info } from '@mui/icons-material';
 import { useTimeSlotsByScene } from '../../hooks/useTimeSlots';
 import type { TimeSlot } from '../../types/timeslot';
 
@@ -24,13 +24,13 @@ interface TimeSlotListProps {
 }
 
 export const TimeSlotList = ({
-                                                              sceneId,
-                                                              onAddTimeSlot,
-                                                              onEditTimeSlot,
-                                                              onDeleteTimeSlot,
-                                                              isAdmin,
-                                                              isGlobalScene = false,
-                                                          }:TimeSlotListProps) => {
+                                 sceneId,
+                                 onAddTimeSlot,
+                                 onEditTimeSlot,
+                                 onDeleteTimeSlot,
+                                 isAdmin,
+                                 isGlobalScene = false,
+                             }: TimeSlotListProps) => {
     const { data: timeslots = [], isLoading, error } = useTimeSlotsByScene(sceneId);
 
     const formatTimeRange = (startTime: string, endTime: string): string => {
@@ -65,55 +65,77 @@ export const TimeSlotList = ({
 
             {!isGlobalScene ? (
                 <Alert severity="info">
-                    Tijdsloten zijn alleen beschikbaar voor globale scenes.
-                    Persoonlijke scenes kunnen niet automatisch geactiveerd worden via tijdsloten.
-                </Alert>
-            ) : timeslots.length === 0 ? (
-                <Alert severity="info">
-                    Geen tijdsloten gevonden. Voeg een tijdslot toe om deze scene automatisch te activeren.
+                    <Typography variant="body2" gutterBottom>
+                        <strong>Tijdsloten zijn alleen beschikbaar voor globale scenes.</strong>
+                    </Typography>
+                    <Typography variant="body2">
+                        Persoonlijke scenes kunnen niet automatisch geactiveerd worden via tijdsloten.
+                    </Typography>
                 </Alert>
             ) : (
-                <List>
-                    {timeslots.map((timeslot) => (
-                        <ListItem
-                            key={timeslot.id}
-                            divider
-                            secondaryAction={
-                                isAdmin && isGlobalScene ? (
-                                    <Stack direction="row" spacing={1}>
-                                        <IconButton
-                                            onClick={() => onEditTimeSlot(timeslot)}
-                                            size="small"
-                                        >
-                                            <Edit />
-                                        </IconButton>
-                                        <IconButton
-                                            onClick={() => onDeleteTimeSlot(timeslot.id)}
-                                            size="small"
-                                            color="error"
-                                        >
-                                            <Delete />
-                                        </IconButton>
-                                    </Stack>
-                                ) : undefined
-                            }
-                        >
-                            <ListItemText
-                                primary={formatTimeRange(timeslot.startTime, timeslot.endTime)}
-                                secondary={
-                                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.5 }}>
-                                        <Chip
-                                            label={timeslot.isActive ? 'Actief' : 'Inactief'}
-                                            size="small"
-                                            color={timeslot.isActive ? 'success' : 'default'}
-                                            variant="outlined"
-                                        />
-                                    </Box>
-                                }
-                            />
-                        </ListItem>
-                    ))}
-                </List>
+                <>
+                    <Alert severity="info" icon={<Info />} sx={{ mb: 2 }}>
+                        <Typography variant="body2">
+                            <strong>Let op:</strong> Tijdsloten mogen niet overlappen met tijdsloten van andere globale scenes.
+                            Slechts één scene kan actief zijn op een bepaald moment.
+                        </Typography>
+                    </Alert>
+
+                    {timeslots.length === 0 ? (
+                        <Alert severity="info">
+                            Geen tijdsloten gevonden. Voeg een tijdslot toe om deze scene automatisch te activeren.
+                        </Alert>
+                    ) : (
+                        <List>
+                            {timeslots.map((timeslot) => (
+                                <ListItem
+                                    key={timeslot.id}
+                                    divider
+                                    secondaryAction={
+                                        isAdmin && isGlobalScene ? (
+                                            <Stack direction="row" spacing={1}>
+                                                <IconButton
+                                                    onClick={() => onEditTimeSlot(timeslot)}
+                                                    size="small"
+                                                >
+                                                    <Edit />
+                                                </IconButton>
+                                                <IconButton
+                                                    onClick={() => onDeleteTimeSlot(timeslot.id)}
+                                                    size="small"
+                                                    color="error"
+                                                >
+                                                    <Delete />
+                                                </IconButton>
+                                            </Stack>
+                                        ) : undefined
+                                    }
+                                >
+                                    <ListItemText
+                                        primary={
+                                            <Typography variant="body1" fontWeight="medium">
+                                                {formatTimeRange(timeslot.startTime, timeslot.endTime)}
+                                            </Typography>
+                                        }
+                                        secondary={
+                                            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.5 }}>
+                                                <Chip
+                                                    label={timeslot.isActive ? 'Actief' : 'Inactief'}
+                                                    size="small"
+                                                    color={timeslot.isActive ? 'success' : 'default'}
+                                                    variant="outlined"
+                                                />
+                                                <Typography variant="caption" color="text.secondary">
+                                                    Dagelijks herhaald
+                                                </Typography>
+                                            </Box>
+                                        }
+                                    />
+                                </ListItem>
+                            ))}
+                        </List>
+                    )}
+                </>
             )}
         </Box>
     );

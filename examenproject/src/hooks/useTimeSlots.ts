@@ -57,8 +57,16 @@ export const useDeleteTimeSlot = () => {
 
 export const useCheckOverlap = () => {
     return useMutation({
-        mutationFn: ({ sceneId, startTime, endTime, excludeId }:
-                     { sceneId: string; startTime: string; endTime: string; excludeId?: string }) =>
-            timeSlotService.checkOverlap(sceneId, startTime, endTime, excludeId),
+        mutationFn: ({
+                         sceneId,
+                         startTime,
+                         endTime,
+                         excludeId,
+                     }: {
+            sceneId: string;
+            startTime: string;
+            endTime: string;
+            excludeId?: string;
+        }) => timeSlotService.checkOverlap(sceneId, startTime, endTime, excludeId),
     });
 };
