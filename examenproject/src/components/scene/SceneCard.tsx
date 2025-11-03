@@ -2,21 +2,21 @@ import React from 'react';
 import {
     Card,
     CardContent,
-    CardMedia,
-    Typography,
-    Button,
     Box,
-    Chip,
-    IconButton,
+    Button,
     Menu,
     MenuItem,
     Tooltip,
 } from '@mui/material';
-import { MoreVert,  Edit, Delete, Info, PowerSettingsNew, Stop } from '@mui/icons-material';
+import { Delete,Edit, Info, PowerSettingsNew, Stop } from '@mui/icons-material';
 import type { Scene } from '../../types/scene';
 import { useActiveTimeSlot } from "../../hooks/useTimeSlots.ts";
 import { useNavigate } from "react-router";
 import { useAuth } from '../../hooks/useAuth.ts';
+import { SceneCardHeader } from './card/SceneCardHeader.tsx';
+import { SceneCardImage } from './card/SceneCardImage.tsx';
+import { SceneCardChips } from './card/SceneCardChips.tsx';
+import { SceneCardControls } from './card/SceneCardControls.tsx';
 
 interface SceneCardProps {
     scene: Scene;
@@ -36,7 +36,7 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                                                         onDelete,
                                                         isAdmin,
                                                         isCurrentlyActive = false,
-                                                    }:SceneCardProps) => {
+                                                    }: SceneCardProps) => {
     const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
     const { data: activeTimeSlot } = useActiveTimeSlot();
     const isSceneActiveViaTimeSlot = activeTimeSlot?.sceneId === scene.id;
@@ -52,30 +52,6 @@ export const SceneCard: React.FC<SceneCardProps> = ({
     };
 
     const isOwner = !scene.isGlobal && scene.createdBy === user?.id;
-
-    const getInitials = (name: string): string => {
-        return name
-            .split(' ')
-            .map(word => word[0])
-            .join('')
-            .toUpperCase()
-            .slice(0, 2);
-    };
-
-    const getDeviceSummary = (): string => {
-        const deviceTypes = scene.controls.map(control =>
-            control.device?.type || 'device'
-        );
-        const uniqueTypes = [...new Set(deviceTypes)];
-        return `${scene.controls.length} devices (${uniqueTypes.join(', ')})`;
-    };
-
-    const formatControlValue = (control: Scene['controls'][0]): string => {
-        const values = Object.entries(control.waarde)
-            .map(([key, value]) => `${key}: ${value}`)
-            .join(', ');
-        return values;
-    };
 
     const handleActivateClick = () => {
         onActivate(scene.id);
@@ -123,115 +99,24 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                 </Box>
             )}
 
-            {/* Scene Image of Initials */}
-            {scene.image ? (
-                <CardMedia
-                    component="img"
-                    height="140"
-                    image={scene.image}
-                    alt={scene.naam}
-                    sx={{ cursor: 'pointer' }}
-                    onClick={() => navigate(`/scenes/${scene.id}`)}
-                />
-            ) : (
-                <Box
-                    sx={{
-                        height: 140,
-                        bgcolor: scene.isGlobal ? 'primary.main' : 'success.main',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        color: 'white',
-                        fontSize: 48,
-                        fontWeight: 'bold',
-                        cursor: 'pointer'
-                    }}
-                    onClick={() => navigate(`/scenes/${scene.id}`)}
-                >
-                    {getInitials(scene.naam)}
-                </Box>
-            )}
+            <SceneCardImage scene={scene} navigate={navigate} />
 
             <CardContent sx={{ flexGrow: 1 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
-                    <Typography
-                        variant="h6"
-                        component="h2"
-                        noWrap
-                        sx={{
-                            cursor: 'pointer',
-                            '&:hover': { color: 'primary.main' }
-                        }}
-                        onClick={() => navigate(`/scenes/${scene.id}`)}
-                    >
-                        {scene.naam}
-                    </Typography>
+                <SceneCardHeader
+                    scene={scene}
+                    navigate={navigate}
+                    isAdmin={isAdmin}
+                    isOwner={isOwner}
+                    onMenuOpen={handleMenuOpen}
+                />
 
-                    {(isAdmin || isOwner) && (
-                        <IconButton size="small" onClick={handleMenuOpen}>
-                            <MoreVert />
-                        </IconButton>
-                    )}
-                </Box>
+                <SceneCardChips
+                    scene={scene}
+                    isSceneActiveViaTimeSlot={isSceneActiveViaTimeSlot}
+                    isCurrentlyActive={isCurrentlyActive}
+                />
 
-                {/* Scene Type Chips */}
-                <Box sx={{ display: 'flex', gap: 1, mb: 1, flexWrap: 'wrap' }}>
-                    {scene.isGlobal ? (
-                        <Chip
-                            label="Globale Scene"
-                            size="small"
-                            color="primary"
-                            variant="outlined"
-                        />
-                    ) : (
-                        <Chip
-                            label="Eigen Scene"
-                            size="small"
-                            color="success"
-                            variant="outlined"
-                        />
-                    )}
-
-                    {isSceneActiveViaTimeSlot && (
-                        <Chip
-                            label="Actief via tijdslot"
-                            size="small"
-                            color="success"
-                        />
-                    )}
-
-                    {isCurrentlyActive && (
-                        <Chip
-                            label="Handmatig geactiveerd"
-                            size="small"
-                            color="warning"
-                        />
-                    )}
-                </Box>
-
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                    {getDeviceSummary()}
-                </Typography>
-
-                {scene.omschrijving && (
-                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                        {scene.omschrijving}
-                    </Typography>
-                )}
-
-                {/* Control Preview */}
-                <Box sx={{ mt: 'auto' }}>
-                    {scene.controls.slice(0, 3).map((control, index) => (
-                        <Typography key={index} variant="caption" display="block" color="text.secondary">
-                            • {control.device?.naam || `Device ${control.deviceId}`}: {formatControlValue(control)}
-                        </Typography>
-                    ))}
-                    {scene.controls.length > 3 && (
-                        <Typography variant="caption" color="text.secondary">
-                            ... en {scene.controls.length - 3} meer
-                        </Typography>
-                    )}
-                </Box>
+                <SceneCardControls scene={scene} />
             </CardContent>
 
             <Box sx={{ p: 1, display: 'flex', gap: 1 }}>
@@ -261,7 +146,6 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                     </Tooltip>
                 )}
 
-                {/* Toon alleen details knop voor globale scenes of admin */}
                 {(isAdmin || scene.isGlobal) && (
                     <Button
                         variant="outlined"
@@ -274,7 +158,6 @@ export const SceneCard: React.FC<SceneCardProps> = ({
                 )}
             </Box>
 
-            {/* Edit/Delete Menu */}
             {(isAdmin || isOwner) && (
                 <Menu
                     anchorEl={menuAnchor}

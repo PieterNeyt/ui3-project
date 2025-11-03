@@ -119,7 +119,7 @@
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T15:56:39.430Z",
+      "updatedAt": "2025-11-03T16:11:58.908Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -135,10 +135,10 @@
         "temperature": 26
       },
       "waarde": {
-        "temperature": 26
+        "temperature": 20
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T15:28:35.583Z"
+      "updatedAt": "2025-11-03T16:13:45.917Z"
     },
     {
       "id": "3",
@@ -177,7 +177,7 @@
         "playlist": "classic"
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T16:05:27.788Z",
+      "updatedAt": "2025-11-03T16:12:00.729Z",
       "lastActivatedBy": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2"
     },
     {
@@ -240,7 +240,7 @@
         "brightness": 50
       },
       "createdAt": "2025-10-29T15:35:46.546Z",
-      "updatedAt": "2025-11-03T16:05:27.799Z",
+      "updatedAt": "2025-11-03T16:12:00.738Z",
       "lastActivatedBy": "5f9468f7-0ccc-4232-a190-b07c7a5b52f2"
     },
     {
@@ -298,7 +298,7 @@
         "temperature": 25
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-11-03T16:05:27.122Z",
+      "updatedAt": "2025-11-03T16:12:01.504Z",
       "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
@@ -317,8 +317,8 @@
         "locked": true
       },
       "createdAt": "2025-10-30T12:29:44.976Z",
-      "updatedAt": "2025-11-03T16:05:28.655Z",
-      "lastActivatedBy": "281b8faf-afff-4945-b215-acfa5443818b"
+      "updatedAt": "2025-11-03T16:12:01.514Z",
+      "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
       "id": "443accfa-1d11-4b12-a97e-69fef721d766",
@@ -467,16 +467,38 @@
       "naam": "ochtendroutine",
       "controls": [
         {
-          "deviceId": "3",
-          "waarde": {
-            "locked": true
-          }
-        },
-        {
           "deviceId": "8",
           "waarde": {
             "on_off": "on",
             "brightness": 100
+          },
+          "device": {
+            "id": "8",
+            "naam": "Wasplaats verlichting",
+            "type": "licht",
+            "upcCode": "1234567890130",
+            "kamerId": "1",
+            "x": 20,
+            "y": 150,
+            "omschrijving": "Functionele verlichting wasplaats",
+            "defaultWaarde": {
+              "on_off": "off",
+              "brightness": 100
+            },
+            "waarde": {
+              "on_off": "off",
+              "brightness": 100
+            },
+            "createdAt": "2024-01-15T08:00:00.000Z",
+            "updatedAt": "2025-11-03T13:08:41.614Z",
+            "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
+          }
+        },
+        {
+          "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+          "waarde": {
+            "volume": 75,
+            "playlist": "jazz"
           }
         }
       ],
@@ -484,8 +506,9 @@
       "omschrijving": "",
       "isGlobal": true,
       "createdAt": "2025-10-30T12:34:31.232Z",
-      "updatedAt": "2025-10-30T12:34:31.232Z",
-      "createdBy": "current-user-id"
+      "updatedAt": "2025-11-03T16:13:22.248Z",
+      "createdBy": "current-user-id",
+      "userId": "2"
     },
     {
       "id": "f6195bf3-c6bd-421a-980c-05ceb1288124",
@@ -537,57 +560,6 @@
       "userId": "1",
       "createdAt": "2025-11-03T13:10:19.325Z",
       "updatedAt": "2025-11-03T13:10:19.325Z",
-      "createdBy": "1"
-    },
-    {
-      "id": "7df3ff49-445d-40d7-83e5-456166b0a1be",
-      "naam": "azeaze",
-      "controls": [
-        {
-          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
-          "waarde": {
-            "temperature": 25
-          }
-        },
-        {
-          "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
-          "waarde": {
-            "locked": true
-          }
-        }
-      ],
-      "image": "azeaze",
-      "omschrijving": "aeaze",
-      "isGlobal": false,
-      "userId": "1",
-      "createdAt": "2025-11-03T15:57:52.865Z",
-      "updatedAt": "2025-11-03T15:57:52.865Z",
-      "createdBy": "1"
-    },
-    {
-      "id": "281b8faf-afff-4945-b215-acfa5443818b",
-      "naam": "azeaze",
-      "controls": [
-        {
-          "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
-          "waarde": {
-            "locked": true
-          }
-        },
-        {
-          "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
-          "waarde": {
-            "on_off": "off",
-            "brightness": 81
-          }
-        }
-      ],
-      "image": "",
-      "omschrijving": "azeaz",
-      "isGlobal": false,
-      "userId": "1",
-      "createdAt": "2025-11-03T16:05:22.203Z",
-      "updatedAt": "2025-11-03T16:05:22.203Z",
       "createdBy": "1"
     }
   ],
@@ -2195,6 +2167,44 @@
       "timestamp": "2025-11-03T15:58:08.867Z",
       "userId": "1",
       "userName": "Pieter Neyt"
+    },
+    {
+      "id": "5bbb0938-7edd-4dd5-9573-d15959a9c313",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T16:11:58.919Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0718d13d-85ea-45f8-a184-3ba2bb59bcdb",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 26
+      },
+      "newValue": {
+        "temperature": 20
+      },
+      "timestamp": "2025-11-03T16:13:46.039Z",
+      "userId": "2",
+      "userName": "Admin User"
     }
   ]
 }

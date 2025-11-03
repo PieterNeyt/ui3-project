@@ -254,19 +254,6 @@ export default function Dashboard() {
                             valueLabelFormat={(value) => `${value}°C`}
                             disabled={updateDeviceMutation.isPending}
                         />
-                        <Box sx={{ display: 'flex', gap: 1, mt: 1 }}>
-                            {[16, 20, 22, 24].map(temp => (
-                                <Button
-                                    key={temp}
-                                    variant="outlined"
-                                    size="small"
-                                    onClick={() => handleDeviceControl(device, { temperature: temp })}
-                                    disabled={updateDeviceMutation.isPending}
-                                >
-                                    {temp}°
-                                </Button>
-                            ))}
-                        </Box>
                     </Box>
                 );
             }
