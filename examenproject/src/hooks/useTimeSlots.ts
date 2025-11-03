@@ -1,6 +1,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { timeSlotService } from '../services/timeslotService';
 import type { TimeSlotFormData } from '../types/timeslot';
+import {useEffect} from "react";
 
 
 
@@ -69,4 +70,11 @@ export const useCheckOverlap = () => {
             excludeId?: string;
         }) => timeSlotService.checkOverlap(sceneId, startTime, endTime, excludeId),
     });
+};
+
+export const useWindowEvent = (eventName: string, handler: (e: any) => void) => {
+    useEffect(() => {
+        window.addEventListener(eventName, handler as EventListener);
+        return () => window.removeEventListener(eventName, handler as EventListener);
+    }, [eventName, handler]);
 };

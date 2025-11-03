@@ -1,11 +1,11 @@
 import {useEffect, useState} from 'react';
-import {useActiveTimeSlot} from '../../hooks/useTimeSlots';
+import {useActiveTimeSlot, useWindowEvent} from '../../hooks/useTimeSlots';
 import {useDevices} from '../../hooks/useDevices';
 import {useUpdateDevice} from '../../hooks/useDevices';
 import {useScenes} from "../../hooks/useScenes.ts";
 import type {AudioValue, DoorLockValue, HeatingValue, LightValue} from "../../types/device.ts";
 
-export const TimeSlotManager= () => {
+export const TimeSlotManager = () => {
     const {data: activeTimeSlot, refetch: refetchActiveTimeSlot} = useActiveTimeSlot();
     const {data: scenes = []} = useScenes();
     const {data: devices = []} = useDevices();
@@ -32,26 +32,17 @@ export const TimeSlotManager= () => {
         return () => clearInterval(interval);
     }, [refetchActiveTimeSlot]);
 
-    // Luister naar handmatige activatie events
-    useEffect(() => {
-        const handleManualActivation = (event: CustomEvent) => {
-            setManuallyActivatedSceneId(event.detail.sceneId);
-            console.log('⏰ TimeSlotManager: Handmatige scene gedetecteerd, tijdsloten genegeerd');
-        };
 
-        const handleManualDeactivation = () => {
-            setManuallyActivatedSceneId(null);
-            console.log('⏰ TimeSlotManager: Handmatige scene gedeactiveerd, tijdsloten actief');
-        };
+    const handleManualActivation = (event: CustomEvent) => {
+        setManuallyActivatedSceneId(event.detail.sceneId);
+    };
 
-        window.addEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
-        window.addEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
+    const handleManualDeactivation = () => {
+        setManuallyActivatedSceneId(null);
+    };
 
-        return () => {
-            window.removeEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
-            window.removeEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
-        };
-    }, []);
+    useWindowEvent('sceneManuallyActivated', handleManualActivation);
+    useWindowEvent('sceneManuallyDeactivated', handleManualDeactivation);
 
     useEffect(() => {
         // Als er een handmatig geactiveerde scene is, negeren we tijdsloten

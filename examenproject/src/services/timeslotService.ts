@@ -22,12 +22,6 @@ export const timeSlotService = {
         return response.data;
     },
 
-    // Eén timeslot ophalen
-    getTimeSlot: async (id: string): Promise<TimeSlot> => {
-        const response = await api.get(`/timeslots/${id}`);
-        return response.data;
-    },
-
     // Timeslot aanmaken
     createTimeSlot: async (timeSlotData: TimeSlotFormData): Promise<TimeSlot> => {
         const now = new Date().toISOString();
@@ -90,7 +84,7 @@ export const timeSlotService = {
         return start1 < end2 && start2 < end1;
     },
 
-    // Actieve timeslot ophalen (op basis van huidige tijd)
+    // Actieve timeslot ophalen
     getActiveTimeSlot: async (): Promise<TimeSlot | null> => {
         const timeslots = await timeSlotService.getTimeSlots();
         const now = new Date();
@@ -102,7 +96,6 @@ export const timeSlotService = {
             const startMinutes = timeToMinutes(timeslot.startTime);
             const endMinutes = timeToMinutes(timeslot.endTime);
 
-            // Handle overnight (bv. 22:00 - 06:00)
             if (endMinutes < startMinutes) {
                 return currentMinutes >= startMinutes || currentMinutes < endMinutes;
             }

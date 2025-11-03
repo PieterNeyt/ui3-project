@@ -119,7 +119,7 @@
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T16:11:58.908Z",
+      "updatedAt": "2025-11-03T17:32:37.707Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -215,11 +215,11 @@
         "brightness": 100
       },
       "waarde": {
-        "on_off": "off",
+        "on_off": "on",
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T13:08:41.614Z",
+      "updatedAt": "2025-11-03T17:23:09.719Z",
       "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
@@ -375,11 +375,12 @@
         "playlist": "jazz"
       },
       "waarde": {
-        "volume": 9,
+        "volume": 12,
         "playlist": "jazz"
       },
       "createdAt": "2025-11-03T13:06:48.626Z",
-      "updatedAt": "2025-11-03T13:06:48.626Z"
+      "updatedAt": "2025-11-03T17:32:37.671Z",
+      "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
       "id": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
@@ -394,10 +395,10 @@
         "locked": false
       },
       "waarde": {
-        "locked": false
+        "locked": true
       },
       "createdAt": "2025-11-03T15:10:51.411Z",
-      "updatedAt": "2025-11-03T15:10:51.411Z"
+      "updatedAt": "2025-11-03T17:32:37.693Z"
     },
     {
       "id": "5430fc97-54cf-421d-8527-656711e7dfd1",
@@ -463,74 +464,6 @@
       "createdBy": "current-user-id"
     },
     {
-      "id": "bf668394-1a28-4b6f-bbaa-b02747d7d52a",
-      "naam": "ochtendroutineazeazeazeazeaze",
-      "controls": [
-        {
-          "deviceId": "8",
-          "waarde": {
-            "on_off": "on",
-            "brightness": 100
-          },
-          "device": {
-            "id": "8",
-            "naam": "Wasplaats verlichting",
-            "type": "licht",
-            "upcCode": "1234567890130",
-            "kamerId": "1",
-            "x": 20,
-            "y": 150,
-            "omschrijving": "Functionele verlichting wasplaats",
-            "defaultWaarde": {
-              "on_off": "off",
-              "brightness": 100
-            },
-            "waarde": {
-              "on_off": "off",
-              "brightness": 100
-            },
-            "createdAt": "2024-01-15T08:00:00.000Z",
-            "updatedAt": "2025-11-03T13:08:41.614Z",
-            "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
-          }
-        },
-        {
-          "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
-          "waarde": {
-            "volume": 75,
-            "playlist": "jazz"
-          },
-          "device": {
-            "id": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
-            "naam": "speaker",
-            "type": "audio",
-            "upcCode": "1111111111111",
-            "kamerId": "4",
-            "x": 231,
-            "y": 56,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "volume": 9,
-              "playlist": "jazz"
-            },
-            "waarde": {
-              "volume": 9,
-              "playlist": "jazz"
-            },
-            "createdAt": "2025-11-03T13:06:48.626Z",
-            "updatedAt": "2025-11-03T13:06:48.626Z"
-          }
-        }
-      ],
-      "image": "",
-      "omschrijving": "",
-      "isGlobal": true,
-      "createdAt": "2025-10-30T12:34:31.232Z",
-      "updatedAt": "2025-11-03T16:29:47.561Z",
-      "createdBy": "current-user-id",
-      "userId": "2"
-    },
-    {
       "id": "f6195bf3-c6bd-421a-980c-05ceb1288124",
       "naam": "ochtendroutine",
       "controls": [
@@ -581,27 +514,75 @@
       "createdAt": "2025-11-03T13:10:19.325Z",
       "updatedAt": "2025-11-03T13:10:19.325Z",
       "createdBy": "1"
+    },
+    {
+      "id": "bea129d5-f074-4af6-a3a0-7d1ac668a98e",
+      "naam": "eazeae",
+      "controls": [
+        {
+          "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+          "waarde": {
+            "locked": true
+          },
+          "device": {
+            "id": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+            "naam": "zerzer",
+            "type": "deurslot",
+            "upcCode": "1111111111111",
+            "kamerId": "4",
+            "x": 0,
+            "y": 124,
+            "omschrijving": "",
+            "defaultWaarde": {
+              "locked": false
+            },
+            "waarde": {
+              "locked": true
+            },
+            "createdAt": "2025-10-30T12:29:44.976Z",
+            "updatedAt": "2025-11-03T16:12:01.514Z",
+            "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
+          }
+        },
+        {
+          "deviceId": "4",
+          "waarde": {
+            "volume": 50,
+            "playlist": "classic"
+          }
+        },
+        {
+          "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
+          "waarde": {
+            "on_off": "on",
+            "brightness": 50
+          }
+        },
+        {
+          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+          "waarde": {
+            "temperature": 20
+          }
+        }
+      ],
+      "image": "",
+      "omschrijving": "azeazeae",
+      "isGlobal": true,
+      "userId": "2",
+      "createdAt": "2025-11-03T17:33:22.271Z",
+      "updatedAt": "2025-11-03T18:18:55.810Z",
+      "createdBy": "2"
     }
   ],
   "timeslots": [
     {
-      "id": "ccdf9a18-0d58-4396-8d98-0a7e073c2957",
-      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
-      "startTime": "13:32",
-      "endTime": "21:11",
+      "id": "beac32ac-96da-4b25-91d3-e28d5de12919",
+      "sceneId": null,
+      "startTime": "18:33",
+      "endTime": "20:00",
       "isActive": true,
-      "createdAt": "2025-10-30T00:08:32.770Z",
-      "updatedAt": "2025-10-30T12:31:26.326Z",
-      "createdBy": "current-user-id"
-    },
-    {
-      "id": "6c7a31b8-0464-4086-9060-75a9a5a6954e",
-      "sceneId": "83d37b0b-d545-4be9-ac6b-d9223f88e7df",
-      "startTime": "07:00",
-      "endTime": "10:00",
-      "isActive": true,
-      "createdAt": "2025-11-03T16:50:29.205Z",
-      "updatedAt": "2025-11-03T16:50:29.205Z",
+      "createdAt": "2025-11-03T17:23:33.976Z",
+      "updatedAt": "2025-11-03T17:32:57.663Z",
       "createdBy": "current-user-id"
     }
   ],
@@ -2233,6 +2214,6164 @@
         "temperature": 20
       },
       "timestamp": "2025-11-03T16:13:46.039Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "039963df-0a8f-4324-aa47-dc0e5430b0e8",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.393Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ffb24dd5-8bad-474b-90b1-c5e24d190952",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.414Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "1177834f-a2e4-40b0-b072-c16e8cd7b188",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.440Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dab40034-9a22-47b7-abd6-079583f843e7",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.452Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ffdba1a2-a7f8-4ca1-9cc4-aea2dff6f3bb",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.462Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "68b76716-5c1f-4e72-9acb-f3270ea81b5b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.473Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "813b404d-50a4-4020-a3a6-f3cfa43089e3",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.478Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "72383030-9b53-42d3-b992-a8bd07d095d4",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.493Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "056ae875-3c4a-4b8f-87ab-634c943f1f30",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.499Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "989af901-b9b3-4126-aa6b-cbcf2d0225de",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.511Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7a6cde47-cb3a-4d64-a8ba-c86cf00fde59",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:12:52.521Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "95459790-376a-4010-a404-9b534f661988",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 40
+      },
+      "timestamp": "2025-11-03T17:24:04.982Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5633f58d-7ac8-4b1b-a4d6-a07ba90bf27e",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 40
+      },
+      "timestamp": "2025-11-03T17:24:04.983Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a00d06c1-cd47-4eea-9937-5502f6fef02a",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 40
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 9
+      },
+      "timestamp": "2025-11-03T17:24:05.780Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "1f5e8d10-dc42-47c2-91e0-6f7d6cc694f1",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 40
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 9
+      },
+      "timestamp": "2025-11-03T17:24:05.781Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "23ec4288-064b-4dd3-bc34-54828b8cbe6d",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "timestamp": "2025-11-03T17:24:06.680Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3cef6d41-ecfd-4e54-9355-f85951d9c06d",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.314Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b35537a1-c74e-4fd3-ac24-3de57b245693",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.795Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f52b2dc2-ee8b-4af2-8fe2-67cc03e6b5e3",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.315Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ef764074-f148-4adc-b01e-fd30f37b91bd",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.315Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ba072256-afbc-4b42-9ca1-387939307012",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.316Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "782d1215-6783-4f92-bc45-1712156d9c21",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.317Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bbbac61d-be14-49cb-8c30-ed4e07f33e77",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.318Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "72165aba-b6c1-4b37-a505-23e3a3a3e20d",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.318Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "cf438abb-90b1-49b0-b13a-43ee0d5388b3",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.319Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "51560458-65dd-44f9-ab30-822c19e59cdf",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.319Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "56e3b6de-bb45-494b-97d5-4dc0252e9469",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.321Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "161519ea-5e03-4aa3-9a66-b1a0f822b4f9",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.321Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7e541096-750a-46f5-9ddf-17ab958a591d",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.322Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "88b4976d-7ac0-4421-bbad-9339b3e97254",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.322Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3ddd73ef-735a-4b5c-8bad-0260f1ec823a",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.323Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "cb3e71ba-8daf-4e36-b17b-d66739328a58",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.323Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "44ad0b25-c7ac-4ba4-97ff-86864d8785c7",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.325Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4a8bf001-aa93-498f-b799-d91a0f2cbfd1",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.326Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "87de11f2-492c-45f9-b7bf-1865e077f477",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.342Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f44408b5-025d-4275-8369-de354061a1ef",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.342Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d0004e6f-4ac3-4864-a693-268ed4a8fac6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.343Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "01487e26-0c29-439a-862e-4077d97d59ac",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.344Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bdc65dd6-2e5e-447c-96f1-c21490617176",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.344Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5c80d8b9-043b-414c-bc2c-07da2a2ea1db",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.358Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "16304fd1-b6aa-4a43-adc7-6c6da0e2f3ea",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.359Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "34fe654c-1939-404a-8cf0-2dc58a058be5",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.359Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "15e716c1-42f6-4d81-907a-e73c8a9bde8c",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.360Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "462079e3-aeac-4dc6-9820-35a4b4a5d904",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.361Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "25fe579d-5aa3-4765-9b14-fafc10b75870",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.361Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e9190aed-72f6-4ea2-a8cc-eb61d8fc6db5",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.376Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "23f8c5b0-475f-4263-8d4b-1a5d4e521f4e",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.377Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4cb3a6ee-05f7-409a-9465-75fc764f2d85",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.378Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dc42289a-53db-4bbc-8e4c-9211fbba828c",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.379Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2eb26d20-965e-44a8-8a88-31019e2c1338",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.379Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3d07b008-6c0a-40eb-b718-384c44b865d8",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.380Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3e133a44-01c9-43e1-98ce-eb26b0f0a623",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.385Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d2935ab5-9e2b-4301-8f5f-bb7662d109d8",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.386Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "755a8a92-1300-47e9-ae26-18e6b48019a8",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.387Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "86fd004e-7135-402b-8dec-7bb66f604d5d",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.388Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "37ad9274-969a-433f-a244-955ad88366e4",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.389Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "191e849e-6c03-4f1e-ab15-03505de46f01",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.389Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6cb177a2-c1ba-4f83-9349-bde9969815e4",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.400Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bcda9067-bad5-415e-810f-8814978ae05d",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.401Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0317d6fe-8c1a-4750-b3b1-5b1946a4292d",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.402Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b540ec23-97f5-4eba-8a54-f9bd746e7ceb",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.402Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "915f0ac7-0276-48fb-b481-68bcb9793a4b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.404Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7fd2dbc0-09db-44f4-9855-f6790d3eebf4",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.405Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b1cef44b-0a13-4dc4-84e5-9ffbc8f3fa19",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.422Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0616f4b2-b10c-4b88-8ffa-d351eb5c93ff",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.423Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3fcc21de-f9d0-4e79-8e44-c76e09749735",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.423Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "87084006-b0c4-485b-a575-f1a19d0f0ec6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.424Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "92e48f89-91fe-4451-944a-1a0ae07d5209",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.425Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c9eb10e5-65c1-4ec3-a858-9f56ab9da249",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.425Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "63053552-9975-4ffb-a71e-c6f0f40fe2aa",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.444Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ab037ab2-3345-4fc8-b6a4-b859425ea371",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.445Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "16bd1a65-60b5-44ff-b93d-1fb06a3298e8",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.446Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d9d67bfd-4e09-4aa3-b2d8-80174bbe7aee",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.446Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4e026e1a-c08f-429d-8fdc-84ab0a2ff233",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.447Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "54251cc7-4a9c-4402-bcfd-5fd79a8785b7",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.448Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "05b005ad-2f46-4388-b569-aa93cc82ce98",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.465Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fcd3f188-fc53-481c-8d42-32933afc3655",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.465Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f794c584-81d2-44dc-baf9-2f2975668a8c",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.466Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6b257bda-a45b-43eb-8152-739159664e65",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.466Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "1319a1c0-6d0e-454e-886c-2e3f3aad75eb",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.467Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "239334e8-35f8-4278-a99f-4df9de293937",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.467Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "032532c5-8c9a-48ed-8654-90fbea2ff18a",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.486Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "641bef61-3e1e-40a1-8465-cdade6f13719",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.486Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ff6a724d-a5ad-4ba6-b1f1-a0f1e49319b0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.487Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "1b22b27c-5c18-46be-9b5d-eb7a9d1530a2",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.488Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "be27b50e-30af-4380-a765-35496204b313",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.489Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "cb206b2c-486e-4387-9d2a-89159af6b8a5",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.489Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "55416c56-83c4-4b60-a5ce-cdb39ac6a8f0",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.505Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5d84daac-9af0-4dd0-83d5-61a8daae4184",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.506Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8766929f-04d9-476c-8de9-798a94b42f0b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.507Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0d297f61-8a52-4430-84d7-219bbb36b603",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.507Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "13b4792b-1635-407a-940c-9be2af24ea40",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.508Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bd2c059e-bc56-45ae-8705-2b2a2b814b2b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.509Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ee7b3d30-bcb4-4533-a266-221a2ed05bcd",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.524Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "14013d4a-38f9-42b8-a640-cc1666668077",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.525Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "858c973a-8065-479e-82b7-9317d458f6b3",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.872Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "13150458-c29b-49d9-9121-3279c76f6a9a",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.526Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b703da28-40e3-428e-8cf3-3f047f215805",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.873Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0403ce83-7888-48a1-aeb8-81149ecd9a61",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.526Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8d8faf72-99c4-4862-8608-86c2551471d3",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.874Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6c6233ec-359a-401c-bf35-13694a418c72",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.527Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b03de3c7-04f3-4344-8da8-75c8d305a4dc",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.528Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b05bca6d-ebd7-4887-b7b4-ac3c7f5f9071",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.542Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "679b3286-24ea-4991-9e68-30fae749f7a6",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.543Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4047375f-1af9-4870-8e8b-02b298691d32",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.543Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9b69e62e-3b5c-4442-89fc-c3a95440ca8b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.544Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "99728f50-ec63-4fd1-932c-60985b011364",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.545Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "93525dcd-dfc4-4f3a-9428-1614b1e882d1",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.546Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "77aaa892-ae35-4518-9bea-91303129df5a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.564Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "460d752b-3771-4a84-84dd-6f4dce0c5ecb",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.565Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "40378929-a0a8-47c3-89a4-30cda441d3c2",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.566Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ac50922b-1a9a-4fd4-a4ed-3e22be44f8d0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.567Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "46e84d23-60e6-4981-8289-3ab918aa7348",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.568Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c7e343bc-513b-4a20-83c1-e0c81248997b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.568Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "922c7dd3-319a-4650-8ac1-169acf0151e0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.584Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8193b96e-ec11-4f5c-8ff8-fe540124f2c5",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.585Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2d692420-00ec-435b-901d-c0a2d46fa033",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.585Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "20a3edf6-ac27-495e-a2a8-0a8f5d8a8114",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.586Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "05400ba9-d4e4-4ad3-a981-0dfc5f41d1c2",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.587Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ba7355c7-115a-4015-8eea-1d7c3cdb41e0",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.587Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c22431b5-bee6-4618-a093-544ffe9642c2",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.602Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b0c62019-d4f5-42d8-b86a-3204883b304a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.603Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "52e586ae-c02d-455e-b12c-2996551c48c0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.604Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "280456b4-3588-4bdc-9cd0-bc67d911a18c",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.604Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bc546cfb-7167-470b-be07-b2a3670f5bb0",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.605Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e00921d9-c277-464a-812c-f7f35d164e71",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.606Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "14e128fb-6f5c-40cc-b84c-dd7eb2a083f1",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.621Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e044bf3e-e6e0-4c95-8c4a-7bbfe8ee16fb",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.621Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3832d2f1-e4ad-4245-ba96-24b00bc01f79",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.622Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e46f8dff-bab2-4b5b-a88d-ca66332bc78e",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.623Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f3e84151-4499-4435-ab34-c4878c8f1ffd",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.623Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "aa108333-3a79-45f6-82d1-23475ad0f248",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.624Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "18a694fc-b4e0-446f-985f-dd018a5bcd1b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.643Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5f0e1df4-a212-4915-ab28-ba87a11b6f8f",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.643Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bbe58b5e-d1f9-405b-8f77-e96783fe7d77",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.644Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c563f7c9-5d73-4bb1-829f-361d0fa1dbf2",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.644Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c190f1fb-47ee-471d-a116-ed2c68fd2690",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.645Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0f3ec2c2-8fde-4473-90de-f0d19f5429dd",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.645Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6a7575e7-1db5-4e7a-8ae3-06fbc8d72d9b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.663Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "14b3345a-be96-4a4c-bd89-2588b8f39164",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.664Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "699019a1-9fac-4856-a986-f3904d2e856c",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.664Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c53e6da3-2d70-45e7-8ee0-bf5171cc2f18",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.665Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "addcaa5d-f6d9-4571-a36a-d90e3d98b2aa",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.665Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4eec7baa-06be-41cd-be45-f7238ef5a3fb",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.666Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5d91b46d-4c26-4ea3-b18c-6273ac6e7f78",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.679Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2b711a21-52cf-4b13-8ff5-4b32ee483417",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.697Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f9d011cf-3bb8-434b-bd68-6e78868b649a",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.697Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7511fabf-944f-4de5-8ece-edb2746f5296",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.698Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "aa5f5c87-6ca3-406a-a87a-70ca979f3139",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.699Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "60aeafd9-e18c-412f-b071-95d83c2e288f",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.699Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0330019d-1cd5-4d22-b947-aa8808555c19",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.717Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "93fdc1dd-f576-451e-b2e5-e5e9f379472f",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.718Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a6ad58e8-d2a1-4855-8ce0-bd1642af42ca",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.718Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3691d0b5-bb18-4ff4-8465-cb02ce7b4367",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.719Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2cf2c795-739f-4dbb-9b9a-bf49004b0d75",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.720Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e0b664a3-db05-451f-9f12-ada00de0d781",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.720Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b08f6a44-f687-47c0-97ce-37da3a3be4c6",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.738Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fddc6a51-3995-4192-9d3c-bd315ee96861",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.738Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0ced30a9-f5d3-4199-b4e2-5a6f37fc8c80",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.739Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0d6dd961-007c-4d1b-b5d1-cb7b4795cb29",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.740Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "642c5bdc-ed25-4e79-b63b-da0b2595ee3a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.740Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "29477de8-a2cd-4834-95fc-4b9aeb300e20",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.741Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7ace549b-7a87-4221-b54d-1b9e09523d65",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.754Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "56eb9785-088e-477b-8825-2adac0f4ded2",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.755Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "34afc3f9-f30c-4811-85ef-cbe09cdd6478",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.756Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d284a0a1-ba70-4f90-a7b5-63d18a0c78ad",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.757Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2f9fcfc7-6b30-44d4-99de-6c46aeb6f525",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.757Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0ebc0b55-8882-49c6-a258-fdce10df8cc7",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.758Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "eb0efdab-805a-4cc8-85d4-afe94732eef2",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.773Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "029bc313-298f-4096-8c5d-199772e50290",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.774Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "28ad0954-d81e-4cf0-9dd7-78d46c5fc165",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.774Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "daef7621-7e32-48aa-b8db-7bd4d263ee81",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.775Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8d7acfcc-d634-48ce-981b-39d8207c41ac",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.775Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fdf07b0c-ce14-49e3-b0ce-04731319fbae",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.776Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "14cd2577-1c92-4ad0-9ee7-60729ebb6c6a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.792Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "997471e5-43e9-42f7-931c-5b06907d0904",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.793Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "74445915-57ca-4687-ae12-f80f9af0ddf8",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:29.793Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ff568362-b006-4950-b847-ad9bcca862c0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:29.794Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "27da8a22-dcba-45b4-8c1d-3f40ebf81da7",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:29.795Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8fca9178-b649-459a-9e6d-20aa4f0a1d11",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.244Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "30417772-5960-41aa-8c5c-fde8dfacd3b6",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.267Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "15e1d2df-7c4d-411c-a987-edd9e0f53ec5",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.267Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e45b7537-9967-481c-805a-e6f93497a492",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.607Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "43bd8507-8bf2-41d7-ad7f-db6a913f85f2",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.659Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0aa76616-c584-4f05-9a71-3c58c5e45555",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.659Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "551c0f55-23d4-4a11-a0d9-9d8f72eba75b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.660Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fe3c5d65-24ef-4c7f-8d74-31249f555d9a",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.681Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f3ee0186-eded-4932-8db9-8c4d626478e1",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.682Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6f74cc46-195d-4642-b6da-5b7a24706efb",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.682Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b746a2bd-977e-4143-81a4-80aeb53ee000",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.705Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2c512880-bb1c-407e-a6d4-09dc63f22457",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.706Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3fbf0fef-a58a-4a64-988c-bdfdfb17499b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.706Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d1d97c4b-f5b5-409d-89fd-6ea13d602967",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.734Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "1ff01cc9-97bf-40f0-b6b6-ad0b58ccafd2",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.735Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "43c7e984-873e-4881-8ee6-3691c0c08b47",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.736Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c3fc81cd-b12c-48d7-83e5-8f07342fd8fe",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.758Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f9ca0c73-65b2-4448-a867-3b33d31416f5",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.758Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d5bf9a95-4bb9-42bd-a310-c9674bf7e6a6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.759Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "88dd6558-d69b-4f16-b7da-9f8ec19f7f99",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.783Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "77873dc3-e256-44e1-8439-05f31bba610f",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.784Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c559d4b2-f9d4-4e7d-896d-77e21f7f1058",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.785Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "05f2f224-650c-4b2a-8b75-8fffd61057de",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.809Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f43c0621-4ae3-41c0-878f-3f64583b741b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.810Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fec6b0c8-ddae-4e70-880b-30ee68812003",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.810Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "914bb682-3aec-4674-8944-e2accc688151",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.833Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "682fb0da-febd-4036-9d2c-4211dced3dca",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.833Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "33a4a7cd-7617-4e35-8850-f79504a51998",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.834Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "685545f8-c5f1-4d5e-ae3a-ccca813caa26",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.865Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6a4e8ea7-d6e2-4ee3-80ae-62cdb16eb5b3",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.866Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "47fb4318-4c5f-45e1-b25b-b26058d68c5f",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.866Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5309eacb-d092-476f-87b1-4cb69a853116",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.891Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "85179482-183e-405a-980d-d758479ff9b3",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.892Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "33d49968-2b18-46d5-880f-5abf1ea7a18a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.892Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e444f695-8951-40d2-9f32-708ee154ca54",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.914Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c4dec394-a1f5-4b16-af99-ce4eb3d7277a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.914Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dfbd8e2b-94ce-426f-b3a9-e96fad8c57f2",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.915Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a17b367f-775b-4503-a0d4-bea39b02361f",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 75,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:25:30.943Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c9ce9f49-8ebd-4daf-ae81-4e24974bfd38",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.944Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4aa574d5-3b9b-4c3e-badd-992192d73fd3",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 9
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:25:30.944Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "733a3e3d-3a2a-422a-9881-4e4555d66a36",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": false
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:25:30.968Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "91fff20a-80dc-45a7-acad-df6544ee7151",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:29:52.688Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0514a933-f666-43b0-bb09-45382f470855",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:29:52.711Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9a662efa-ec14-475a-ba03-52a34ace927b",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:29:52.733Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c5feb5d0-debd-4578-a2b9-42a8108dfc89",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.780Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "125d4297-c756-420a-95a3-99d2ad14f3a7",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.782Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6864cd49-c818-410f-aab4-d5191cf8d6a5",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.784Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9db035aa-8088-4198-a1cc-3c7b97dcea95",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.879Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8b8219c3-739f-4642-b40a-ffa74065be45",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.788Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "55ce8351-9037-4949-b8c2-349139614a2e",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.790Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f4be63e6-35c9-4eb7-8400-e6f92895cb94",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.882Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "47c480aa-03db-45bb-8213-12bab3cc6aad",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.792Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d74b8120-e58a-4705-a943-5c0f793c4439",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.794Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "320fd049-1aa0-4690-8127-632805d6438d",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.886Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0adc384a-a24b-40db-b2bd-c9452486f6cd",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.795Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ba9d8559-5d5d-442a-8a28-5e3308fc6948",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.797Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c20ba9ac-570b-4336-b039-473a1aa16a23",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.802Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8c4c4070-fe86-4cdd-a7a6-4c69961b5a78",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.804Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "34f6fa1f-6869-400e-9d37-06150acecf6a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.805Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a17a1267-6858-4230-acf8-2141a1df9c47",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.807Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4045f999-3a6c-4e34-a8d8-30087180816a",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.809Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "87a45f7e-b535-4441-b462-f82122a6cede",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.890Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d00e8733-72cf-4b85-8dd8-3e1dff566503",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.811Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a9cb449c-fc64-4446-af1f-4f8563eb6278",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.894Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c27465e6-76a2-42a7-9a98-424bd749296a",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.813Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a704d293-4e6e-4be0-8275-4d569270d5b9",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.814Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7e5c0c9f-bb09-4196-9506-2cbe41cd0886",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.816Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b0f01ce3-90be-434c-9fef-ad79f27be162",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.896Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c71f43ed-ad59-4761-b9db-8a83cd672624",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.898Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6b6c5040-5ec7-4b2b-ad31-d197a3548e96",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.900Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f5966a3c-94ff-4b62-b503-c6ae27d3218d",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.901Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2268cf8d-cf1f-4a8f-960d-27ac447e11e8",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.903Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "730bf73d-2913-49a4-bbfb-6150419afee7",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.906Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c8c51c43-d624-47fc-a10f-05f28ac4ef20",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.908Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2b2bd354-4203-42c2-b47c-b138b97a39e5",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.909Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f2e04904-e7df-4132-9a8e-efaa76807e0f",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.911Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0b43dd6c-0d87-4f9f-b9fb-e422abe3a890",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.817Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f9053498-7912-4acc-ae1d-1cc6aa037887",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.819Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "39c4847d-bdc1-4e24-91f9-87236be6f4f9",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.821Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5c9e0963-c5c1-47c5-a98f-0bb95ab3cfe0",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.913Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a24b180f-3e74-411b-9f22-c44873d0997b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.916Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e37eff1c-85a9-4ea8-955a-68953e79432f",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.822Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4cc2c5ec-a1ef-41b1-bebb-fd2506c40019",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.824Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9b02a46d-a505-41c7-818a-354ca4adcf06",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.825Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e63d51fd-6736-4fa6-b173-0929448c802b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.828Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3bad8044-944d-4a9b-befd-7a861ba8f55c",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.832Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "855db270-c140-4380-9270-c06ab07cafe6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.833Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "18ec51ba-f6c5-464b-9a38-74d8a689034a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.923Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0e559165-92fb-40a2-804d-29e5b833363b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.835Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "9d86db86-d4b5-4478-8519-bd3869ff38b9",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.925Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0ea8fd13-cd9f-4056-946c-6ec09a58af87",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.837Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "872b7869-998d-4f14-b796-005da0de85a8",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.838Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "43b96549-82e3-427a-87b1-2dac936ab685",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.839Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "242a1b45-7ff3-468c-8f5e-9d3959a817cc",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.841Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "69fd5691-c43c-46d3-a304-96036b1d2d2b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.842Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6236e694-eef3-4e53-8fef-50329291afb1",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.844Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "08ef3ac1-69ed-4ccf-9e8d-661f54208464",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.928Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "df7c7f30-5cc6-4ebd-97fb-d865a999ec5b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.930Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6bfea365-bce0-4455-8156-b51e5c4cdaf8",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.932Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "aabd978b-eaa6-44c3-8967-45aa3aae64b6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.846Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a06abd45-c172-4041-a71c-010f677f6768",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.847Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b6887fce-1d5d-4e21-bacc-4e1a8b0a098e",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.859Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "803b9a45-f26e-45b6-98d7-0573186ec6da",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.861Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ccdef579-4363-411b-a25f-0ba8c00ed28b",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.863Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "83da5bdb-f55a-446e-8e82-b5e89830e88f",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.864Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8526265a-0b31-4ee8-8e6c-94dceb36dd78",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.935Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5822382f-8cc8-48cc-8c7a-269815ba9e47",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.937Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7d5b4914-db2a-4c9e-a7e9-953fb191bbac",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.871Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f340e144-1bc2-4b81-a929-af950ad68daa",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.940Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "92e04602-e691-4a08-a882-e7a3201f7abb",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.942Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "627ccd5e-3372-4da4-ac7d-da6668818035",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.873Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "23817ff5-76ff-43c0-80a0-a3d1e2a2e89f",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.876Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "3946ec93-c389-47f1-8b95-c389081343c7",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.877Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a18f29ad-1bf1-4484-bb2d-1198c0633ad6",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.945Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "af8ddf4b-f5ee-48c3-85ac-f402ff990412",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.947Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "f4b9ef00-d5ce-4ae9-9e70-2b5dd8216aaf",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.949Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "0430468c-16f6-4105-9ab8-95b0d58cd4d3",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.951Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "12df03c4-8ff5-4dfa-b06a-ae50b78e6e6c",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.954Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e9431371-3089-4cf4-950c-7ba418777be4",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.956Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "50a4a48f-65e7-449b-ba30-f6c922c5d610",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:17.958Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "afcaf312-7781-43e2-9ea5-b598175ee43c",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.960Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "988a9b8c-3047-4169-8a8d-48e56e5c62fd",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:17.961Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c11e62be-bc07-4592-a3ad-9a016c86a69b",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:17.963Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c5adf329-be4c-4d7e-a67a-f5afb3130479",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:18.009Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "57ce6683-6ec2-4738-8408-f4df2c80b9b2",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:18.016Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7c4e7ae7-2730-4295-b450-1d30fdcd9222",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:18.019Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e7815547-848c-4e81-909a-c808577c80b3",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:18.021Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "25501aba-ca1e-4c69-8924-7294f3aabd28",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:18.022Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "56a02e0b-ee41-4fce-bf09-c4523d114703",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:18.026Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "8e40ba48-be33-4f44-8aca-29747c915ec1",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:18.163Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "731c4772-3333-4bcc-b668-b1d9f7a9aaee",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:31:18.164Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "d611b9b2-d02a-4056-9498-65e0c05ad9e4",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:18.166Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "2e5bc053-a22e-46e4-a0d4-cc309b16bb76",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:18.167Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "bdca188a-ed03-454c-9638-4c6173c68d9a",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:31:18.168Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "919e5195-793e-42ab-ae05-cedda159eb3e",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:18.182Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "ee511955-0557-4a95-aadb-e04e4e6a0596",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:31:18.196Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c0dfd800-4fe8-469e-a01f-932c1c67168d",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "timestamp": "2025-11-03T17:32:37.692Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "87e40e6a-ed67-47f3-a557-14e0c5b87434",
+      "deviceId": "6f5f3645-cd33-462a-8436-d35dbc1bf538",
+      "deviceName": "hoofddeur",
+      "deviceType": "deurslot",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T17:32:37.706Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6681276f-a862-414f-b4f6-73677b0017f5",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T17:32:37.723Z",
       "userId": "2",
       "userName": "Admin User"
     }
