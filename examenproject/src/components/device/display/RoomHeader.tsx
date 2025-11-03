@@ -1,6 +1,6 @@
 import { Box, Typography, Button } from '@mui/material';
 import { Add } from '@mui/icons-material';
-import { useAuth } from '../../hooks/useAuth.ts';
+import { useAuth } from '../../../hooks/useAuth.ts';
 
 interface RoomHeaderProps {
     roomName: string;

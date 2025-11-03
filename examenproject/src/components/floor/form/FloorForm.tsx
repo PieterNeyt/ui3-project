@@ -1,12 +1,12 @@
 import { Dialog, DialogTitle, DialogContent, Box } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import type { Floor, FloorFormData } from '../../types/floor';
-import { FloorFormField } from './FloorFormField';
-import { FloorFormNumberPair } from './FloorFormNumberPair';
-import { FloorFormActions } from './FloorFormActions';
+import type { Floor, FloorFormData } from '../../../types/floor.ts';
+import { FloorFormField } from './FloorFormField.tsx';
+import { FloorFormNumberPair } from './FloorFormNumberPair.tsx';
+import { FloorFormActions } from './FloorFormActions.tsx';
 import React from 'react';
-import { floorFormSchema } from '../../validation/FloorFormSchema.ts';
+import { floorFormSchema } from '../../../validation/FloorFormSchema.ts';
 
 interface FloorFormProps {
     open: boolean;

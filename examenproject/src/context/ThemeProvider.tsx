@@ -49,13 +49,19 @@ export const CustomThemeProvider = ({ children }:ThemeProviderProps) => {
                     mode: safeMode,
                     primary: {
                         main: safeMode === 'light' ? '#1976d2' : '#90caf9',
+                        contrastText: '#ffffff',
                     },
                     secondary: {
-                        main: safeMode === 'light' ? '#dc004e' : '#f48fb1',
+                        main: safeMode === 'light' ? '#f57c00' : '#ffb74d',
+                        contrastText: '#000000',
                     },
                     background: {
                         default: safeMode === 'light' ? '#f5f5f5' : '#121212',
                         paper: safeMode === 'light' ? '#ffffff' : '#1e1e1e',
+                    },
+                    text: {
+                        primary: safeMode === 'light' ? '#1e1e1e' : '#ffffff',
+                        secondary: safeMode === 'light' ? '#555555' : '#aaaaaa',
                     },
                 },
                 typography: {
@@ -65,21 +71,50 @@ export const CustomThemeProvider = ({ children }:ThemeProviderProps) => {
                     MuiAppBar: {
                         styleOverrides: {
                             root: {
-                                backgroundColor: safeMode === 'light' ? '#1976d2' : '#1e1e1e',
+                                backgroundColor: safeMode === 'light' ? '#1565c0' : '#1f1f1f',
+                                color: safeMode === 'light' ? '#ffffff' : '#ffffff',
                             },
                         },
                     },
-                    MuiCard: {
+                    MuiButton: {
                         styleOverrides: {
                             root: {
-                                backgroundColor: safeMode === 'light' ? '#ffffff' : '#1e1e1e',
+                                textTransform: 'none',
+                                '&:hover': {
+                                    backgroundColor: safeMode === 'light' ? '#115293' : '#333333',
+                                    color: safeMode === 'light' ? '#ffffff' : '#ffffff',
+                                },
                             },
+                        },
+                    },
+                    MuiMenuItem: {
+                        styleOverrides: {
+                            root: {
+                                '&:hover': {
+                                    backgroundColor: safeMode === 'light' ? '#e3f2fd' : '#333333',
+                                    color: safeMode === 'light' ? '#1565c0' : '#90caf9',
+                                },
+                            },
+                        },
+                    },
+                    MuiTooltip: {
+                        styleOverrides: {
+                            tooltip: {
+                                backgroundColor: safeMode === 'light' ? '#333' : '#ddd',
+                                color: safeMode === 'light' ? '#fff' : '#000',
+                            },
+                        },
+                    },
+                    MuiTextField: {
+                        defaultProps: {
+                            size: 'small',
                         },
                     },
                 },
             }),
         [safeMode]
     );
+
 
     const contextValue: ThemeContextType = useMemo(() => ({
         mode: safeMode,

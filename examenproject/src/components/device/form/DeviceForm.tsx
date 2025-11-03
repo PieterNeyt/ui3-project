@@ -9,15 +9,15 @@ import {
 } from '@mui/material';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { type DeviceFormData, type DeviceType, type Device } from '../../types/device';
-import type { Room } from '../../types/room';
-import { type FormData, deviceSchema } from '../../validation/DeviceFormScheme.ts';
-import { DeviceFormContent } from './DeviceFormContent';
+import { type DeviceFormData, type DeviceType, type Device } from '../../../types/device.ts';
+import type { Room } from '../../../types/room.ts';
+import { type FormData, deviceSchema } from '../../../validation/DeviceFormScheme.ts';
+import { DeviceFormContent } from './DeviceFormContent.tsx';
 import {
     getDefaultValues,
     createDeviceData,
     validateFormSubmission,
-} from './helper/DeviceFormUtils.tsx';
+} from '../../../utils/DeviceFormUtils.tsx';
 
 interface DeviceFormProps {
     open: boolean;
@@ -95,7 +95,7 @@ export const DeviceForm = ({
                 device
             )
         );
-    }, [open, device, deviceType, initialX, initialY, selectedRoom]);
+    }, [open, device, deviceType, initialX, initialY, selectedRoom, reset, initialKamerId]);
 
     const handleFormSubmit = (data: FormData) => {
         const validation = validateFormSubmission(data, rooms, existingDevices, device);

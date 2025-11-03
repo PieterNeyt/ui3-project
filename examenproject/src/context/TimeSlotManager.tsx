@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
-import {useActiveTimeSlot, useWindowEvent} from '../../hooks/useTimeSlots';
-import {useDevices} from '../../hooks/useDevices';
-import {useUpdateDevice} from '../../hooks/useDevices';
-import {useScenes} from "../../hooks/useScenes.ts";
-import type {AudioValue, DoorLockValue, HeatingValue, LightValue} from "../../types/device.ts";
+import {useActiveTimeSlot, useWindowEvent} from '../hooks/useTimeSlots.ts';
+import {useDevices} from '../hooks/useDevices.ts';
+import {useUpdateDevice} from '../hooks/useDevices.ts';
+import {useScenes} from "../hooks/useScenes.ts";
+import type {AudioValue, DoorLockValue, HeatingValue, LightValue} from "../types/device.ts";
 
 export const TimeSlotManager = () => {
     const {data: activeTimeSlot, refetch: refetchActiveTimeSlot} = useActiveTimeSlot();

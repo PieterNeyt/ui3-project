@@ -19,21 +19,11 @@ export const useDevicesByRoom = (kamerId: string) => {
 export const useDevices = () => {
     return useQuery({
         queryKey: ['devices'],
-        queryFn: async (): Promise<Device[]> => {
-            try {
-                const response = await fetch('http://localhost:3001/devices');
-                if (!response.ok) {
-                    throw new Error('Failed to fetch devices');
-                }
-                return response.json();
-            } catch (error) {
-                console.error('Error fetching devices:', error);
-                throw error;
-            }
-        },
+        queryFn: deviceService.getAllDevices,
         refetchInterval: 30000,
     });
 };
+
 
 export const useCreateDevice = () => {
     const queryClient = useQueryClient();
@@ -50,8 +40,8 @@ export const useCreateDevice = () => {
 export const useUpdateDevice = () => {
     const queryClient = useQueryClient();
     const addLogEntry = useAddLogEntry();
-    const { user } = useAuth(); // Haal huidige gebruiker op
-    const { data: rooms = [] } = useRooms(); // Haal kamers op voor kamer naam
+    const { user } = useAuth();
+    const { data: rooms = [] } = useRooms();
 
     return useMutation({
         mutationFn: ({ id, data }: { id: string; data: Partial<Device> }) =>
@@ -65,20 +55,19 @@ export const useUpdateDevice = () => {
             const room = rooms.find(r => r.id === updatedDevice.kamerId);
             const roomName = room?.naam || 'Onbekende kamer';
 
-            // Log de wijziging met CORRECTE oldValue en newValue
             if (oldDevice) {
                 addLogEntry.mutate({
                     deviceId: variables.id,
                     deviceName: updatedDevice.naam,
                     deviceType: updatedDevice.type,
                     roomId: updatedDevice.kamerId,
-                    roomName: roomName, // Gebruik echte kamer naam
+                    roomName: roomName,
                     changeType: 'state_changed',
                     oldValue: oldDevice.waarde,
                     newValue: updatedDevice.waarde,
                     timestamp: new Date().toISOString(),
-                    userId: user?.id || 'unknown-user', // Gebruik echte user ID
-                    userName: user?.username || 'Onbekende gebruiker', // Gebruik echte username
+                    userId: user?.id || 'unknown-user',
+                    userName: user?.username || 'Onbekende gebruiker',
                 });
             }
 

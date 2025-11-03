@@ -72,9 +72,11 @@ export const useCheckOverlap = () => {
     });
 };
 
-export const useWindowEvent = (eventName: string, handler: (e: any) => void) => {
+export const useWindowEvent = <T extends Event>(eventName: string, handler: (event: T) => void) => {
     useEffect(() => {
-        window.addEventListener(eventName, handler as EventListener);
-        return () => window.removeEventListener(eventName, handler as EventListener);
+        const listener = (event: Event) => handler(event as T);
+
+        window.addEventListener(eventName, listener);
+        return () => window.removeEventListener(eventName, listener);
     }, [eventName, handler]);
 };

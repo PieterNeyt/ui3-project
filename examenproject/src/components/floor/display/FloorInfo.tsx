@@ -1,5 +1,5 @@
 import { Box, Typography } from '@mui/material';
-import type {Floor} from '../../types/floor';
+import type {Floor} from '../../../types/floor.ts';
 
 interface FloorInfoProps {
     floor: Floor;

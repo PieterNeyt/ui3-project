@@ -44,7 +44,6 @@ export const DeviceChangeLogsFilters = ({
                         label="Vanaf"
                         value={filters.startDate}
                         onChange={(e) => onFilterChange('startDate', e.target.value)}
-                        InputLabelProps={{ shrink: true }}
                     />
 
                     <TextField
@@ -54,7 +53,6 @@ export const DeviceChangeLogsFilters = ({
                         label="Tot"
                         value={filters.endDate}
                         onChange={(e) => onFilterChange('endDate', e.target.value)}
-                        InputLabelProps={{ shrink: true }}
                     />
 
                     <TextField

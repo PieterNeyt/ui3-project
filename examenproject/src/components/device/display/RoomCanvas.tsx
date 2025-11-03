@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
-import type { Room } from '../../types/room';
-import type { Device } from '../../types/device';
-import { DeviceVisualization } from './DeviceVisualizations';
+import type { Room } from '../../../types/room.ts';
+import type { Device } from '../../../types/device.ts';
+import { DeviceVisualization } from '../visualization/DeviceVisualizations.tsx';
 import React from "react";
 
 interface RoomCanvasProps {

@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 import { Controller, type Control } from 'react-hook-form';
-import type {FloorFormData} from '../../types/floor';
+import type {FloorFormData} from '../../../types/floor.ts';
 
 interface FloorFormFieldProps {
     name: keyof FloorFormData;

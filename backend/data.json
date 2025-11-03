@@ -194,11 +194,11 @@
         "brightness": 100
       },
       "waarde": {
-        "on_off": "off",
+        "on_off": "on",
         "brightness": 100
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T13:08:41.613Z",
+      "updatedAt": "2025-11-03T21:19:34.240Z",
       "lastActivatedBy": "f6195bf3-c6bd-421a-980c-05ceb1288124"
     },
     {
@@ -292,13 +292,13 @@
       "y": 75,
       "omschrijving": "",
       "defaultWaarde": {
-        "temperature": 20
+        "temperature": 11
       },
       "waarde": {
-        "temperature": 20
+        "temperature": 11
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-11-03T18:35:12.181Z",
+      "updatedAt": "2025-11-03T21:19:38.142Z",
       "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
@@ -330,15 +330,15 @@
       "y": 174,
       "omschrijving": "",
       "defaultWaarde": {
-        "on_off": "on",
-        "brightness": 31
+        "on_off": "off",
+        "brightness": 94
       },
       "waarde": {
-        "on_off": "off",
-        "brightness": 81
+        "on_off": "on",
+        "brightness": 94
       },
       "createdAt": "2025-10-30T12:46:35.698Z",
-      "updatedAt": "2025-11-03T16:05:28.674Z",
+      "updatedAt": "2025-11-03T21:20:09.587Z",
       "lastActivatedBy": "281b8faf-afff-4945-b215-acfa5443818b"
     },
     {
@@ -371,15 +371,15 @@
       "y": 56,
       "omschrijving": "",
       "defaultWaarde": {
-        "volume": 9,
-        "playlist": "jazz"
+        "volume": 18,
+        "playlist": "pop"
       },
       "waarde": {
-        "volume": 12,
-        "playlist": "jazz"
+        "volume": 18,
+        "playlist": "pop"
       },
       "createdAt": "2025-11-03T13:06:48.626Z",
-      "updatedAt": "2025-11-03T17:32:37.671Z",
+      "updatedAt": "2025-11-03T21:19:49.239Z",
       "lastActivatedBy": "bf668394-1a28-4b6f-bbaa-b02747d7d52a"
     },
     {
@@ -8422,6 +8422,124 @@
         "temperature": 18
       },
       "timestamp": "2025-11-03T20:59:52.816Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "e0400643-924a-4ab2-a720-b0c1d9ceef24",
+      "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "deviceName": "lars",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 81
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 94
+      },
+      "timestamp": "2025-11-03T21:19:30.238Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "c76ebda9-d86f-4357-aef5-c9f380c664e9",
+      "deviceId": "5",
+      "deviceName": "Keuken verlichting",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 100
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 100
+      },
+      "timestamp": "2025-11-03T21:19:34.284Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "fad8962c-e5e6-4f22-9460-a79067b1997c",
+      "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+      "deviceName": "verwarming",
+      "deviceType": "verwarming",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 20
+      },
+      "newValue": {
+        "temperature": 11
+      },
+      "timestamp": "2025-11-03T21:19:38.205Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "5f5a06c9-e829-4596-a345-0149844d9d1a",
+      "deviceId": "c845c662-de18-4eb3-a7d0-d7ccf637cc51",
+      "deviceName": "speaker",
+      "deviceType": "audio",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "volume": 12,
+        "playlist": "jazz"
+      },
+      "newValue": {
+        "volume": 18,
+        "playlist": "pop"
+      },
+      "timestamp": "2025-11-03T21:19:49.289Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "053efbb2-5901-4e65-a206-1a47c75a93a9",
+      "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "deviceName": "lars",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 94
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 94
+      },
+      "timestamp": "2025-11-03T21:20:03.941Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "92aa01c1-c339-4f53-ab14-a1c9f8d3c9cc",
+      "deviceId": "443accfa-1d11-4b12-a97e-69fef721d766",
+      "deviceName": "lars",
+      "deviceType": "licht",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 94
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 94
+      },
+      "timestamp": "2025-11-03T21:20:09.624Z",
       "userId": "2",
       "userName": "Admin User"
     }

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Paper, Typography, Box } from '@mui/material';
-import type { Room } from '../../types/room';
-import type { Device, DeviceFormData } from '../../types/device';
-import { DeviceForm } from './DeviceForm';
-import { RoomHeader } from './RoomHeader';
-import { RoomCanvas } from './RoomCanvas';
-import { useCreateDevice } from '../../hooks/useDevices';
-import { useAuth } from '../../hooks/useAuth.ts';
+import type { Room } from '../../../types/room.ts';
+import type { Device, DeviceFormData } from '../../../types/device.ts';
+import { DeviceForm } from '../form/DeviceForm.tsx';
+import { RoomHeader } from './RoomHeader.tsx';
+import { RoomCanvas } from './RoomCanvas.tsx';
+import { useCreateDevice } from '../../../hooks/useDevices.ts';
+import { useAuth } from '../../../hooks/useAuth.ts';
 
 interface RoomPlanProps {
     room: Room;

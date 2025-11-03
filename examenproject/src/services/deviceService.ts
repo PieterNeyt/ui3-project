@@ -15,6 +15,10 @@ export const deviceService = {
         });
         return response.data;
     },
+    getAllDevices: async (): Promise<Device[]> => {
+        const response = await api.get('/devices');
+        return response.data;
+    },
 
     // Get single device
     getDevice: async (id: string): Promise<Device> => {

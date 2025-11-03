@@ -1,5 +1,5 @@
 import { DialogActions, Button } from '@mui/material';
-import type {Floor} from '../../types/floor';
+import type {Floor} from '../../../types/floor.ts';
 
 interface FloorFormActionsProps {
     onClose: () => void;

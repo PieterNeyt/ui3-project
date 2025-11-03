@@ -6,7 +6,7 @@ import { AuthProvider } from "./context/AuthProvider";
 import { CustomThemeProvider } from "./context/ThemeProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Box, CssBaseline } from "@mui/material";
-import { TimeSlotManager } from "./components/timeslot/TimeSlotManager";
+import { TimeSlotManager } from "./context/TimeSlotManager.tsx";
 import routes from '~react-pages';
 import {Navbar} from "./components/navbar/Navbar.tsx";
 const queryClient = new QueryClient();

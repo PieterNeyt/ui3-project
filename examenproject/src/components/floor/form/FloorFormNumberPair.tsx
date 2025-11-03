@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import type {Control} from 'react-hook-form';
-import type {FloorFormData} from '../../types/floor';
-import { FloorFormField } from './FloorFormField';
+import type {FloorFormData} from '../../../types/floor.ts';
+import { FloorFormField } from './FloorFormField.tsx';
 
 interface NumberPairProps {
     control: Control<FloorFormData>;

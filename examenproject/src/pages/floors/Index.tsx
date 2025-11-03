@@ -13,8 +13,8 @@ import {
 } from '@mui/material';
 import {Edit, Delete, Add} from '@mui/icons-material';
 import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../../hooks/useFloors.ts';
-import { FloorForm } from '../../components/floor/FloorForm.tsx';
-import { FloorPreview } from '../../components/floor/FloorPreview.tsx';
+import { FloorForm } from '../../components/floor/form/FloorForm.tsx';
+import { FloorPreview } from '../../components/floor/display/FloorPreview.tsx';
 import type { Floor, FloorFormData } from '../../types/floor.ts';
 import { useAuth } from '../../hooks/useAuth.ts';
 

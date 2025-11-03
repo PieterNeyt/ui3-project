@@ -1,8 +1,8 @@
 import { Paper, Typography } from '@mui/material';
 import { useNavigate } from 'react-router';
-import type {Floor} from '../../types/floor';
-import { FloorBox } from './FloorBox';
-import { FloorInfo } from './FloorInfo';
+import type {Floor} from '../../../types/floor.ts';
+import { FloorBox } from './FloorBox.tsx';
+import { FloorInfo } from './FloorInfo.tsx';
 
 interface FloorPreviewProps {
     floor: Floor;
