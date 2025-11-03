@@ -115,11 +115,11 @@
         "brightness": 18
       },
       "waarde": {
-        "on_off": "off",
+        "on_off": "on",
         "brightness": 18
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T15:25:12.558Z",
+      "updatedAt": "2025-11-03T15:45:43.283Z",
       "lastActivatedBy": "83d37b0b-d545-4be9-ac6b-d9223f88e7df"
     },
     {
@@ -2044,6 +2044,66 @@
       "timestamp": "2025-11-03T15:28:35.631Z",
       "userId": "1",
       "userName": "Pieter Neyt"
+    },
+    {
+      "id": "376d19c9-a99b-40d1-81d5-c50530c7e481",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 18
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 18
+      },
+      "timestamp": "2025-11-03T15:45:42.372Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dff7ac34-ed46-4f40-af8b-bfce2284d7f3",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "on",
+        "brightness": 18
+      },
+      "newValue": {
+        "on_off": "off",
+        "brightness": 18
+      },
+      "timestamp": "2025-11-03T15:45:42.697Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "7f6a0734-9dce-4548-9b12-8665b8640003",
+      "deviceId": "1",
+      "deviceName": "Woonkamer verlichting",
+      "deviceType": "licht",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "on_off": "off",
+        "brightness": 18
+      },
+      "newValue": {
+        "on_off": "on",
+        "brightness": 18
+      },
+      "timestamp": "2025-11-03T15:45:43.444Z",
+      "userId": "2",
+      "userName": "Admin User"
     }
   ]
 }

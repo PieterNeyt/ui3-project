@@ -11,7 +11,7 @@ import {
 } from '@mui/material';
 import { Timeline, BarChart } from '@mui/icons-material';
 import { DeviceChangeLogs } from '../components/logging/logging/DeviceChangeLogs.tsx';
-import { DeviceStatistics } from '../components/logging/DeviceStatistics.tsx';
+import { DeviceStatistics } from '../components/logging/analytics/DeviceStatistics.tsx';
 
 interface TabPanelProps {
     children?: React.ReactNode;
