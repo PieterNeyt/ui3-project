@@ -9,14 +9,14 @@ import {
     Tooltip,
 } from '@mui/material';
 import { Delete,Edit, Info, PowerSettingsNew, Stop } from '@mui/icons-material';
-import type { Scene } from '../../types/scene';
-import { useActiveTimeSlot } from "../../hooks/useTimeSlots.ts";
+import type { Scene } from '../../../types/scene.ts';
+import { useActiveTimeSlot } from "../../../hooks/useTimeSlots.ts";
 import { useNavigate } from "react-router";
-import { useAuth } from '../../hooks/useAuth.ts';
-import { SceneCardHeader } from './card/SceneCardHeader.tsx';
-import { SceneCardImage } from './card/SceneCardImage.tsx';
-import { SceneCardChips } from './card/SceneCardChips.tsx';
-import { SceneCardControls } from './card/SceneCardControls.tsx';
+import { useAuth } from '../../../hooks/useAuth.ts';
+import { SceneCardHeader } from './SceneCardHeader.tsx';
+import { SceneCardImage } from './SceneCardImage.tsx';
+import { SceneCardChips } from './SceneCardChips.tsx';
+import { SceneCardControls } from './SceneCardControls.tsx';
 
 interface SceneCardProps {
     scene: Scene;

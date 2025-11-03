@@ -1,8 +1,7 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import {
     Container,
     Typography,
-    Box,
     CircularProgress,
     Alert,
     Button,
@@ -10,32 +9,26 @@ import {
     DialogTitle,
     DialogContent,
     DialogActions,
-    Breadcrumbs,
-    Link,
-    Chip,
 } from '@mui/material';
-import { NavigateNext, ArrowBack } from '@mui/icons-material';
+import { ArrowBack } from '@mui/icons-material';
 import { useParams, useNavigate } from 'react-router';
 import { useScene } from '../../hooks/useScenes.ts';
 import { useCreateTimeSlot, useUpdateTimeSlot, useDeleteTimeSlot } from '../../hooks/useTimeSlots.ts';
-import { TimeSlotList } from '../../components/timeslot/TimeSlotList.tsx';
-import { TimeSlotForm } from '../../components/timeslot/TimeSlotForm.tsx';
-import type { TimeSlot, TimeSlotFormData } from '../../types/timeslot.ts';
 import { useAuth } from '../../hooks/useAuth.ts';
+import type { TimeSlot, TimeSlotFormData } from '../../types/timeslot.ts';
+import { SceneBreadcrumbs } from '../../components/scene/SceneBreadcrumbs.tsx';
+import { SceneHeader } from '../../components/scene/SceneHeader.tsx';
+import { SceneInfo } from '../../components/scene/SceneInfo.tsx';
+import { TimeSlotsSection } from '../../components/scene/TimeSlotsSection.tsx';
+import { DeviceControlsSection } from '../../components/device/DeviceControlsSection.tsx';
+import { TimeSlotForm } from '../../components/timeslot/TimeSlotForm.tsx';
 
-export default function Id()  {
+export default function Id() {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const { isAdmin, user } = useAuth();
 
     const { data: scene, isLoading: sceneLoading, error: sceneError } = useScene(id || '');
-
-    // Check toegangsrechten
-    const hasAccess = scene && (isAdmin() || scene.isGlobal || scene.createdBy === user?.id);
-
-    // Check of tijdsloten getoond mogen worden (alleen voor globale scenes of admin)
-    const showTimeSlots = isAdmin() || (scene?.isGlobal ?? false);
-
     const createTimeSlotMutation = useCreateTimeSlot();
     const updateTimeSlotMutation = useUpdateTimeSlot();
     const deleteTimeSlotMutation = useDeleteTimeSlot();
@@ -45,8 +38,10 @@ export default function Id()  {
     const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
     const [timeSlotToDelete, setTimeSlotToDelete] = useState<string | null>(null);
 
-    const handleAddTimeSlot = () => {
+    const hasAccess = scene && (isAdmin() || scene.isGlobal || scene.createdBy === user?.id);
+    const showTimeSlots = isAdmin() || (scene?.isGlobal ?? false);
 
+    const handleAddTimeSlot = () => {
         if (!scene?.isGlobal) {
             alert('Tijdsloten kunnen alleen worden toegevoegd aan globale scenes');
             return;
@@ -56,7 +51,6 @@ export default function Id()  {
     };
 
     const handleEditTimeSlot = (timeslot: TimeSlot) => {
-        // VOEG DEZE CHECK TOE - voorkom bewerken voor persoonlijke scenes
         if (!scene?.isGlobal) {
             alert('Tijdsloten kunnen alleen worden bewerkt voor globale scenes');
             return;
@@ -66,7 +60,6 @@ export default function Id()  {
     };
 
     const handleDeleteTimeSlot = (timeslotId: string) => {
-        // VOEG DEZE CHECK TOE - voorkom verwijderen voor persoonlijke scenes
         if (!scene?.isGlobal) {
             alert('Tijdsloten kunnen alleen worden verwijderd van globale scenes');
             return;
@@ -134,137 +127,24 @@ export default function Id()  {
 
     return (
         <Container maxWidth="md" sx={{ mt: 12, mb: 4, py: 4 }}>
-            {/* Breadcrumbs */}
-            <Breadcrumbs separator={<NavigateNext fontSize="small" />} sx={{ mb: 3 }}>
-                <Link
-                    component="button"
-                    variant="body1"
-                    onClick={() => navigate('/scenes')}
-                    color="inherit"
-                    sx={{ textDecoration: 'none', '&:hover': { textDecoration: 'underline' } }}
-                >
-                    Scenes
-                </Link>
-                <Typography color="text.primary">{scene.naam}</Typography>
-            </Breadcrumbs>
+            <SceneBreadcrumbs scene={scene} navigate={navigate} />
 
-            {/* Scene Header */}
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 4 }}>
-                <Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-                        <Typography variant="h4" component="h1">
-                            {scene.naam}
-                        </Typography>
-                        <Chip
-                            label={scene.isGlobal ? "Globale Scene" : "Persoonlijke Scene"}
-                            color={scene.isGlobal ? "primary" : "success"}
-                            variant="outlined"
-                        />
-                    </Box>
-                    {scene.omschrijving && (
-                        <Typography variant="body1" color="text.secondary">
-                            {scene.omschrijving}
-                        </Typography>
-                    )}
-                </Box>
-                <Button
-                    startIcon={<ArrowBack />}
-                    onClick={() => navigate('/scenes')}
-                    variant="outlined"
-                >
-                    Terug
-                </Button>
-            </Box>
+            <SceneHeader scene={scene} navigate={navigate} />
 
-            {/* Scene Info */}
-            <Box sx={{ mb: 4, p: 3, bgcolor: 'background.default', borderRadius: 2, border: 1, borderColor: 'divider' }}>
-                <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    Scene Informatie
-                </Typography>
-                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                    <Typography variant="body2">
-                        <strong>Aantal devices:</strong> {scene.controls.length}
-                    </Typography>
-                    <Typography variant="body2" color={scene.isGlobal ? "primary.main" : "success.main"}>
-                        <strong>Type:</strong> {scene.isGlobal ? "Globale scene (zichtbaar voor alle gebruikers)" : "Persoonlijke scene (alleen zichtbaar voor jou)"}
-                    </Typography>
-                    {!scene.isGlobal && (
-                        <Typography variant="caption" color="text.secondary">
-                            Persoonlijke scenes kunnen niet gekoppeld worden aan tijdsloten
-                        </Typography>
-                    )}
-                </Box>
-            </Box>
+            <SceneInfo scene={scene} />
 
-            {/* TimeSlots Section - alleen voor globale scenes */}
+            <TimeSlotsSection
+                sceneId={id!}
+                scene={scene}
+                isAdmin={isAdmin()}
+                showTimeSlots={showTimeSlots}
+                onAddTimeSlot={handleAddTimeSlot}
+                onEditTimeSlot={handleEditTimeSlot}
+                onDeleteTimeSlot={handleDeleteTimeSlot}
+            />
 
-            {showTimeSlots ? (
-                <Box sx={{ mb: 4 }}>
-                    <TimeSlotList
-                        sceneId={id!}
-                        onAddTimeSlot={handleAddTimeSlot}
-                        onEditTimeSlot={handleEditTimeSlot}
-                        onDeleteTimeSlot={handleDeleteTimeSlot}
-                        isAdmin={isAdmin()}
-                        isGlobalScene={scene?.isGlobal}
-                    />
-                </Box>
-            ) : (
-                <Alert severity="info" sx={{ mb: 4 }}>
-                    <Typography variant="body2">
-                        <strong>Persoonlijke scenes kunnen niet gekoppeld worden aan tijdsloten.</strong>
-                        <br />
-                        Alleen globale scenes kunnen automatisch geactiveerd worden via tijdsloten.
-                        {isAdmin() && " Als admin kun je deze scene converteren naar een globale scene om tijdsloten toe te voegen."}
-                    </Typography>
-                </Alert>
-            )}
+            <DeviceControlsSection scene={scene} />
 
-            {/* Device Controls Overzicht */}
-            <Box sx={{ mb: 4 }}>
-                <Typography variant="h6" gutterBottom>
-                    Device Instellingen
-                </Typography>
-                {scene.controls.length === 0 ? (
-                    <Alert severity="info">
-                        Deze scene heeft geen devices geconfigureerd.
-                    </Alert>
-                ) : (
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                        {scene.controls.map((control, index) => (
-                            <Box
-                                key={index}
-                                sx={{
-                                    p: 2,
-                                    border: '1px solid',
-                                    borderColor: 'divider',
-                                    borderRadius: 1,
-                                    backgroundColor: 'background.default'
-                                }}
-                            >
-                                <Typography variant="subtitle1" fontWeight="bold" gutterBottom>
-                                    {control.device?.naam || `Device ${control.deviceId}`}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary" gutterBottom>
-                                    Type: {control.device?.type || 'Onbekend'}
-                                </Typography>
-                                <Box sx={{ mt: 1 }}>
-                                    <Typography variant="body2">
-                                        <strong>Instellingen:</strong>
-                                    </Typography>
-                                    {Object.entries(control.waarde).map(([key, value]) => (
-                                        <Typography key={key} variant="body2" color="text.secondary">
-                                            • {key}: {String(value)}
-                                        </Typography>
-                                    ))}
-                                </Box>
-                            </Box>
-                        ))}
-                    </Box>
-                )}
-            </Box>
-
-            {/* TimeSlot Form Dialog */}
             <TimeSlotForm
                 open={isTimeSlotFormOpen}
                 timeslot={editingTimeSlot}
@@ -276,28 +156,42 @@ export default function Id()  {
                 isSubmitting={createTimeSlotMutation.isPending || updateTimeSlotMutation.isPending}
             />
 
-            {/* Delete Confirmation Dialog */}
-            <Dialog
+            <DeleteConfirmationDialog
                 open={deleteConfirmOpen}
                 onClose={() => setDeleteConfirmOpen(false)}
-            >
-                <DialogTitle>Tijdslot Verwijderen</DialogTitle>
-                <DialogContent>
-                    <Typography>
-                        Weet je zeker dat je dit tijdslot wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
-                    </Typography>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={() => setDeleteConfirmOpen(false)}>Annuleren</Button>
-                    <Button
-                        onClick={handleConfirmDelete}
-                        color="error"
-                        disabled={deleteTimeSlotMutation.isPending}
-                    >
-                        {deleteTimeSlotMutation.isPending ? 'Verwijderen...' : 'Verwijderen'}
-                    </Button>
-                </DialogActions>
-            </Dialog>
+                onConfirm={handleConfirmDelete}
+                isDeleting={deleteTimeSlotMutation.isPending}
+            />
         </Container>
+    );
+}
+
+interface DeleteConfirmationDialogProps {
+    open: boolean;
+    onClose: () => void;
+    onConfirm: () => void;
+    isDeleting: boolean;
+}
+
+const DeleteConfirmationDialog = ({ open, onClose, onConfirm, isDeleting }: DeleteConfirmationDialogProps) => {
+    return (
+        <Dialog open={open} onClose={onClose}>
+            <DialogTitle>Tijdslot Verwijderen</DialogTitle>
+            <DialogContent>
+                <Typography>
+                    Weet je zeker dat je dit tijdslot wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.
+                </Typography>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={onClose}>Annuleren</Button>
+                <Button
+                    onClick={onConfirm}
+                    color="error"
+                    disabled={isDeleting}
+                >
+                    {isDeleting ? 'Verwijderen...' : 'Verwijderen'}
+                </Button>
+            </DialogActions>
+        </Dialog>
     );
 };

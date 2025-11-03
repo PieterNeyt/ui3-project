@@ -1,31 +1,23 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import {
     Container,
-    Typography,
-    Box,
     Alert,
     CircularProgress,
-    Breadcrumbs,
-    Link,
-    Card,
-    CardContent,
-    CardActions,
-    IconButton,
+    Box,
 } from '@mui/material';
-import { Edit, Delete, Home } from '@mui/icons-material';
-import { Link as RouterLink, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import { useDevicesByRoom, useDeleteDevice, useUpdateDevice } from '../../../hooks/useDevices.ts';
 import { useRooms } from '../../../hooks/useRooms.ts';
 import { useFloors } from '../../../hooks/useFloors.ts';
-import { RoomPlan } from '../../../components/device/display/RoomPlan.tsx';
+import { useAuth } from "../../../hooks/useAuth.ts";
+import type { Device, DeviceFormData } from '../../../types/device.ts';
+import { DevicesBreadcrumbs } from '../../../components/device/DevicesBreadcrumbs.tsx';
+import { DevicesHeader } from '../../../components/device/DevicesHeader.tsx';
+import { RoomPlanSection } from '../../../components/device/RoomPlanSection.tsx';
+import { DevicesGrid } from '../../../components/device/DevicesGrid.tsx';
 import { DeviceForm } from '../../../components/device/form/DeviceForm.tsx';
-import type { Device, LightDevice, HeatingDevice, DoorLockDevice, AudioDevice, DeviceFormData } from '../../../types/device.ts';
-import type {Room} from "../../../types/room.ts";
-import type {Floor} from "../../../types/floor.ts";
-import {useAuth} from "../../../hooks/useAuth.ts";
 
-export default function Devices()  {
-
+export default function Devices() {
     const { kamerId } = useParams<{ kamerId: string }>();
     const { isAdmin, isGebruiker } = useAuth();
     const { data: floors } = useFloors();
@@ -38,13 +30,11 @@ export default function Devices()  {
     const [editingDevice, setEditingDevice] = useState<Device | null>(null);
     const [refreshing, setRefreshing] = useState(false);
 
-    // Find current room and floor met juiste types
-    const currentRoom = rooms?.find((room: Room) => room.id === kamerId);
-    const currentFloor = floors?.find((floor: Floor) =>
+    const currentRoom = rooms?.find(room => room.id === kamerId);
+    const currentFloor = floors?.find(floor =>
         floor.id === currentRoom?.verdiepingId
     );
 
-    // Refetch devices when mutation is successful
     useEffect(() => {
         if (deleteDeviceMutation.isSuccess || updateDeviceMutation.isSuccess) {
             setRefreshing(true);
@@ -72,7 +62,6 @@ export default function Devices()  {
                     id: editingDevice.id,
                     data: {
                         ...data,
-                        // Zorg ervoor dat waarde wordt bijgewerkt met nieuwe defaultWaarde
                         waarde: data.defaultWaarde,
                         x: Number(data.x),
                         y: Number(data.y),
@@ -97,26 +86,6 @@ export default function Devices()  {
         handleEditDevice(device);
     };
 
-    // Helper functies voor type-safe device waarden
-    const getDeviceStatus = (device: Device) => {
-        switch (device.type) {
-            case 'licht':
-            { const light = device as LightDevice;
-                return `Status: ${light.waarde.on_off} | Helderheid: ${light.waarde.brightness}%`; }
-            case 'verwarming':
-            { const heating = device as HeatingDevice;
-                return `Temperatuur: ${heating.waarde.temperature}°C`; }
-            case 'deurslot':
-            { const doorLock = device as DoorLockDevice;
-                return `Status: ${doorLock.waarde.locked ? 'Vergrendeld' : 'Ontgrendeld'}`; }
-            case 'audio':
-            { const audio = device as AudioDevice;
-                return `Volume: ${audio.waarde.volume} | Playlist: ${audio.waarde.playlist}`; }
-            default:
-                return '';
-        }
-    };
-
     if (!isAdmin() && !isGebruiker()) {
         return (
             <Container sx={{ mt: 12, mb: 4 }}>
@@ -139,36 +108,9 @@ export default function Devices()  {
 
     return (
         <Container sx={{ mt: 12, mb: 4 }}>
-            {/* Breadcrumbs */}
-            <Breadcrumbs sx={{ mb: 3 }}>
-                <Link component={RouterLink} to="/" color="inherit" underline="hover">
-                    <Home sx={{ mr: 0.5 }} fontSize="inherit" />
-                    Home
-                </Link>
-                <Link component={RouterLink} to="/floors" color="inherit" underline="hover">
-                    Verdiepingen
-                </Link>
-                <Link
-                    component={RouterLink}
-                    to={`/floors/${currentFloor.id}/rooms`}
-                    color="inherit"
-                    underline="hover"
-                >
-                    {currentFloor.naam}
-                </Link>
-                <Typography color="text.primary">Domotica - {currentRoom.naam}</Typography>
-            </Breadcrumbs>
+            <DevicesBreadcrumbs currentFloor={currentFloor} currentRoom={currentRoom} />
 
-            <Box mb={4}>
-                <Typography variant="h4" component="h1" gutterBottom >
-                    Domotica Controls - {currentRoom.naam}
-                </Typography>
-                {currentRoom.omschrijving && (
-                    <Typography variant="body1" color="text.secondary">
-                        {currentRoom.omschrijving}
-                    </Typography>
-                )}
-            </Box>
+            <DevicesHeader currentRoom={currentRoom} />
 
             {(error || refreshing) && (
                 <Alert severity="info" sx={{ mb: 2 }}>
@@ -182,85 +124,23 @@ export default function Devices()  {
                 </Box>
             )}
 
-            {/* Room Plan with Devices */}
-            {currentRoom && rooms && !refreshing && (
-                <Box mb={4}>
-                    <RoomPlan
-                        room={currentRoom}
-                        devices={devices || []}
-                        onDeviceClick={handleDeviceClick}
-                        scale={0.8}
-                        rooms={rooms || []}
-                    />
-                </Box>
-            )}
+            <RoomPlanSection
+                currentRoom={currentRoom}
+                rooms={rooms || []}
+                devices={devices || []}
+                refreshing={refreshing}
+                onDeviceClick={handleDeviceClick}
+            />
 
-            {/* Devices List */}
-            <Typography variant="h5" gutterBottom sx={{ mt: 4 }} >
-                Alle Controls ({devices?.length || 0})
-            </Typography>
+            <DevicesGrid
+                devices={devices}
+                refreshing={refreshing}
+                isAdmin={isAdmin()}
+                onEditDevice={handleEditDevice}
+                onDeleteDevice={handleDeleteDevice}
+                deleteDeviceMutation={deleteDeviceMutation}
+            />
 
-            {devices && devices.length === 0 && !refreshing && (
-                <Alert severity="info">
-                    Er zijn nog geen controls in deze kamer. Klik in de kamer om er een toe te voegen.
-                </Alert>
-            )}
-
-            {/* Box container in plaats van Grid */}
-            <Box
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                        xs: '1fr',
-                        sm: 'repeat(2, 1fr)',
-                        md: 'repeat(3, 1fr)'
-                    },
-                    gap: 3,
-                    mt: 2
-                }}
-            >
-                {devices?.map((device) => (
-                    <Card key={device.id}>
-                        <CardContent>
-                            <Typography variant="h6" gutterBottom>
-                                {device.naam}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary" gutterBottom>
-                                Type: {device.type} | UPC: {device.upcCode}
-                            </Typography>
-                            {device.omschrijving && (
-                                <Typography variant="body2" color="text.secondary" gutterBottom>
-                                    {device.omschrijving}
-                                </Typography>
-                            )}
-                            <Typography variant="body2">
-                                Positie: ({device.x}, {device.y})
-                            </Typography>
-                            <Typography variant="body2">
-                                {getDeviceStatus(device)}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            <IconButton
-                                color="primary"
-                                onClick={() => handleEditDevice(device)}
-                            >
-                                <Edit />
-                            </IconButton>
-                            {isAdmin() && (
-                            <IconButton
-                                color="error"
-                                onClick={() => handleDeleteDevice(device.id)}
-                                disabled={deleteDeviceMutation.isPending}
-                            >
-                                <Delete />
-                            </IconButton>)}
-                        </CardActions>
-                    </Card>
-                ))}
-            </Box>
-
-            {/* Edit Device Form */}
             <DeviceForm
                 open={formOpen}
                 onClose={handleCloseForm}
@@ -272,4 +152,4 @@ export default function Devices()  {
             />
         </Container>
     );
-};
+}

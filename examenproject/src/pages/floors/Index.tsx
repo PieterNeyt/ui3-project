@@ -1,25 +1,18 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import {
     Container,
-    Typography,
-    Button,
-    Box,
     Alert,
     CircularProgress,
-    IconButton,
-    Card,
-    CardContent,
-    CardActions,
+    Box,
 } from '@mui/material';
-import {Edit, Delete, Add} from '@mui/icons-material';
 import { useFloors, useCreateFloor, useUpdateFloor, useDeleteFloor } from '../../hooks/useFloors.ts';
-import { FloorForm } from '../../components/floor/form/FloorForm.tsx';
-import { FloorPreview } from '../../components/floor/display/FloorPreview.tsx';
-import type { Floor, FloorFormData } from '../../types/floor.ts';
 import { useAuth } from '../../hooks/useAuth.ts';
+import type { Floor, FloorFormData } from '../../types/floor.ts';
+import { FloorsHeader } from '../../components/floor/FloorsHeader.tsx';
+import { FloorsGrid } from '../../components/floor/FloorsGrid.tsx';
+import { FloorForm } from '../../components/floor/form/FloorForm.tsx';
 
-
-export default function  Index ()  {
+export default function Index() {
     const { isAdmin, isGebruiker } = useAuth();
     const { data: floors, error, isLoading } = useFloors();
     const createFloorMutation = useCreateFloor();
@@ -88,39 +81,10 @@ export default function  Index ()  {
                 textAlign: 'center',
             }}
         >
-
-            <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                mb={4}
-                sx={{
-                    pb: 1,
-                    gap: 2,
-                    width: '100%',
-                    maxWidth: 1200,
-                }}
-            >
-                <Typography
-                    variant="h4"
-                    component="h1"
-                    color="text.primary"
-                    sx={{ fontWeight: 600 }}
-                >
-                    Verdiepingen Beheren
-                </Typography>
-
-                {isAdmin() && (
-                    <Button
-                        variant="contained"
-                        startIcon={<Add />}
-                        onClick={() => setFormOpen(true)}
-                        sx={{ whiteSpace: 'nowrap' }}
-                    >
-                        Nieuwe Verdieping
-                    </Button>
-                )}
-            </Box>
+            <FloorsHeader
+                isAdmin={isAdmin()}
+                onAddFloor={() => setFormOpen(true)}
+            />
 
             {error && (
                 <Alert severity="error" sx={{ mb: 2 }}>
@@ -134,50 +98,13 @@ export default function  Index ()  {
                 </Box>
             )}
 
-            {floors && floors.length === 0 && (
-                <Alert severity="info">
-                    Er zijn nog geen verdiepingen. Maak er een aan om te beginnen.
-                </Alert>
-            )}
-
-            <Box
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                        xs: '1fr',
-                        sm: 'repeat(2, 1fr)',
-                        md: 'repeat(3, 1fr)'
-                    },
-                    gap: 3,
-                    width: '100%',
-                    maxWidth: 1200
-                }}
-            >
-                {floors?.map((floor) => (
-                    <Card key={floor.id}>
-                        <CardContent>
-                            <FloorPreview floor={floor} />
-                        </CardContent>
-                        {isAdmin() && (
-                        <CardActions>
-                            <IconButton
-                                color="primary"
-                                onClick={() => handleEditFloor(floor)}
-                                disabled={createFloorMutation.isPending || updateFloorMutation.isPending}
-                            >
-                                <Edit />
-                            </IconButton>
-                            <IconButton
-                                color="error"
-                                onClick={() => handleDeleteFloor(floor.id)}
-                                disabled={deleteFloorMutation.isPending}
-                            >
-                                <Delete />
-                            </IconButton>
-                        </CardActions>)}
-                    </Card>
-                ))}
-            </Box>
+            <FloorsGrid
+                floors={floors}
+                isAdmin={isAdmin()}
+                onEditFloor={handleEditFloor}
+                onDeleteFloor={handleDeleteFloor}
+                isSubmitting={createFloorMutation.isPending || updateFloorMutation.isPending || deleteFloorMutation.isPending}
+            />
 
             <FloorForm
                 open={formOpen}
@@ -190,4 +117,4 @@ export default function  Index ()  {
             />
         </Container>
     );
-};
+}

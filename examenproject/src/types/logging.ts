@@ -13,7 +13,7 @@ export interface DeviceChangeLog {
     userName?: string;
 }
 
-// types/logging.ts
+// types/view.ts
 export interface DeviceStatistics {
     mostSwitchedLights: Array<{
         deviceId: string;

@@ -7,14 +7,14 @@ import {
     Button,
     Stack,
 } from '@mui/material';
-import { useDevices } from '../../hooks/useDevices';
-import { usePlaylists } from '../../hooks/useDevices';
-import { useAuth } from '../../hooks/useAuth';
-import type { Scene, SceneFormData, SceneControl } from '../../types/scene';
-import type {DeviceValue, Playlist} from '../../types/device';
-import { SceneFormHeader } from './form/SceneFormHeader.tsx';
-import { SceneFormControls } from './form/SceneFormControls.tsx';
-import { SceneInfoAlerts } from './form/SceneInfoAlerts.tsx';
+import { useDevices } from '../../../hooks/useDevices.ts';
+import { usePlaylists } from '../../../hooks/useDevices.ts';
+import { useAuth } from '../../../hooks/useAuth.ts';
+import type { Scene, SceneFormData, SceneControl } from '../../../types/scene.ts';
+import type {DeviceValue, Playlist} from '../../../types/device.ts';
+import { SceneFormHeader } from './SceneFormHeader.tsx';
+import { SceneFormControls } from './SceneFormControls.tsx';
+import { SceneInfoAlerts } from './SceneInfoAlerts.tsx';
 
 interface SceneFormProps {
     open: boolean;

@@ -1,33 +1,27 @@
-import  {useState} from 'react';
+import { useState } from 'react';
 import {
     Container,
-    Typography,
-    Button,
-    Box,
     Alert,
     CircularProgress,
-    IconButton,
-    Card,
-    CardContent,
-    CardActions,
-    Breadcrumbs,
-    Link,
+    Box,
 } from '@mui/material';
-import {Edit, Delete, Add, Home, Settings} from '@mui/icons-material';
-import {Link as RouterLink, useParams} from 'react-router';
-import {useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom} from '../../../hooks/useRooms.ts';
-import {useFloors} from '../../../hooks/useFloors.ts';
-import {RoomForm} from '../../../components/room/RoomForm.tsx';
-import {FloorPlan} from '../../../components/room/FloorPlan.tsx';
-import type {Room, RoomFormData} from '../../../types/room.ts';
-import {useAuth} from '../../../hooks/useAuth.ts';
+import { useParams } from 'react-router';
+import { useRoomsByFloor, useCreateRoom, useUpdateRoom, useDeleteRoom } from '../../../hooks/useRooms.ts';
+import { useFloors } from '../../../hooks/useFloors.ts';
+import { useAuth } from '../../../hooks/useAuth.ts';
+import type { Room, RoomFormData } from '../../../types/room.ts';
+import { RoomsHeader } from '../../../components/room/RoomsHeader.tsx';
+import { RoomsBreadcrumbs } from '../../../components/room/RoomsBreadcrumbs.tsx';
+import { FloorPlanSection } from '../../../components/room/FloorPlanSection.tsx';
+import { RoomsGrid } from '../../../components/room/RoomsGrid.tsx';
+import { RoomForm } from '../../../components/room/RoomForm.tsx';
 
 export default function Rooms() {
-    const {isAdmin, isGebruiker} = useAuth();
-    const {verdiepingId} = useParams<{ verdiepingId: string }>();
+    const { isAdmin, isGebruiker } = useAuth();
+    const { verdiepingId } = useParams<{ verdiepingId: string }>();
 
-    const {data: floors} = useFloors();
-    const {data: rooms, error, isLoading} = useRoomsByFloor(verdiepingId || '');
+    const { data: floors } = useFloors();
+    const { data: rooms, error, isLoading } = useRoomsByFloor(verdiepingId || '');
     const createRoomMutation = useCreateRoom();
     const updateRoomMutation = useUpdateRoom();
     const deleteRoomMutation = useDeleteRoom();
@@ -48,7 +42,7 @@ export default function Rooms() {
     const handleUpdateRoom = (data: RoomFormData) => {
         if (editingRoom) {
             updateRoomMutation.mutate(
-                {id: editingRoom.id, data},
+                { id: editingRoom.id, data },
                 {
                     onSuccess: () => {
                         setFormOpen(false);
@@ -87,7 +81,7 @@ export default function Rooms() {
 
     if (!verdiepingId) {
         return (
-            <Container sx={{mt: 12, mb: 4}}>
+            <Container sx={{ mt: 12, mb: 4 }}>
                 <Alert severity="error">
                     Geen verdieping geselecteerd.
                 </Alert>
@@ -97,7 +91,7 @@ export default function Rooms() {
 
     if (!currentFloor) {
         return (
-            <Container sx={{mt: 12, mb: 4}}>
+            <Container sx={{ mt: 12, mb: 4 }}>
                 <Alert severity="error">
                     Verdieping niet gevonden.
                 </Alert>
@@ -106,142 +100,40 @@ export default function Rooms() {
     }
 
     return (
-        <Container sx={{mt: 12, mb: 4}}>
+        <Container sx={{ mt: 12, mb: 4 }}>
+            <RoomsBreadcrumbs currentFloor={currentFloor} />
 
-            <Breadcrumbs sx={{mb: 3}}>
-                <Link component={RouterLink} to="/" color="inherit" underline="hover">
-                    <Home sx={{mr: 0.5}} fontSize="inherit"/>
-                    Home
-                </Link>
-                <Link component={RouterLink} to="/floors" color="inherit" underline="hover">
-                    Verdiepingen
-                </Link>
-                <Typography color="text.primary">{currentFloor.naam}</Typography>
-            </Breadcrumbs>
-
-            <Box display="flex" justifyContent="space-between" alignItems="flex-start" mb={4}>
-                <Box>
-                    <Typography
-                        variant="h4"
-                        component="h1"
-                        gutterBottom
-                    >
-                        Kamers Beheren - {currentFloor.naam}
-                    </Typography>
-                    {currentFloor.omschrijving && (
-                        <Typography variant="body1" color="text.secondary">
-                            {currentFloor.omschrijving}
-                        </Typography>
-                    )}
-                </Box>
-                {isAdmin() && (
-                    <Button
-                        variant="contained"
-                        startIcon={<Add/>}
-                        onClick={() => setFormOpen(true)}
-                    >
-                        Nieuwe Kamer
-                    </Button>)}
-            </Box>
+            <RoomsHeader
+                currentFloor={currentFloor}
+                isAdmin={isAdmin()}
+                onAddRoom={() => setFormOpen(true)}
+            />
 
             {error && (
-                <Alert severity="error" sx={{mb: 2}}>
+                <Alert severity="error" sx={{ mb: 2 }}>
                     Fout bij het laden van kamers: {(error as Error).message}
                 </Alert>
             )}
 
-
-            {currentFloor && rooms && (
-                <Box mb={4}>
-                    <FloorPlan
-                        floor={currentFloor}
-                        rooms={rooms}
-                        onRoomClick={handleEditRoom}
-                        scale={0.8}
-                    />
-                </Box>
-            )}
+            <FloorPlanSection
+                currentFloor={currentFloor}
+                rooms={rooms}
+                onRoomClick={handleEditRoom}
+            />
 
             {isLoading && (
                 <Box display="flex" justifyContent="center" my={4}>
-                    <CircularProgress/>
+                    <CircularProgress />
                 </Box>
             )}
 
-
-            <Typography
-                variant="h5"
-                gutterBottom
-                sx={{mt: 4}}
-            >
-                Alle Kamers ({rooms?.length || 0})
-            </Typography>
-
-            {rooms && rooms.length === 0 && (
-                <Alert severity="info">
-                    Er zijn nog geen kamers op deze verdieping. Maak er een aan om te beginnen.
-                </Alert>
-            )}
-
-            <Box
-                sx={{
-                    display: 'grid',
-                    gridTemplateColumns: {
-                        xs: '1fr',
-                        sm: 'repeat(2, 1fr)',
-                        md: 'repeat(3, 1fr)'
-                    },
-                    gap: 3,
-                    mt: 2
-                }}
-            >
-                {rooms?.map((room) => (
-                    <Card key={room.id}>
-                        <CardContent>
-                            <Typography variant="h6" gutterBottom>
-                                {room.naam}
-                            </Typography>
-                            {room.omschrijving && (
-                                <Typography variant="body2" color="text.secondary" gutterBottom>
-                                    {room.omschrijving}
-                                </Typography>
-                            )}
-                            <Typography variant="body2">
-                                Positie: ({room.x}, {room.y})
-                            </Typography>
-                            <Typography variant="body2">
-                                Afmeting: {room.width} × {room.height}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-                            {isAdmin() && (
-                            <IconButton
-                                color="primary"
-                                onClick={() => handleEditRoom(room)}
-                                disabled={createRoomMutation.isPending || updateRoomMutation.isPending}
-                            >
-                                <Edit/>
-                            </IconButton>)}
-                            <IconButton
-                                color="secondary"
-                                component={RouterLink}
-                                to={`/rooms/${room.id}/devices`}
-                                title="Domotica Controls Beheren"
-                            >
-                                <Settings/>
-                            </IconButton>
-                            {isAdmin() && (
-                            <IconButton
-                                color="error"
-                                onClick={() => handleDeleteRoom(room.id)}
-                                disabled={deleteRoomMutation.isPending}
-                            >
-                                <Delete/>
-                            </IconButton>)}
-                        </CardActions>
-                    </Card>
-                ))}
-            </Box>
+            <RoomsGrid
+                rooms={rooms}
+                isAdmin={isAdmin()}
+                onEditRoom={handleEditRoom}
+                onDeleteRoom={handleDeleteRoom}
+                isSubmitting={createRoomMutation.isPending || updateRoomMutation.isPending || deleteRoomMutation.isPending}
+            />
 
             <RoomForm
                 open={formOpen}
@@ -249,10 +141,8 @@ export default function Rooms() {
                 onSubmit={editingRoom ? handleUpdateRoom : handleCreateRoom}
                 room={editingRoom}
                 floors={floors || []}
-                isSubmitting={
-                    createRoomMutation.isPending || updateRoomMutation.isPending
-                }
+                isSubmitting={createRoomMutation.isPending || updateRoomMutation.isPending}
             />
         </Container>
     );
-};
+}

@@ -88,16 +88,6 @@
       "y": 0,
       "omschrijving": "",
       "id": "daa39127-0db0-4b6a-96f6-c9534de6146e"
-    },
-    {
-      "id": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
-      "naam": "kot",
-      "verdiepingId": "2",
-      "width": 50,
-      "height": 50,
-      "x": 100,
-      "y": 0,
-      "omschrijving": ""
     }
   ],
   "devices": [
@@ -135,10 +125,10 @@
         "temperature": 26
       },
       "waarde": {
-        "temperature": 18
+        "temperature": 16
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T20:59:52.700Z"
+      "updatedAt": "2025-11-03T23:36:33.271Z"
     },
     {
       "id": "3",
@@ -292,13 +282,13 @@
       "y": 75,
       "omschrijving": "",
       "defaultWaarde": {
-        "temperature": 11
+        "temperature": 16
       },
       "waarde": {
-        "temperature": 11
+        "temperature": 16
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-11-03T21:19:38.142Z",
+      "updatedAt": "2025-11-03T23:36:27.270Z",
       "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
@@ -419,24 +409,6 @@
       },
       "createdAt": "2025-11-03T15:22:23.167Z",
       "updatedAt": "2025-11-03T15:22:23.167Z"
-    },
-    {
-      "id": "a3f1602b-a17b-4f08-a044-54c0f958857b",
-      "naam": "Woonkamer",
-      "type": "verwarming",
-      "upcCode": "1111111111111",
-      "kamerId": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
-      "x": 21,
-      "y": 21,
-      "omschrijving": "",
-      "defaultWaarde": {
-        "temperature": 30
-      },
-      "waarde": {
-        "temperature": 30
-      },
-      "createdAt": "2025-11-03T18:50:58.449Z",
-      "updatedAt": "2025-11-03T18:51:19.549Z"
     }
   ],
   "playlists": [
@@ -8373,10 +8345,10 @@
     },
     {
       "id": "b4347f67-8a1b-40ab-a990-01fe5c9b1e16",
-      "deviceId": "a3f1602b-a17b-4f08-a044-54c0f958857b",
+      "deviceId": null,
       "deviceName": "Woonkamer",
       "deviceType": "verwarming",
-      "roomId": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
+      "roomId": null,
       "roomName": "kot",
       "changeType": "state_changed",
       "oldValue": {
@@ -8540,6 +8512,60 @@
         "brightness": 94
       },
       "timestamp": "2025-11-03T21:20:09.624Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a2c3477e-b797-4318-a2c1-1c9525d057c9",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 18
+      },
+      "newValue": {
+        "temperature": 21
+      },
+      "timestamp": "2025-11-03T22:16:57.614Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b0c81b58-8b21-4a20-80e8-bfbb9e6a61d7",
+      "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+      "deviceName": "verwarming",
+      "deviceType": "verwarming",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 11
+      },
+      "newValue": {
+        "temperature": 16
+      },
+      "timestamp": "2025-11-03T23:36:27.322Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "4adbdf9e-c41f-4571-a330-92d67a48b978",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 21
+      },
+      "newValue": {
+        "temperature": 16
+      },
+      "timestamp": "2025-11-03T23:36:33.392Z",
       "userId": "2",
       "userName": "Admin User"
     }
