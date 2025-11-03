@@ -9,9 +9,8 @@ import {
     Card,
     CardContent,
 } from '@mui/material';
-import { Timeline, Analytics, BarChart, ShowChart } from '@mui/icons-material';
+import { Timeline, BarChart } from '@mui/icons-material';
 import { DeviceChangeLogs } from '../components/logging/DeviceChangeLogs.tsx';
-import { StatisticsCharts } from '../components/logging/StatisticsCharts.tsx';
 import { DeviceStatistics } from '../components/logging/DeviceStatistics.tsx';
 
 interface TabPanelProps {
@@ -70,16 +69,6 @@ export default function Logging()  {
                         label="Statistieken"
                         iconPosition="start"
                     />
-                    <Tab
-                        icon={<ShowChart />}
-                        label="Grafieken"
-                        iconPosition="start"
-                    />
-                    <Tab
-                        icon={<Analytics />}
-                        label="Overzicht"
-                        iconPosition="start"
-                    />
                 </Tabs>
 
                 <TabPanel value={currentTab} index={0}>
@@ -90,9 +79,6 @@ export default function Logging()  {
                     <DeviceStatistics />
                 </TabPanel>
 
-                <TabPanel value={currentTab} index={2}>
-                    <StatisticsCharts />
-                </TabPanel>
 
                 <TabPanel value={currentTab} index={3}>
                     <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
@@ -107,14 +93,6 @@ export default function Logging()  {
                                         Meest Geschakelde Lampen
                                     </Typography>
                                     <DeviceStatistics type="mostSwitchedLights" />
-                                </CardContent>
-                            </Card>
-                            <Card sx={{ flex: 1 }}>
-                                <CardContent>
-                                    <Typography variant="h6" gutterBottom>
-                                        Temperatuur Verloop
-                                    </Typography>
-                                    <StatisticsCharts type="temperature" compact />
                                 </CardContent>
                             </Card>
                         </Box>

@@ -167,20 +167,6 @@ export const DeviceChangeLogs= () => {
                             <MenuItem value="audio">Audio</MenuItem>
                         </TextField>
 
-                        <TextField
-                            fullWidth
-                            size="small"
-                            select
-                            label="Wijziging Type"
-                            value={filters.changeType || ''}
-                            onChange={(e) => handleFilterChange('changeType', e.target.value)}
-                        >
-                            <MenuItem value="">Alle wijzigingen</MenuItem>
-                            <MenuItem value="created">Aangemaakt</MenuItem>
-                            <MenuItem value="updated">Bijgewerkt</MenuItem>
-                            <MenuItem value="deleted">Verwijderd</MenuItem>
-                            <MenuItem value="state_changed">Status gewijzigd</MenuItem>
-                        </TextField>
 
                         <Tooltip title="Vernieuwen">
                             <IconButton

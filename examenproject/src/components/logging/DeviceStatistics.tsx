@@ -150,36 +150,6 @@ export const DeviceStatistics = ({ type = 'all' }:DeviceStatisticsProps) => {
         </Card>
     );
 
-    const renderChangeTypeDistribution = () => (
-        <Card sx={{ height: 300 }}>
-            <CardContent>
-                <Typography variant="h6" gutterBottom sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                    <PieChart color="secondary" />
-                    Wijzigingstype Verdeling
-                </Typography>
-                <ResponsiveContainer width="100%" height={200}>
-                    <RechartsPieChart>
-                        <Pie
-                            data={statistics.changeTypeDistribution}
-                            cx="50%"
-                            cy="50%"
-                            labelLine={false}
-                            label={({ changeType, count }) => `${changeType}: ${count}`}
-                            outerRadius={80}
-                            fill="#8884d8"
-                            dataKey="count"
-                        >
-                            {statistics.changeTypeDistribution.map((_entry, index) => (
-                                <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                            ))}
-                        </Pie>
-                        <Tooltip />
-                    </RechartsPieChart>
-                </ResponsiveContainer>
-            </CardContent>
-        </Card>
-    );
-
     const renderDeviceTypeStats = () => (
         <Card sx={{ height: 300 }}>
             <CardContent>
@@ -322,7 +292,6 @@ export const DeviceStatistics = ({ type = 'all' }:DeviceStatisticsProps) => {
                 }}>
                     {renderMostSwitchedLights()}
                     {renderMostActiveRooms()}
-                    {renderChangeTypeDistribution()}
                 </Box>
 
                 <Box sx={{
