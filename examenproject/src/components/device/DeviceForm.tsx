@@ -11,7 +11,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { type DeviceFormData, type DeviceType, type Device } from '../../types/device';
 import type { Room } from '../../types/room';
-import { type FormData, deviceSchema } from './DeviceFormScheme.tsx';
+import { type FormData, deviceSchema } from '../../validation/DeviceFormScheme.ts';
 import { DeviceFormContent } from './DeviceFormContent';
 import {
     getDefaultValues,

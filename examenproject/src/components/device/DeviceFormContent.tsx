@@ -13,7 +13,7 @@ import { Controller } from 'react-hook-form';
 import type { Control, FieldErrors } from 'react-hook-form';
 import type { DeviceType, Device } from '../../types/device';
 import type { Room } from '../../types/room';
-import type { FormData } from './DeviceFormScheme.tsx';
+import type { FormData } from '../../validation/DeviceFormScheme.ts';
 import { DeviceFormFields } from './DeviceFormFields';
 import {
     checkExistingDevice,

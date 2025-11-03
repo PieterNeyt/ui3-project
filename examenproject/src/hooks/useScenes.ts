@@ -1,4 +1,4 @@
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {useMutation, useQuery, useQueryClient} from '@tanstack/react-query';
 import {sceneService} from '../services/sceneService';
 import {deviceService} from '../services/deviceService';
 import type {Scene, SceneFormData} from '../types/scene';
@@ -10,7 +10,7 @@ export const useScenes = () => {
         queryFn: async (): Promise<Scene[]> => {
             const scenesData = await sceneService.getScenes();
 
-            const enrichedScenes = await Promise.all(
+            return await Promise.all(
                 scenesData.map(async (scene) => {
                     const controlsWithDevices = await Promise.all(
                         scene.controls.map(async (control) => {
@@ -18,15 +18,13 @@ export const useScenes = () => {
                                 const device = await deviceService.getDevice(control.deviceId);
                                 return {...control, device};
                             } catch {
-                                return control; // Device niet gevonden, maar scene behouden
+                                return control;
                             }
                         })
                     );
                     return {...scene, controls: controlsWithDevices};
                 })
             );
-
-            return enrichedScenes;
         },
     });
 };

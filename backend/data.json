@@ -60,14 +60,14 @@
       "omschrijving": "Gezellige woonkamer met zitplaatsen"
     },
     {
-      "id": "4",
       "naam": "Keuken",
       "verdiepingId": "2",
       "width": 400,
       "height": 300,
       "x": 100,
       "y": 500,
-      "omschrijving": "Moderne keuken met eethoek"
+      "omschrijving": "Moderne keuken met eethoekg",
+      "id": "4"
     },
     {
       "id": "5",
@@ -135,10 +135,10 @@
         "temperature": 26
       },
       "waarde": {
-        "temperature": 20
+        "temperature": 18
       },
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2025-11-03T16:13:45.917Z"
+      "updatedAt": "2025-11-03T20:59:52.700Z"
     },
     {
       "id": "3",
@@ -292,13 +292,13 @@
       "y": 75,
       "omschrijving": "",
       "defaultWaarde": {
-        "temperature": 10
+        "temperature": 20
       },
       "waarde": {
-        "temperature": 25
+        "temperature": 20
       },
       "createdAt": "2025-10-29T19:16:08.717Z",
-      "updatedAt": "2025-11-03T16:12:01.504Z",
+      "updatedAt": "2025-11-03T18:35:12.181Z",
       "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
@@ -311,13 +311,13 @@
       "y": 124,
       "omschrijving": "",
       "defaultWaarde": {
-        "locked": false
+        "locked": true
       },
       "waarde": {
         "locked": true
       },
       "createdAt": "2025-10-30T12:29:44.976Z",
-      "updatedAt": "2025-11-03T16:12:01.514Z",
+      "updatedAt": "2025-11-03T18:35:17.913Z",
       "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
     },
     {
@@ -419,6 +419,24 @@
       },
       "createdAt": "2025-11-03T15:22:23.167Z",
       "updatedAt": "2025-11-03T15:22:23.167Z"
+    },
+    {
+      "id": "a3f1602b-a17b-4f08-a044-54c0f958857b",
+      "naam": "Woonkamer",
+      "type": "verwarming",
+      "upcCode": "1111111111111",
+      "kamerId": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
+      "x": 21,
+      "y": 21,
+      "omschrijving": "",
+      "defaultWaarde": {
+        "temperature": 30
+      },
+      "waarde": {
+        "temperature": 30
+      },
+      "createdAt": "2025-11-03T18:50:58.449Z",
+      "updatedAt": "2025-11-03T18:51:19.549Z"
     }
   ],
   "playlists": [
@@ -514,64 +532,6 @@
       "createdAt": "2025-11-03T13:10:19.325Z",
       "updatedAt": "2025-11-03T13:10:19.325Z",
       "createdBy": "1"
-    },
-    {
-      "id": "bea129d5-f074-4af6-a3a0-7d1ac668a98e",
-      "naam": "eazeae",
-      "controls": [
-        {
-          "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
-          "waarde": {
-            "locked": true
-          },
-          "device": {
-            "id": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
-            "naam": "zerzer",
-            "type": "deurslot",
-            "upcCode": "1111111111111",
-            "kamerId": "4",
-            "x": 0,
-            "y": 124,
-            "omschrijving": "",
-            "defaultWaarde": {
-              "locked": false
-            },
-            "waarde": {
-              "locked": true
-            },
-            "createdAt": "2025-10-30T12:29:44.976Z",
-            "updatedAt": "2025-11-03T16:12:01.514Z",
-            "lastActivatedBy": "7df3ff49-445d-40d7-83e5-456166b0a1be"
-          }
-        },
-        {
-          "deviceId": "4",
-          "waarde": {
-            "volume": 50,
-            "playlist": "classic"
-          }
-        },
-        {
-          "deviceId": "08df6e60-a1ca-4478-92b8-ae24fa21beab",
-          "waarde": {
-            "on_off": "on",
-            "brightness": 50
-          }
-        },
-        {
-          "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
-          "waarde": {
-            "temperature": 20
-          }
-        }
-      ],
-      "image": "",
-      "omschrijving": "azeazeae",
-      "isGlobal": true,
-      "userId": "2",
-      "createdAt": "2025-11-03T17:33:22.271Z",
-      "updatedAt": "2025-11-03T18:18:55.810Z",
-      "createdBy": "2"
     }
   ],
   "timeslots": [
@@ -8372,6 +8332,96 @@
         "brightness": 100
       },
       "timestamp": "2025-11-03T17:32:37.723Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "6eeff02a-0fbd-463c-86b5-4a277f134a18",
+      "deviceId": "bd872aab-e033-4013-822e-a67572ee3a95",
+      "deviceName": "verwarming",
+      "deviceType": "verwarming",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 25
+      },
+      "newValue": {
+        "temperature": 20
+      },
+      "timestamp": "2025-11-03T18:35:12.230Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "83c8c179-694d-430a-82b2-50d135a86e21",
+      "deviceId": "d9db1d71-ad17-4936-831d-35bf7ab74c05",
+      "deviceName": "zerzer",
+      "deviceType": "deurslot",
+      "roomId": "4",
+      "roomName": "Keuken",
+      "changeType": "state_changed",
+      "oldValue": {
+        "locked": true
+      },
+      "newValue": {
+        "locked": true
+      },
+      "timestamp": "2025-11-03T18:35:17.961Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "b4347f67-8a1b-40ab-a990-01fe5c9b1e16",
+      "deviceId": "a3f1602b-a17b-4f08-a044-54c0f958857b",
+      "deviceName": "Woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "08867284-6f66-4c94-a8ca-4dc3bf719a3d",
+      "roomName": "kot",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 19
+      },
+      "newValue": {
+        "temperature": 30
+      },
+      "timestamp": "2025-11-03T18:51:19.607Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "dff82b97-21c3-4f87-9c32-b9ec98e24109",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 20
+      },
+      "newValue": {
+        "temperature": 23
+      },
+      "timestamp": "2025-11-03T19:08:02.298Z",
+      "userId": "2",
+      "userName": "Admin User"
+    },
+    {
+      "id": "a7069852-2a1d-420f-88e9-b0a74152d961",
+      "deviceId": "2",
+      "deviceName": "Thermostaat woonkamer",
+      "deviceType": "verwarming",
+      "roomId": "3",
+      "roomName": "Woonkamer",
+      "changeType": "state_changed",
+      "oldValue": {
+        "temperature": 23
+      },
+      "newValue": {
+        "temperature": 18
+      },
+      "timestamp": "2025-11-03T20:59:52.816Z",
       "userId": "2",
       "userName": "Admin User"
     }

@@ -16,12 +16,6 @@ export const floorService = {
         return response.data;
     },
 
-    // Get single floor
-    getFloor: async (id: string): Promise<Floor> => {
-        const response = await api.get(`/floors/${id}`);
-        return response.data;
-    },
-
     // Create floor
     createFloor: async (floorData: FloorFormData): Promise<Floor> => {
         const response = await api.post('/floors', {

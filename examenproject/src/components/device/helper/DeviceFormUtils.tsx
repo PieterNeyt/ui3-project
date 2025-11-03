@@ -1,6 +1,6 @@
 import type { Device, DeviceType, DeviceFormData } from '../../../types/device.ts';
 import type { Room } from '../../../types/room.ts';
-import type { FormData } from '../DeviceFormScheme.tsx';
+import type { FormData } from '../../../validation/DeviceFormScheme.ts';
 
 export const checkExistingDevice = (
     type: DeviceType,

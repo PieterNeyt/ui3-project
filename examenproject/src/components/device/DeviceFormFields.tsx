@@ -13,7 +13,7 @@ import {
 import { type Control, Controller } from 'react-hook-form';
 import type { DeviceType } from '../../types/device';
 import type { Room } from '../../types/room';
-import type { FormData } from './DeviceFormScheme.tsx';
+import type { FormData } from '../../validation/DeviceFormScheme.ts';
 
 interface DeviceFormFieldsProps {
     deviceType: DeviceType;

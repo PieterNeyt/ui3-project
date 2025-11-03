@@ -176,13 +176,7 @@ export const loggingService = {
         };
     },
 
-    // Add a new log entry - CORRECTE OUD/NIEUW WAARDE HANDLING
     addLogEntry: async (log: Omit<DeviceChangeLog, 'id'>): Promise<DeviceChangeLog> => {
-        // Voor state_changed: oldValue moet de vorige waarde zijn, newValue de nieuwe
-        // Voor created: oldValue is undefined, newValue is de initiële waarde
-        // Voor deleted: oldValue is de laatste waarde, newValue is undefined
-        // Voor updated: oldValue is vorige waarde, newValue is nieuwe waarde
-
         const newLog = {
             ...log,
             id: crypto.randomUUID(),
