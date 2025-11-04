@@ -3,7 +3,7 @@
 ## 💡 Uitdagingen & Prestaties
 
 ###  Belangrijkste uitdagingen
-Tijdens de ontwikkeling heb ik vooral moeite gehad met **state management**. Het synchroniseren van de status van meerdere domotica-controls tussen de frontend en backend.  
+Tijdens de ontwikkeling heb ik vooral moeite gehad met **state management** en het onderverdelen in components. Het synchroniseren van de status van meerdere domotica-controls tussen de frontend en backend.  
 In het begin liepen de statussen soms uit sync door vertragingen of gelijktijdige updates.  
 Uiteindelijk heb ik dit probleem kunnen oplossen door **polling** te implementeren, waardoor de frontend op vaste intervallen de data van de backend ophaalt en de weergave altijd up-to-date blijft.
 
@@ -13,6 +13,7 @@ Hierin worden alle wijzigingen aan controls overzichtelijk weergegeven, gecombin
 - de meest geschakelde lampen
 - de kamers met de meeste interacties met domotica-controls
 
+Ook ben ik redelijk trots op de auto routing die succesvol is geimplementeerd waardoor ik niet manueel de routes in app.tsx hoef te zetten  
 
 ---
 
