@@ -99,7 +99,6 @@ export const getDefaultValues = (
     }
 };
 
-// Nieuwe handlers
 export const createDeviceData = (data: FormData): DeviceFormData => {
     const parsedData = {
         ...data,

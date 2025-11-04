@@ -8,14 +8,23 @@ import {
     DialogTitle,
     DialogContent,
     DialogActions,
-    Divider, Button,
+    Divider,
+    Button,
 } from '@mui/material';
-import { useScenes, useCreateScene, useUpdateScene, useDeleteScene, useActivateScene, useDeactivateScene } from '../../hooks/useScenes.ts';
+import {
+    useScenes,
+    useCreateScene,
+    useUpdateScene,
+    useDeleteScene,
+    useActivateScene,
+    useDeactivateScene
+} from '../../hooks/useScenes.ts';
 import { useAuth } from "../../hooks/useAuth.ts";
 import type { Scene, SceneFormData } from '../../types/scene.ts';
 import { ScenesHeader } from '../../components/scene/ScenesHeader.tsx';
 import { SceneSection } from '../../components/scene/SceneSection.tsx';
 import { SceneForm } from '../../components/scene/form/SceneForm.tsx';
+import { useWindowEvent } from '../../hooks/useTimeSlots.ts'; // <— custom hook gebruiken
 
 export default function Index() {
     const { isAdmin, isGebruiker, user } = useAuth();
@@ -32,32 +41,25 @@ export default function Index() {
     const [sceneToDelete, setSceneToDelete] = useState<string | null>(null);
     const [manuallyActivatedSceneId, setManuallyActivatedSceneId] = useState<string | null>(null);
 
+
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const lastManualScene = localStorage.getItem('lastManuallyActivatedScene');
-            if (lastManualScene) {
-                setManuallyActivatedSceneId(lastManualScene);
-            }
+        const lastManualScene = localStorage.getItem('lastManuallyActivatedScene');
+        if (lastManualScene) {
+            setManuallyActivatedSceneId(lastManualScene);
         }
     }, []);
 
-    useEffect(() => {
-        const handleManualActivation = (event: CustomEvent) => {
-            setManuallyActivatedSceneId(event.detail.sceneId);
-        };
 
-        const handleManualDeactivation = () => {
-            setManuallyActivatedSceneId(null);
-        };
+    useWindowEvent<CustomEvent>('sceneManuallyActivated', (event) => {
+        const sceneId = event.detail.sceneId;
+        setManuallyActivatedSceneId(sceneId);
+        localStorage.setItem('lastManuallyActivatedScene', sceneId);
+    });
 
-        window.addEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
-        window.addEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
-
-        return () => {
-            window.removeEventListener('sceneManuallyActivated', handleManualActivation as EventListener);
-            window.removeEventListener('sceneManuallyDeactivated', handleManualDeactivation as EventListener);
-        };
-    }, []);
+    useWindowEvent<CustomEvent>('sceneManuallyDeactivated', () => {
+        setManuallyActivatedSceneId(null);
+        localStorage.removeItem('lastManuallyActivatedScene');
+    });
 
     const { globalScenes, personalScenes } = useMemo(() => {
         const allScenes = scenes || [];

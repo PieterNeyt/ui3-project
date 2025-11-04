@@ -13,7 +13,6 @@ export interface DeviceChangeLog {
     userName?: string;
 }
 
-// types/view.ts
 export interface DeviceStatistics {
     mostSwitchedLights: Array<{
         deviceId: string;
@@ -37,7 +36,7 @@ export interface DeviceStatistics {
         changeCount: number;
         roomName: string;
     }>;
-    // NIEUWE STATISTIEKEN
+
     mostActiveRooms: Array<{
         roomName: string;
         activityCount: number;
@@ -66,7 +65,6 @@ export interface LogFilter {
     changeType?: string;
 }
 
-// Voeg DeviceValue type toe vanuit je device types
 export type DeviceValue = {
     on_off?: 'on' | 'off';
     brightness?: number;

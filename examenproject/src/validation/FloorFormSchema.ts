@@ -8,3 +8,4 @@ export const floorFormSchema = z.object({
     y: z.number().min(0, 'Y moet 0 of groter zijn'),
     omschrijving: z.string().optional(),
 });
+export type FormData = z.infer<typeof floorFormSchema>;
